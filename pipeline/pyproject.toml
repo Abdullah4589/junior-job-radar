@@ -1,0 +1,23 @@
+[project]
+name = "jobradar"
+version = "0.1.0"
+description = "Fetch and normalize public junior and remote software job postings."
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "Abdullah" }]
+dependencies = []
+
+[project.scripts]
+jobradar = "jobradar.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8.3"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"
