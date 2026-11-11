@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import csv
 import json
+import re
 from pathlib import Path
 from typing import Any
 
@@ -57,6 +58,23 @@ def latest_normalized(root: Path) -> Path | None:
 
 def normalized_path(root: Path, date: str) -> Path:
     return root / "data" / "normalized" / f"{date}.json"
+
+
+def normalized_snapshots(root: Path) -> list[Path]:
+    """Normalized JSON snapshots, oldest date first.
+
+    Only `YYYY-MM-DD.json` names count. Other files in the directory are ignored.
+    """
+
+    directory = root / "data" / "normalized"
+    if not directory.is_dir():
+        return []
+    paths = [
+        path
+        for path in directory.glob("*.json")
+        if re.fullmatch(r"\d{4}-\d{2}-\d{2}", path.stem)
+    ]
+    return sorted(paths, key=lambda path: path.stem)
 
 
 def load_normalized(path: Path) -> list[dict[str, Any]]:

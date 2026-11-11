@@ -14,8 +14,9 @@ from jobradar.pipeline import (
     collect,
     format_fetch_report,
 )
-from jobradar.snapshot import latest_normalized, load_normalized, normalized_path, write_snapshots
+from jobradar.snapshot import latest_normalized, load_normalized, normalized_path
 from jobradar.sources import default_sources
+from jobradar.store import persist_collection
 from jobradar.summary import format_summary, summarize
 
 _DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
@@ -35,7 +36,10 @@ def run(argv: list[str] | None = None) -> int:
     fetch = sub.add_parser("fetch", help="Fetch sources and write today's snapshot")
     fetch.add_argument(
         "--date",
-        help="Snapshot date YYYY-MM-DD (default: today, UTC). Re-running a date overwrites it.",
+        help=(
+            "Snapshot date YYYY-MM-DD (default: today, UTC). "
+            "Refreshes that date only; earlier dates stay on disk."
+        ),
     )
 
     summary = sub.add_parser("summary", help="Print counts, tags, remote share, and junior share")
@@ -67,7 +71,7 @@ def _fetch(root, date: str | None) -> int:
             file=sys.stderr,
         )
         return 1
-    written = write_snapshots(
+    written, stats = persist_collection(
         root,
         date=snapshot_date,
         raw_document=build_raw_document(collection),
@@ -75,7 +79,14 @@ def _fetch(root, date: str | None) -> int:
         jobs=collection.jobs,
     )
     relative = [path.relative_to(root).as_posix() for path in written]
-    print(format_fetch_report(collection, date=snapshot_date, paths=relative))
+    print(
+        format_fetch_report(
+            collection,
+            date=snapshot_date,
+            paths=relative,
+            catalog=(stats.total, stats.new, stats.seen_again),
+        )
+    )
     return 0
 
 

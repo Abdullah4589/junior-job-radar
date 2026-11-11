@@ -113,7 +113,13 @@ def build_normalized_document(collection: Collection, *, date: str) -> dict[str,
     }
 
 
-def format_fetch_report(collection: Collection, *, date: str, paths: list[str]) -> str:
+def format_fetch_report(
+    collection: Collection,
+    *,
+    date: str,
+    paths: list[str],
+    catalog: tuple[int, int, int] | None = None,
+) -> str:
     lines = [
         f"Junior Job Radar — fetch {date}",
         f"fetched_at {collection.fetched_at}",
@@ -133,6 +139,12 @@ def format_fetch_report(collection: Collection, *, date: str, paths: list[str]) 
     )
     for path in paths:
         lines.append(f"wrote {path}")
+    if catalog is not None:
+        total, first_seen, already_stored = catalog
+        lines.append(
+            f"catalog: {total} unique postings "
+            f"({first_seen} first seen on {date}, {already_stored} already stored)"
+        )
     if not collection.any_ok:
         lines.append("no source succeeded")
     return "\n".join(lines)

@@ -1,0 +1,63 @@
+name: Daily snapshot
+
+# Fetch once a day and store the result on automation/daily-snapshots, then
+# open a pull request into main. This file never pushes to main.
+# The job boards are public and need no token. GITHUB_TOKEN is used only to
+# push the data branch and open the pull request. No repository secrets.
+
+on:
+  schedule:
+    # 06:15 UTC. One run a day, off the crowded :00 slot. Remotive asks for
+    # at most a few calls a day; workflow_dispatch is the manual extra run.
+    - cron: "15 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: daily-snapshot
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+      pull-requests: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GIT_AUTHOR_NAME: github-actions[bot]
+      GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+      GIT_COMMITTER_NAME: github-actions[bot]
+      GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+    steps:
+      - name: Check out main
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+          ref: main
+
+      - name: Use the data branch
+        run: bash .github/scripts/prepare-data-branch.sh
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2 # v10.3.3
+        with:
+          version: "0.13.7"
+          python-version: "3.12"
+          working-directory: pipeline
+          enable-cache: false
+
+      - name: Test and fetch
+        working-directory: pipeline
+        run: |
+          uv sync --frozen --group dev
+          uv run pytest
+          uv run jobradar fetch
+
+      - name: Push the data branch and open a pull request
+        run: bash .github/scripts/publish-data-branch.sh

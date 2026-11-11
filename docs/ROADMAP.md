@@ -18,15 +18,17 @@ Python 3.12 pipeline managed with `uv`, under `pipeline/`, so `web/` can land la
 - Summary prints counts per source, top 15 tags, remote share, and how many titles look junior or entry-level.
 - Timeouts, retries, a proper User-Agent, and continue if one source fails.
 - Pytest coverage for the normalizer and the small helpers it depends on.
-- No GitHub Actions yet.
+- GitHub Actions start on Day 2.
 
-## Day 2 — Storage and daily automation
+## Day 2 — Storage and daily automation (done)
 
-- Scheduled GitHub Action (cron) that runs the fetch once a day.
-- Append that day's snapshot; do not overwrite history.
-- Dedupe across days (same canonical URL, or same company + title) so the trend series is not inflated by reposts.
-- Keep credentials out of the workflow. The sources used here do not need keys.
-- Document the retention choice (keep every daily file in git for now; revisit if the repo grows).
+The fetch still writes one snapshot per UTC date. A second run of the same date refreshes that date's three files and leaves every other date on disk.
+
+The cross-day catalog is `data/jobradar.sqlite`, dumped for review to `data/catalog/postings.json`. The same canonical URL, or the same company and title, is one row. `first_seen` stays on the earliest snapshot. A repost updates `last_seen`. Every fetch rebuilds the catalog from the snapshot files, so a role that leaves those files drops out. When the rebuilt dump matches what is already stored, the database file is left untouched. `days.new` in the catalog is the trend count; `days.seen_again` is the reposts that are kept out of that count. Deleting the sqlite file and running `uv run jobradar fetch` rebuilds it from the snapshot files.
+
+`.github/workflows/daily-fetch.yml` runs at 06:15 UTC and on `workflow_dispatch`. It runs pytest, then `jobradar fetch`, then commits `data/` onto `automation/daily-snapshots` and opens a pull request. It does not push `main`. Actions are pinned to full commit SHAs. Permissions are `contents: read` at the workflow, and `contents: write` plus `pull-requests: write` on the job. There is no cache scope and no repository secret. The sources do not need keys. `GITHUB_TOKEN` is used only to push the data branch and open the pull request. The push is refused if the destination is `main` or `master`, and the script does not force-push.
+
+Retention: keep every daily file in git. Raw snapshots already drop descriptions and logos, and the catalog grows by newly seen roles rather than by reposts. Revisit if `data/` gets large. The workflow is inactive until this branch is merged to `main`, because `schedule` uses the workflow file on the default branch.
 
 ## Day 3 — Skill, seniority, and remote extraction
 
