@@ -30,14 +30,14 @@ def dedupe_jobs(jobs: list[JobPosting]) -> list[JobPosting]:
             kept.append(job)
             continue
         current = kept[existing_index]
-        if _richness(job) > _richness(current):
+        if richness(job) > richness(current):
             kept[existing_index] = job
             by_url[canonical_url(job.url)] = existing_index
             by_identity[identity_key(job.company, job.title)] = existing_index
     return kept
 
 
-def _richness(job: JobPosting) -> tuple[int, int, int, int]:
+def richness(job: JobPosting) -> tuple[int, int, int, int]:
     return (
         1 if job.salary_text else 0,
         len(job.tags),

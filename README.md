@@ -4,20 +4,20 @@ Daily pipeline and (from Day 4) dashboard that tracks public junior and remote s
 
 Built by Abdullah, a software-engineering graduate in Karachi, as a public portfolio project. It uses free job-board APIs only. There is no paid plan and no API key.
 
-Day 1 is the ingestion pipeline. The dashboard, scheduled refresh, and deployment come later. The day-by-day plan is in [docs/ROADMAP.md](docs/ROADMAP.md).
+Day 1 is the ingestion pipeline. Day 2 stores every posting in a deduped catalog and runs the fetch on a daily schedule. The dashboard and deployment come later. The day-by-day plan is in [docs/ROADMAP.md](docs/ROADMAP.md).
 
 ## Roadmap
 
 | Day | Work |
 | --- | --- |
-| 1 | Python ingestion pipeline, normalized snapshots, `fetch` and `summary` (this repo state) |
-| 2 | Daily GitHub Action that appends a deduped snapshot |
+| 1 | Python ingestion pipeline, normalized snapshots, `fetch` and `summary` |
+| 2 | Deduped SQLite catalog, daily snapshots kept in git, scheduled workflow that opens a pull request (this repo state) |
 | 3 | Skill, seniority, and workplace extraction (keywords, then an optional free LLM with a fallback) |
 | 4–5 | Next.js dashboard with charts and filters |
 | 6 | Parser tests, Playwright, CI |
 | 7 | Free-tier deploy and a README with screenshots, methodology, and limitations |
 
-## Run Day 1
+## Run the pipeline
 
 Install [uv](https://docs.astral.sh/uv/getting-started/installation/) and Python 3.12 (uv will fetch 3.12 from the pin in `pipeline/.python-version` if you don't have it).
 
@@ -35,9 +35,14 @@ uv run pytest
 - `data/normalized/YYYY-MM-DD.json` — deduped software roles
 - `data/normalized/YYYY-MM-DD.csv` — the same rows
 
-Running `fetch` again on the same UTC date overwrites that day's files. History across days starts on Day 2.
+Running `fetch` again on the same UTC date refreshes that date's three snapshot files. Files for other dates stay as they are. The same run rebuilds the catalog from every snapshot:
 
-`summary` reads the latest normalized snapshot (or `--date YYYY-MM-DD`) and prints counts per source, the top 15 tags, the remote share, and how many postings look junior or entry-level.
+- `data/jobradar.sqlite` — one row per posting. The same canonical URL, or the same company and title, does not get a second row.
+- `data/catalog/postings.json` — the same rows as text, including `first_seen`, `last_seen`, and `days.new` (the deduped count for each date).
+
+A second fetch that sees the same postings does not add rows and does not rewrite the database. A richer repost (a salary, more tags) can fill in the stored row and keeps `first_seen`. A role that disappears from the snapshot files drops out of the catalog. Deleting `data/jobradar.sqlite` and running `fetch` rebuilds it.
+
+`summary` reads the latest normalized snapshot (or `--date YYYY-MM-DD`) and prints counts per source, the top 15 tags, the remote share, and how many postings look junior or entry-level. That summary is one day's file, including roles that were already in an earlier snapshot. The deduped trend series is `days` in the catalog.
 
 ## What gets stored
 
@@ -52,6 +57,14 @@ Duplicates inside one run are collapsed. The same URL matches after tracking par
 Junior / entry-level in the summary is a keyword check on the title and tags (`junior`, `jr`, `intern`, `entry-level`, `new grad`, `working student`, and a few close phrases). It does not read the job description. Day 3 replaces it with a real extractor.
 
 Tags are lowercased. Skills named in the title (`python`, `react`, `full-stack`, …) are added so the three boards can be compared. Remote OK's API attaches unrelated tags to listings (a nurse role can be tagged `golang`), so a Remote OK tag is kept only when the title also says it. Generic labels (`engineer`, `full time`) and parenthetical team names (`engineering (ads)`) are dropped. The raw snapshot still has the original tag list.
+
+## Daily schedule
+
+`.github/workflows/daily-fetch.yml` runs at 06:15 UTC, and when someone starts it by hand from `main`. It installs the pinned uv toolchain, runs `uv run pytest`, then `uv run jobradar fetch`.
+
+The job commits changes under `data/` onto `automation/daily-snapshots` and opens a pull request into `main`. It does not push `main`. The only credential is the run's `GITHUB_TOKEN`, limited to `contents: write` and `pull-requests: write`. The boards need no API key, and the workflow file has no secrets. Actions are pinned to full commit SHAs. A run with no data change does not create an empty commit. Two runs cannot overlap (`concurrency: daily-snapshot`).
+
+The schedule starts after this workflow is on `main`. Until the data pull request is merged, the next day checks out `automation/daily-snapshots` (so unmerged days stack) and merges `main` into it. A conflict in pipeline code fails the job. A conflict in an older snapshot keeps `main`'s copy, and the fetch rebuilds the catalog from the snapshot files.
 
 ## Sources
 
@@ -110,16 +123,20 @@ That junior share is the finding, not a bug in the count: these three boards are
 - Remote OK's tag list is not a skill list. Normalized tags only keep a Remote OK tag when the title supports it.
 - Arbeitnow's first page is 300 mixed roles, mostly on-site in Europe, with no salary field. Software roles are filtered in by title.
 - Junior / entry-level is a keyword check. It misses junior roles whose titles only say "Software Engineer".
-- Fetching the same UTC date again overwrites that day's files. A daily history is Day 2.
+- Fetching the same UTC date again refreshes that date's snapshot files. Other dates stay. The catalog keeps one row per posting, so a repost updates `last_seen` and the trend count uses `days.new`.
 - No paid APIs and no API keys. The Muse's old public jobs endpoint returned 404 and is not a source.
 
 ## Layout
 
 ```
-pipeline/     Python 3.12 package (uv)
-data/         Dated snapshots written by `jobradar fetch`
-docs/         Roadmap for the rest of the week
-web/          Next.js dashboard, added on Day 4
+pipeline/                         Python 3.12 package (uv)
+data/raw/                         One compact payload file per UTC date
+data/normalized/                  One JSON and one CSV per UTC date
+data/catalog/postings.json        Deduped catalog, one row per posting
+data/jobradar.sqlite              Same catalog in SQLite
+.github/workflows/daily-fetch.yml Daily fetch. Opens a pull request, does not push main
+docs/                             Roadmap for the rest of the week
+web/                              Next.js dashboard, added on Day 4
 ```
 
 ## License

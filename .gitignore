@@ -1,5 +1,12 @@
 # Python
 .venv/
+
+# SQLite journals and the staging file used while replacing the catalog.
+# data/jobradar.sqlite itself stays tracked.
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+data/.jobradar.sqlite.staging
 __pycache__/
 *.py[cod]
 .pytest_cache/
