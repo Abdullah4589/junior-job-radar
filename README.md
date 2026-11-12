@@ -4,7 +4,7 @@ Daily pipeline and (from Day 4) dashboard that tracks public junior and remote s
 
 Built by Abdullah, a software-engineering graduate in Karachi, as a public portfolio project. It uses free job-board APIs only. There is no paid plan and no API key.
 
-Day 1 is the ingestion pipeline. Day 2 stores every posting in a deduped catalog and runs the fetch on a daily schedule. Day 3 adds skill, seniority, and workplace extraction. The dashboard and deployment come later. The day-by-day plan is in [docs/ROADMAP.md](docs/ROADMAP.md).
+Day 1 is the ingestion pipeline. Day 2 stores every posting in a deduped catalog and runs the fetch on a daily schedule. Day 3 adds skill, seniority, and workplace extraction. Day 4 is the dashboard overview in `web/`. Filters and deployment come later. The day-by-day plan is in [docs/ROADMAP.md](docs/ROADMAP.md).
 
 ## Roadmap
 
@@ -12,8 +12,9 @@ Day 1 is the ingestion pipeline. Day 2 stores every posting in a deduped catalog
 | --- | --- |
 | 1 | Python ingestion pipeline, normalized snapshots, `fetch` and `summary` |
 | 2 | Deduped SQLite catalog, daily snapshots kept in git, scheduled workflow that opens a pull request |
-| 3 | Skill, seniority, and workplace extraction, stored on each posting and in `data/catalog/trends.json` (this repo state) |
-| 4–5 | Next.js dashboard with charts and filters |
+| 3 | Skill, seniority, and workplace extraction, stored on each posting and in `data/catalog/trends.json` |
+| 4 | Next.js overview: KPIs, new postings per day, seniority, workplace, and top skills (this repo state) |
+| 5 | Dashboard filters, postings table, and empty states |
 | 6 | Parser tests, Playwright, CI |
 | 7 | Free-tier deploy and a README with screenshots, methodology, and limitations |
 
@@ -46,6 +47,18 @@ A second fetch that sees the same postings does not add rows and does not rewrit
 `summary` reads the latest normalized snapshot (or `--date YYYY-MM-DD`) and prints counts per source, the top 15 tags, the remote share, how many postings look junior or entry-level, plus workplace, seniority, and top skills. That summary is one day's file, including roles that were already in an earlier snapshot. The deduped trend series is `days` in the catalog. The deduped skill, seniority, and workplace counts are `data/catalog/trends.json`.
 
 `extract` fills seniority, skills, workplace, `junior_friendly`, and regions on snapshot rows that were stored before those fields existed, then rebuilds the catalog and `trends.json`. A second run does not rewrite files that already match. Fetch already extracts new postings, so `extract` is the backfill.
+
+## Run the dashboard
+
+The overview reads `data/catalog/trends.json` and `data/catalog/postings.json` at build time. It does not call the job boards and it does not need an environment variable.
+
+```powershell
+cd web
+npm install
+npm run dev
+```
+
+Open `http://localhost:3000`. `npm run lint` and `npm run build` check the app. Filters and the postings table are Day 5.
 
 ## What gets stored
 
@@ -142,7 +155,7 @@ data/jobradar.sqlite              Same catalog in SQLite
 pipeline/src/jobradar/taxonomy/   Skill, seniority, and region lists
 .github/workflows/daily-fetch.yml Daily fetch. Opens a pull request, does not push main
 docs/                             Roadmap for the rest of the week
-web/                              Next.js dashboard, added on Day 4
+web/                              Next.js overview (Day 4). Filters land on Day 5
 ```
 
 ## License
