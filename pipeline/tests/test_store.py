@@ -1,4 +1,5 @@
 import json
+import sqlite3
 from pathlib import Path
 
 from jobradar.models import JobPosting
@@ -285,3 +286,65 @@ def test_opening_an_existing_catalog_does_not_rewrite_it(tmp_path: Path):
     with PostingStore(path) as store:
         assert store.stats_for("2026-11-10").total == 1
     assert path.read_bytes() == original
+
+
+def test_v1_catalog_gains_extraction_columns_and_a_second_open_is_stable(tmp_path: Path):
+    path = tmp_path / "jobradar.sqlite"
+    connection = sqlite3.connect(path)
+    connection.executescript(
+        """
+        CREATE TABLE postings (
+            id INTEGER PRIMARY KEY,
+            job_id TEXT NOT NULL,
+            source TEXT NOT NULL,
+            title TEXT NOT NULL,
+            company TEXT NOT NULL,
+            location TEXT NOT NULL,
+            remote INTEGER NOT NULL,
+            tags TEXT NOT NULL,
+            salary_text TEXT,
+            posted_at TEXT,
+            url TEXT NOT NULL,
+            fetched_at TEXT NOT NULL,
+            canonical_url TEXT NOT NULL,
+            identity_key TEXT NOT NULL,
+            first_seen TEXT NOT NULL,
+            last_seen TEXT NOT NULL
+        );
+        CREATE TABLE sightings (
+            posting_id INTEGER NOT NULL REFERENCES postings(id) ON DELETE CASCADE,
+            seen_on TEXT NOT NULL,
+            PRIMARY KEY (posting_id, seen_on)
+        );
+        INSERT INTO postings (
+            job_id, source, title, company, location, remote, tags,
+            salary_text, posted_at, url, fetched_at, canonical_url,
+            identity_key, first_seen, last_seen
+        ) VALUES (
+            'remoteok:1', 'remoteok', 'Backend Engineer', 'Acme', 'Remote', 1,
+            '["python"]', NULL, '2026-11-01T00:00:00Z', 'https://remoteok.com/jobs/1',
+            '2026-11-10T08:00:00Z', 'https://remoteok.com/jobs/1',
+            'acme|backend engineer', '2026-11-10', '2026-11-10'
+        );
+        INSERT INTO sightings (posting_id, seen_on) VALUES (1, '2026-11-10');
+        PRAGMA user_version = 1;
+        """
+    )
+    connection.close()
+
+    with PostingStore(path) as store:
+        document = store.export_document()
+    stored = document["postings"][0]
+    assert stored["title"] == "Backend Engineer"
+    assert stored["tags"] == ["python"]
+    assert stored["first_seen"] == "2026-11-10"
+    assert stored["seniority"] == "unknown"
+    assert stored["skills"] == []
+    assert stored["workplace"] == "unknown"
+    assert stored["junior_friendly"] is False
+    assert stored["regions"] == []
+
+    migrated = path.read_bytes()
+    with PostingStore(path) as store:
+        assert store.stats_for("2026-11-10").total == 1
+    assert path.read_bytes() == migrated

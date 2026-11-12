@@ -88,6 +88,8 @@ def test_snapshots_round_trip(tmp_path: Path):
     loaded = load_normalized(paths[1])
     assert loaded[0]["title"] == "Python Developer"
     assert "python" in paths[2].read_text(encoding="utf-8")
+    header = paths[2].read_text(encoding="utf-8").splitlines()[0]
+    assert header.endswith("seniority,skills,workplace,junior_friendly,regions")
     document = json.loads(paths[1].read_text(encoding="utf-8"))
     assert document["attribution"][0]["name"] == "Arbeitnow"
 

@@ -43,6 +43,11 @@ def test_remotive_record_maps_onto_the_shared_schema():
         "posted_at",
         "url",
         "fetched_at",
+        "seniority",
+        "skills",
+        "workplace",
+        "junior_friendly",
+        "regions",
     ]
     assert payload["id"] == "remotive:2091045"
     assert payload["source"] == "remotive"
@@ -54,6 +59,11 @@ def test_remotive_record_maps_onto_the_shared_schema():
     assert payload["salary_text"] == "$80,000 - $100,000"
     assert payload["posted_at"] == "2026-11-07T01:10:55Z"
     assert payload["fetched_at"] == FETCHED_AT
+    assert payload["seniority"] == "unknown"
+    assert payload["skills"] == ["Full-Stack", "React", "Node.js"]
+    assert payload["workplace"] == "remote"
+    assert payload["junior_friendly"] is False
+    assert payload["regions"] == []
 
 
 def test_remotive_blank_salary_and_missing_url_are_dropped():
@@ -100,7 +110,7 @@ def test_remoteok_salary_range_and_zero_means_unspecified():
             "salary_max": 180000,
             "date": "2026-11-08T16:00:15+00:00",
             "url": "https://remoteOK.com/remote-jobs/remote-senior-vue-developer",
-            "description": "long html",
+            "description": "long body",
         },
         fetched_at=FETCHED_AT,
     )
@@ -114,6 +124,10 @@ def test_remoteok_salary_range_and_zero_means_unspecified():
     assert "golang" not in posting.tags
     assert "exec" not in posting.tags
     assert "vue" in posting.tags
+    assert posting.seniority == "senior"
+    assert posting.skills == ["Vue"]
+    assert posting.workplace == "remote"
+    assert posting.junior_friendly is False
 
     unpaid = normalize_remoteok(
         {
@@ -168,6 +182,11 @@ def test_arbeitnow_unix_timestamp_remote_flag_and_internship():
     assert "python" in posting.tags
     assert "internship" in posting.tags
     assert "working student" in posting.tags
+    assert posting.seniority == "intern"
+    assert posting.junior_friendly is True
+    assert posting.skills == ["Python"]
+    assert posting.workplace == "onsite"
+    assert posting.regions == ["Germany"]
 
 
 def test_arbeitnow_remote_location_text_and_missing_slug():
@@ -189,6 +208,11 @@ def test_arbeitnow_remote_location_text_and_missing_slug():
     assert posting.remote is True
     assert posting.posted_at == "2026-11-10T06:55:24Z"
     assert "entry-level" in posting.tags
+    assert posting.seniority == "junior"
+    assert posting.junior_friendly is True
+    assert posting.workplace == "remote"
+    assert posting.regions == ["Germany"]
+    assert "Security" in posting.skills
     assert (
         normalize_arbeitnow(
             {"title": "Software Engineer", "url": "https://example.com/job", "slug": ""},

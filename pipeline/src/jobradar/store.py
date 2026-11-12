@@ -28,9 +28,11 @@ from pathlib import Path
 from typing import Any
 
 from jobradar.dedupe import richness
+from jobradar.extract import ensure_extracted
 from jobradar.models import JobPosting
 from jobradar.normalize import canonical_url, identity_key
 from jobradar.snapshot import load_normalized, normalized_snapshots, write_snapshots
+from jobradar.trends import build_trends, trends_path, write_trends
 
 _DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
@@ -38,8 +40,12 @@ _NOTES = (
     "One row per posting across every daily snapshot. first_seen is the "
     "earliest snapshot date. A later repost with the same canonical URL, or "
     "the same company and title, updates last_seen and does not add a row. "
-    "days.new is the deduped trend count; days.seen_again is reposts."
+    "days.new is the deduped trend count; days.seen_again is reposts. "
+    "seniority, skills, workplace, junior_friendly, and regions are extracted "
+    "from the title, description, tags, and location."
 )
+
+_SCHEMA_VERSION = 2
 
 _RECORD_COLUMNS = (
     "job_id",
@@ -53,8 +59,21 @@ _RECORD_COLUMNS = (
     "posted_at",
     "url",
     "fetched_at",
+    "seniority",
+    "skills",
+    "workplace",
+    "junior_friendly",
+    "regions",
     "canonical_url",
     "identity_key",
+)
+
+_EXTRACTION_COLUMNS = (
+    ("seniority", "TEXT NOT NULL DEFAULT 'unknown'"),
+    ("skills", "TEXT NOT NULL DEFAULT '[]'"),
+    ("workplace", "TEXT NOT NULL DEFAULT 'unknown'"),
+    ("junior_friendly", "INTEGER NOT NULL DEFAULT 0"),
+    ("regions", "TEXT NOT NULL DEFAULT '[]'"),
 )
 
 
@@ -126,7 +145,7 @@ class PostingStore:
         """
 
         for path in normalized_snapshots(root):
-            jobs = [JobPosting.from_dict(row) for row in load_normalized(path)]
+            jobs = [ensure_extracted(row) for row in load_normalized(path)]
             self.upsert(jobs, seen_on=path.stem)
 
     def stats_for(self, date: str) -> CatalogStats:
@@ -186,6 +205,7 @@ class PostingStore:
             "SELECT 1 FROM sqlite_master WHERE type = 'table' AND name = 'postings'"
         ).fetchone()
         if existing is not None:
+            self._migrate_extraction_columns()
             return
         self._conn.execute("BEGIN")
         try:
@@ -204,6 +224,11 @@ class PostingStore:
                     posted_at TEXT,
                     url TEXT NOT NULL,
                     fetched_at TEXT NOT NULL,
+                    seniority TEXT NOT NULL DEFAULT 'unknown',
+                    skills TEXT NOT NULL DEFAULT '[]',
+                    workplace TEXT NOT NULL DEFAULT 'unknown',
+                    junior_friendly INTEGER NOT NULL DEFAULT 0,
+                    regions TEXT NOT NULL DEFAULT '[]',
                     canonical_url TEXT NOT NULL,
                     identity_key TEXT NOT NULL,
                     first_seen TEXT NOT NULL,
@@ -233,7 +258,30 @@ class PostingStore:
                 ON postings(identity_key)
                 """
             )
-            self._conn.execute("PRAGMA user_version = 1")
+            self._conn.execute(f"PRAGMA user_version = {_SCHEMA_VERSION}")
+        except Exception:
+            self._conn.execute("ROLLBACK")
+            raise
+        self._conn.execute("COMMIT")
+
+    def _migrate_extraction_columns(self) -> None:
+        """Add Day 3 columns to a catalog created before extraction existed.
+
+        A second open finds the columns and does not write.
+        """
+
+        present = {
+            row["name"]
+            for row in self._conn.execute("PRAGMA table_info(postings)")
+        }
+        missing = [column for column in _EXTRACTION_COLUMNS if column[0] not in present]
+        if not missing:
+            return
+        self._conn.execute("BEGIN")
+        try:
+            for name, ddl in missing:
+                self._conn.execute(f"ALTER TABLE postings ADD COLUMN {name} {ddl}")
+            self._conn.execute(f"PRAGMA user_version = {_SCHEMA_VERSION}")
         except Exception:
             self._conn.execute("ROLLBACK")
             raise
@@ -371,7 +419,10 @@ def persist_collection(
     )
     document, stats = sync_catalog(root, date=date)
     catalog = write_catalog(catalog_path(root), document)
-    return [*written, database_path(root), catalog], stats
+    postings = document.get("postings")
+    rows = [row for row in postings if isinstance(row, dict)] if isinstance(postings, list) else []
+    trends = write_trends(trends_path(root), build_trends(rows))
+    return [*written, database_path(root), catalog, trends], stats
 
 
 def sync_catalog(root: Path, *, date: str) -> tuple[dict[str, Any], CatalogStats]:
@@ -452,6 +503,11 @@ def _record(job: JobPosting) -> dict[str, Any]:
         "posted_at": job.posted_at,
         "url": job.url,
         "fetched_at": job.fetched_at,
+        "seniority": job.seniority,
+        "skills": json.dumps(job.skills, ensure_ascii=False, separators=(",", ":")),
+        "workplace": job.workplace,
+        "junior_friendly": 1 if job.junior_friendly else 0,
+        "regions": json.dumps(job.regions, ensure_ascii=False, separators=(",", ":")),
         "canonical_url": canonical_url(job.url),
         "identity_key": identity_key(job.company, job.title),
     }
@@ -490,7 +546,31 @@ def _job_from_row(row: sqlite3.Row) -> JobPosting:
         posted_at=row["posted_at"],
         url=row["url"],
         fetched_at=row["fetched_at"],
+        seniority=_text_column(row, "seniority", "unknown"),
+        skills=_json_strings(row, "skills"),
+        workplace=_text_column(row, "workplace", "unknown"),
+        junior_friendly=bool(_text_column(row, "junior_friendly", 0)),
+        regions=_json_strings(row, "regions"),
     )
+
+
+def _text_column(row: sqlite3.Row, name: str, default: object) -> object:
+    if name not in row.keys() or row[name] is None:
+        return default
+    return row[name]
+
+
+def _json_strings(row: sqlite3.Row, name: str) -> list[str]:
+    raw = _text_column(row, name, "[]")
+    if isinstance(raw, list):
+        parsed: object = raw
+    elif isinstance(raw, str):
+        parsed = json.loads(raw)
+    else:
+        raise ValueError(f"Stored {name} for {row['job_id']} are invalid")
+    if not isinstance(parsed, list) or any(not isinstance(item, str) for item in parsed):
+        raise ValueError(f"Stored {name} for {row['job_id']} are invalid")
+    return list(parsed)
 
 
 def _export_posting(row: sqlite3.Row) -> dict[str, Any]:

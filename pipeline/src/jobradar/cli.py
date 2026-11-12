@@ -1,4 +1,4 @@
-"""Command line: `jobradar fetch` and `jobradar summary`."""
+"""Command line: `jobradar fetch`, `jobradar summary`, and `jobradar extract`."""
 
 from __future__ import annotations
 
@@ -7,6 +7,7 @@ import re
 import sys
 from datetime import datetime, timezone
 
+from jobradar.enrich import enrich_repository
 from jobradar.paths import find_repo_root
 from jobradar.pipeline import (
     build_normalized_document,
@@ -45,6 +46,11 @@ def run(argv: list[str] | None = None) -> int:
     summary = sub.add_parser("summary", help="Print counts, tags, remote share, and junior share")
     summary.add_argument("--date", help="Snapshot date YYYY-MM-DD (default: latest)")
 
+    sub.add_parser(
+        "extract",
+        help="Fill seniority, skills, and workplace on stored snapshots and write trends.json",
+    )
+
     args = parser.parse_args(argv)
     try:
         root = find_repo_root()
@@ -54,6 +60,9 @@ def run(argv: list[str] | None = None) -> int:
 
     if args.command == "fetch":
         return _fetch(root, args.date)
+    if args.command == "extract":
+        print(enrich_repository(root))
+        return 0
     return _summary(root, args.date)
 
 

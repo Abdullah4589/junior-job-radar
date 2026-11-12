@@ -7,6 +7,7 @@ from datetime import datetime, timezone
 from typing import Any
 
 from jobradar.classify import clean_tags, junior_signals_from_job_types
+from jobradar.extract import apply_extraction
 from jobradar.models import JobPosting
 
 _EMPTY_SALARY = {"", "0", "n/a", "na", "none", "not specified", "unspecified"}
@@ -23,18 +24,21 @@ def normalize_remotive(record: dict[str, Any], *, fetched_at: str) -> JobPosting
     if not title or not url or record.get("id") is None:
         return None
     location = _clean_text(record.get("candidate_required_location")) or "Remote"
-    return JobPosting(
-        id=f"remotive:{record.get('id')}",
-        source="remotive",
-        title=title,
-        company=_clean_text(record.get("company_name")) or "Unknown",
-        location=location,
-        remote=True,
-        tags=clean_tags(_as_list(record.get("tags")), source="remotive", title=title),
-        salary_text=_clean_salary_text(record.get("salary")),
-        posted_at=to_utc_iso(record.get("publication_date")),
-        url=url,
-        fetched_at=fetched_at,
+    return _finish(
+        JobPosting(
+            id=f"remotive:{record.get('id')}",
+            source="remotive",
+            title=title,
+            company=_clean_text(record.get("company_name")) or "Unknown",
+            location=location,
+            remote=True,
+            tags=clean_tags(_as_list(record.get("tags")), source="remotive", title=title),
+            salary_text=_clean_salary_text(record.get("salary")),
+            posted_at=to_utc_iso(record.get("publication_date")),
+            url=url,
+            fetched_at=fetched_at,
+        ),
+        record,
     )
 
 
@@ -44,18 +48,21 @@ def normalize_remoteok(record: dict[str, Any], *, fetched_at: str) -> JobPosting
     if not title or not url or record.get("id") is None:
         return None
     location = _clean_text(record.get("location")) or "Remote"
-    return JobPosting(
-        id=f"remoteok:{record.get('id')}",
-        source="remoteok",
-        title=title,
-        company=_clean_text(record.get("company")) or "Unknown",
-        location=location,
-        remote=True,
-        tags=clean_tags(_as_list(record.get("tags")), source="remoteok", title=title),
-        salary_text=format_salary_range(record.get("salary_min"), record.get("salary_max")),
-        posted_at=to_utc_iso(record.get("date") or record.get("epoch")),
-        url=url,
-        fetched_at=fetched_at,
+    return _finish(
+        JobPosting(
+            id=f"remoteok:{record.get('id')}",
+            source="remoteok",
+            title=title,
+            company=_clean_text(record.get("company")) or "Unknown",
+            location=location,
+            remote=True,
+            tags=clean_tags(_as_list(record.get("tags")), source="remoteok", title=title),
+            salary_text=format_salary_range(record.get("salary_min"), record.get("salary_max")),
+            posted_at=to_utc_iso(record.get("date") or record.get("epoch")),
+            url=url,
+            fetched_at=fetched_at,
+        ),
+        record,
     )
 
 
@@ -73,19 +80,36 @@ def normalize_arbeitnow(record: dict[str, Any], *, fetched_at: str) -> JobPostin
     for signal in junior_signals_from_job_types(_as_list(record.get("job_types"))):
         if signal not in tags:
             tags.append(signal)
-    return JobPosting(
-        id=f"arbeitnow:{slug}",
-        source="arbeitnow",
-        title=title,
-        company=_clean_text(record.get("company_name")) or "Unknown",
-        location=location,
-        remote=remote_flag,
-        tags=tags,
-        salary_text=None,
-        posted_at=to_utc_iso(record.get("created_at")),
-        url=url,
-        fetched_at=fetched_at,
+    return _finish(
+        JobPosting(
+            id=f"arbeitnow:{slug}",
+            source="arbeitnow",
+            title=title,
+            company=_clean_text(record.get("company_name")) or "Unknown",
+            location=location,
+            remote=remote_flag,
+            tags=tags,
+            salary_text=None,
+            posted_at=to_utc_iso(record.get("created_at")),
+            url=url,
+            fetched_at=fetched_at,
+        ),
+        record,
+        extra_labels=[item for item in _as_list(record.get("job_types")) if isinstance(item, str)],
     )
+
+
+def _finish(
+    posting: JobPosting,
+    record: dict[str, Any],
+    *,
+    extra_labels: list[str] | None = None,
+) -> JobPosting:
+    description = record.get("description") if isinstance(record.get("description"), str) else ""
+    labels = [item for item in _as_list(record.get("tags")) if isinstance(item, str)]
+    if extra_labels:
+        labels.extend(extra_labels)
+    return apply_extraction(posting, description=description, labels=labels)
 
 
 def format_salary_range(minimum: object, maximum: object) -> str | None:
