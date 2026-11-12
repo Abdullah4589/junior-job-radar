@@ -46,13 +46,26 @@ An optional LLM pass runs only when `JOBRADAR_LLM_URL` is set. `JOBRADAR_LLM_API
 
 The 2026-11-12 fetch, after this extractor, reported 93 software postings and a catalog of 223 unique rows: 16 junior-friendly, workplace 55 remote / 17 hybrid / 150 onsite / 1 unknown. These boards are still senior-heavy (74 senior, 8 junior, 8 intern). Top catalog skills started with AI, Security, Backend, Python, and Full-Stack. Negation is not understood ("Java is not required" still counts Java). Historical snapshots have no description text, so their skills come from the title and tags.
 
-## Day 4–5 — Next.js dashboard
+## Day 4 — Dashboard overview (done)
 
-- New `web/` app (App Router, TypeScript). Read the normalized snapshots; do not call job APIs from the browser.
-- Charts for top skills, remote vs on-site, junior share, and salary-mention rate.
-- Filters for source, remote, seniority, and a date range.
+`web/` is a Next.js App Router app (TypeScript, Tailwind, shadcn/ui, Recharts). It does not call the job boards and it has no environment variables. `web/lib/catalog/load.ts` reads `data/catalog/trends.json` and `data/catalog/postings.json` while the page is built, checks that the two files describe the same catalog, and caches that result with `use cache`.
+
+The overview page shows:
+
+- Unique postings, the junior-friendly share (intern + junior), and the fully remote share (`workplace.remote`, hybrid kept separate).
+- New postings per snapshot day, from `days.new`. Seen-again counts stay in the chart tooltip.
+- Seniority and workplace breakdowns.
+- Top skills from `trends.json`.
+
+Run it from `web/` with `npm install`, then `npm run dev`. `npm run lint` and `npm run build` both have to pass. The footer names Remotive, Remote OK, and Arbeitnow. Filters, the postings table, per-posting links, salary-mention rate, and empty-state polish are Day 5. There is no dashboard workflow yet (Day 6) and no deploy (Day 7).
+
+## Day 5 — Filters, postings, and polish
+
+- Filters for source, workplace, seniority, and a date range, applied to the catalog the overview already loads.
+- A table of postings with the original URL on each row.
 - Empty, loading, and single-source-failed states.
-- Credit Remote OK, Remotive, and Arbeitnow on the page, with direct links back to the original postings.
+- Salary-mention rate beside the other overview figures.
+- Keep the source credits, and link each displayed job back to the board.
 
 ## Day 6 — Tests and CI
 
