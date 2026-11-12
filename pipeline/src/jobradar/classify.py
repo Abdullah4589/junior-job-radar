@@ -1,9 +1,9 @@
-"""Title and tag heuristics for Day 1.
+"""Title and tag heuristics that decide whether a posting is in scope.
 
-Day 3 replaces this with a dedicated extractor. The rules stay narrow on
-purpose: Remote OK attaches unrelated tags (a nurse listing can be tagged
-"golang"), so a tag is not evidence of a software role unless the title
-agrees with it.
+Skill, seniority, and workplace extraction live in `jobradar.extract`.
+`looks_junior` delegates there so the summary and this module share one
+definition. Remote OK still attaches unrelated tags, so a tag is not
+evidence of a software role unless the title agrees with it.
 """
 
 from __future__ import annotations
@@ -233,23 +233,6 @@ _TAG_ALIASES = {
     "k8s": "kubernetes",
 }
 
-_JUNIOR_PATTERNS: tuple[re.Pattern[str], ...] = (
-    re.compile(r"\bjunior\b", re.IGNORECASE),
-    re.compile(r"\bjr\b", re.IGNORECASE),
-    re.compile(r"\bentry[-\s]?level\b", re.IGNORECASE),
-    re.compile(r"\bintern(?:ship)?s?\b", re.IGNORECASE),
-    re.compile(r"\bnew\s+grads?\b", re.IGNORECASE),
-    re.compile(r"\bnew\s+graduate\b", re.IGNORECASE),
-    re.compile(r"\btrainee\b", re.IGNORECASE),
-    re.compile(r"\bapprentice(?:ship)?\b", re.IGNORECASE),
-    re.compile(r"\bearly[-\s]?career\b", re.IGNORECASE),
-    re.compile(r"\bfresher\b", re.IGNORECASE),
-    re.compile(r"\bworking\s+student\b", re.IGNORECASE),
-    re.compile(r"\bgraduate\s+(?:program|programme|scheme|role)\b", re.IGNORECASE),
-    re.compile(r"\bassociate\s+(?:software|engineer|developer|data)\b", re.IGNORECASE),
-)
-
-
 def is_software_role(
     title: str,
     *,
@@ -273,17 +256,16 @@ def is_software_role(
 
 
 def looks_junior(title: str, tags: list[str] | None = None) -> bool:
-    """Keyword check for junior, intern, and entry-level wording.
+    """True when the extractor calls the role intern or junior.
 
-    This is a baseline for the Day 1 summary. It does not read the
-    description, and "senior" is not treated as a negative signal beyond
-    the absence of a junior phrase.
+    Description text is ignored here. A senior title stays senior even if
+    the description mentions mentoring junior engineers.
     """
 
-    blob = title
-    if tags:
-        blob = f"{title} {' '.join(tags)}"
-    return any(pattern.search(blob) for pattern in _JUNIOR_PATTERNS)
+    from jobradar.extract import extract_posting
+
+    found = extract_posting(title=title, tags=list(tags or []), refine=False)
+    return found.junior_friendly
 
 
 def skills_in_title(title: str) -> list[str]:

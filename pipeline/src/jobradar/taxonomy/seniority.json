@@ -1,0 +1,80 @@
+{
+  "levels": [
+    {
+      "name": "manager",
+      "rank": 80,
+      "patterns": [
+        "\\bhead of\\b",
+        "\\bdirectors?\\b",
+        "\\bvice president\\b",
+        "\\bvp\\b",
+        "\\bmanagers?\\b"
+      ]
+    },
+    {
+      "name": "principal",
+      "rank": 70,
+      "patterns": ["\\bprincipal\\b"]
+    },
+    {
+      "name": "staff",
+      "rank": 60,
+      "patterns": ["\\bstaff\\b"]
+    },
+    {
+      "name": "lead",
+      "rank": 50,
+      "patterns": ["\\bleads?\\b"]
+    },
+    {
+      "name": "senior",
+      "rank": 40,
+      "patterns": [
+        "\\bseniors?\\b",
+        "\\bsr\\b",
+        "\\b(?:engineer|developer|sde)\\s+(?:iii|3)\\b"
+      ]
+    },
+    {
+      "name": "mid",
+      "rank": 30,
+      "patterns": [
+        "\\bmid[-\\s]?level\\b",
+        "\\bmid\\b",
+        "\\bintermediate\\b",
+        "\\bmedior\\b",
+        "\\b(?:engineer|developer|sde)\\s+(?:ii|2)\\b"
+      ]
+    },
+    {
+      "name": "junior",
+      "rank": 20,
+      "patterns": [
+        "\\bjunior\\b",
+        "\\bjr\\b",
+        "\\bentry[-\\s]?level\\b",
+        "\\bnew\\s+grads?\\b",
+        "\\bnew\\s+graduates?\\b",
+        "\\bearly[-\\s]?careers?\\b",
+        "\\bfreshers?\\b",
+        "\\bgraduate\\s+(?:software|engineer|developer|program|programme|scheme|role)s?\\b",
+        "\\bassociates?\\s+(?:software|engineers?|developers?|data)\\b"
+      ]
+    },
+    {
+      "name": "intern",
+      "rank": 10,
+      "patterns": [
+        "\\bintern(?:ship)?s?\\b",
+        "\\bworking\\s+students?\\b",
+        "\\bwerkstudents?\\b",
+        "\\bpraktikum\\b",
+        "\\btrainees?\\b",
+        "\\bapprentice(?:ship)?s?\\b",
+        "\\blehr(?:stelle|ling|start)\\b",
+        "(?:^|\\s[-–—(])\\s*stages?\\b",
+        "\\bstages?\\s*[:–—-]"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "regions": [
+    {
+      "canonical": "United States",
+      "aliases": ["united states", "usa", "u.s.a.", "u.s.", "us only", "usa only", "new york", "san francisco", "seattle", "boston", "austin", "chicago", "los angeles", "california", "texas"],
+      "case_sensitive": ["US", "USA", "U.S.", "U.S.A."]
+    },
+    {
+      "canonical": "Canada",
+      "aliases": ["canada", "toronto", "vancouver", "montreal"]
+    },
+    {
+      "canonical": "United Kingdom",
+      "aliases": ["united kingdom", "great britain", "britain", "england", "scotland", "wales", "uk only", "london", "manchester", "edinburgh"],
+      "case_sensitive": ["UK", "U.K."]
+    },
+    {
+      "canonical": "European Union",
+      "aliases": ["european union", "eu only"],
+      "case_sensitive": ["EU"]
+    },
+    {
+      "canonical": "Europe",
+      "aliases": ["europe"]
+    },
+    {
+      "canonical": "EMEA",
+      "aliases": ["emea"]
+    },
+    {
+      "canonical": "Latin America",
+      "aliases": ["latin america", "latam"]
+    },
+    {
+      "canonical": "Asia Pacific",
+      "aliases": ["asia pacific", "apac"]
+    },
+    {
+      "canonical": "North America",
+      "aliases": ["north america"]
+    },
+    {
+      "canonical": "Germany",
+      "aliases": ["germany", "deutschland", "munich", "berlin", "hamburg", "frankfurt", "cologne", "stuttgart", "bavaria", "bayern"]
+    },
+    {
+      "canonical": "France",
+      "aliases": ["france", "paris", "lyon", "toulouse", "occitanie", "marseille", "lille", "nantes", "bordeaux", "strasbourg"]
+    },
+    {
+      "canonical": "Netherlands",
+      "aliases": ["netherlands", "holland", "nederland", "amsterdam", "rotterdam", "eindhoven", "utrecht"]
+    },
+    {
+      "canonical": "Spain",
+      "aliases": ["spain", "madrid", "barcelona"]
+    },
+    {
+      "canonical": "Italy",
+      "aliases": ["italy", "milan", "rome", "roma"]
+    },
+    {
+      "canonical": "Switzerland",
+      "aliases": ["switzerland", "schweiz", "zurich", "zürich", "geneva"]
+    },
+    {
+      "canonical": "Austria",
+      "aliases": ["austria", "vienna", "wien"]
+    },
+    {
+      "canonical": "Belgium",
+      "aliases": ["belgium", "brussels"]
+    },
+    {
+      "canonical": "Portugal",
+      "aliases": ["portugal", "lisbon"]
+    },
+    {
+      "canonical": "Poland",
+      "aliases": ["poland", "warsaw"]
+    },
+    {
+      "canonical": "Sweden",
+      "aliases": ["sweden", "stockholm"]
+    },
+    {
+      "canonical": "Ireland",
+      "aliases": ["ireland", "dublin"]
+    },
+    {
+      "canonical": "Denmark",
+      "aliases": ["denmark", "copenhagen"]
+    },
+    {
+      "canonical": "Finland",
+      "aliases": ["finland", "helsinki"]
+    },
+    {
+      "canonical": "Czechia",
+      "aliases": ["czechia", "czech republic", "prague"]
+    },
+    {
+      "canonical": "India",
+      "aliases": ["india", "bengaluru", "bangalore"]
+    },
+    {
+      "canonical": "Pakistan",
+      "aliases": ["pakistan", "karachi", "lahore"]
+    },
+    {
+      "canonical": "Australia",
+      "aliases": ["australia", "sydney", "melbourne"]
+    },
+    {
+      "canonical": "Brazil",
+      "aliases": ["brazil", "são paulo", "sao paulo"]
+    },
+    {
+      "canonical": "Mexico",
+      "aliases": ["mexico", "mexico city"]
+    },
+    {
+      "canonical": "Singapore",
+      "aliases": ["singapore"]
+    },
+    {
+      "canonical": "Japan",
+      "aliases": ["japan", "tokyo"]
+    }
+  ]
+}

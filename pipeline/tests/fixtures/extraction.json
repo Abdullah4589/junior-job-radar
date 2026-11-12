@@ -1,0 +1,422 @@
+[
+  {
+    "name": "js and k8s aliases do not match json",
+    "title": "JS Platform Engineer",
+    "description": "<p>Build services in JavaScript and Node.js. We run on k8s, not raw JSON files. Google Cloud is the host.</p>",
+    "location": "Remote - US only",
+    "remote": true,
+    "tags": ["js", "node"],
+    "expect": {
+      "skills": ["JavaScript", "Node.js", "Kubernetes", "Google Cloud"],
+      "seniority": "unknown",
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": ["United States"]
+    }
+  },
+  {
+    "name": "go r and c do not match inside ordinary words",
+    "title": "Senior Platform Engineer",
+    "description": "We will go to the office. Join us for R&D on React and C++ / C#. Customers contact us. Google is a vendor.",
+    "location": "Munich, Germany",
+    "remote": false,
+    "tags": [],
+    "expect": {
+      "skills": ["React", "C++", "C#"],
+      "seniority": "senior",
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": ["Germany"]
+    }
+  },
+  {
+    "name": "go r and c match when they are the language",
+    "title": "Senior Go Engineer",
+    "description": "Production Go services. Data science in R. Systems code in C, plus Python.",
+    "location": "Remote",
+    "remote": true,
+    "tags": ["golang"],
+    "expect": {
+      "skills": ["Go", "Data Science", "R", "C", "Python"],
+      "seniority": "senior",
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
+    }
+  },
+  {
+    "name": "javascript is not java and c++ is not c",
+    "title": "JavaScript and C++ Engineer",
+    "description": "Familiarity with JSON APIs.",
+    "location": "",
+    "remote": false,
+    "tags": [],
+    "expect": {
+      "skills": ["JavaScript", "C++"],
+      "seniority": "unknown",
+      "workplace": "unknown",
+      "junior_friendly": false,
+      "regions": []
+    }
+  },
+  {
+    "name": "c and c++ are both present in c/c++",
+    "title": "Systems Engineer",
+    "description": "Strong C/C++ required.",
+    "location": "Austin",
+    "remote": false,
+    "tags": [],
+    "expect": {
+      "skills": ["C", "C++"],
+      "seniority": "unknown",
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": ["United States"]
+    }
+  },
+  {
+    "name": "a senior title is not junior because the description mentors juniors",
+    "title": "Senior Backend Engineer",
+    "description": "You will mentor junior developers and run our internship program. This is not an entry-level role.",
+    "location": "",
+    "remote": false,
+    "tags": ["python"],
+    "expect": {
+      "skills": ["Backend", "Python"],
+      "seniority": "senior",
+      "workplace": "unknown",
+      "junior_friendly": false,
+      "regions": []
+    }
+  },
+  {
+    "name": "keywords do not understand negation",
+    "title": "JavaScript Engineer",
+    "description": "Java is not required.",
+    "location": "",
+    "remote": false,
+    "tags": [],
+    "expect": {
+      "skills": ["JavaScript", "Java"],
+      "seniority": "unknown",
+      "workplace": "unknown",
+      "junior_friendly": false,
+      "regions": []
+    }
+  },
+  {
+    "name": "entry-level tag and empty description",
+    "title": "Software Engineer",
+    "description": "",
+    "location": "Berlin",
+    "remote": false,
+    "tags": ["entry-level", "java"],
+    "expect": {
+      "skills": ["Java"],
+      "seniority": "junior",
+      "workplace": "onsite",
+      "junior_friendly": true,
+      "regions": ["Germany"]
+    }
+  },
+  {
+    "name": "hybrid london role",
+    "title": "Mid-level Full-Stack Engineer (Hybrid)",
+    "description": "3 days on-site in London, 2 days remote.",
+    "location": "London",
+    "remote": false,
+    "tags": ["react", "typescript"],
+    "expect": {
+      "skills": ["Full-Stack", "React", "TypeScript"],
+      "seniority": "mid",
+      "workplace": "hybrid",
+      "junior_friendly": false,
+      "regions": ["United Kingdom"]
+    }
+  },
+  {
+    "name": "asp.net is dotnet",
+    "title": "ASP.NET Developer",
+    "description": "",
+    "location": "Remote",
+    "remote": true,
+    "tags": [],
+    "expect": {
+      "skills": [".NET"],
+      "seniority": "unknown",
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
+    }
+  },
+  {
+    "name": "internal is not an internship",
+    "title": "Internal Tools Engineer",
+    "description": "",
+    "location": "",
+    "remote": false,
+    "tags": [],
+    "expect": {
+      "skills": [],
+      "seniority": "unknown",
+      "workplace": "unknown",
+      "junior_friendly": false,
+      "regions": []
+    }
+  },
+  {
+    "name": "early stage is not a french internship",
+    "title": "Early Stage Startup Engineer",
+    "description": "",
+    "location": "",
+    "remote": false,
+    "tags": [],
+    "expect": {
+      "skills": [],
+      "seniority": "unknown",
+      "workplace": "unknown",
+      "junior_friendly": false,
+      "regions": []
+    }
+  },
+  {
+    "name": "french stage title is an internship",
+    "title": "Software Engineer - Stage",
+    "description": "",
+    "location": "Paris",
+    "remote": false,
+    "tags": [],
+    "expect": {
+      "skills": [],
+      "seniority": "intern",
+      "workplace": "onsite",
+      "junior_friendly": true,
+      "regions": ["France"]
+    }
+  },
+  {
+    "name": "staff outranks senior",
+    "title": "(Senior/Staff) Platform Engineer",
+    "description": "",
+    "location": "",
+    "remote": true,
+    "tags": [],
+    "expect": {
+      "skills": [],
+      "seniority": "staff",
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
+    }
+  },
+  {
+    "name": "associate director is a manager",
+    "title": "Associate Director of Engineering",
+    "description": "",
+    "location": "",
+    "remote": false,
+    "tags": [],
+    "expect": {
+      "skills": [],
+      "seniority": "manager",
+      "workplace": "unknown",
+      "junior_friendly": false,
+      "regions": []
+    }
+  },
+  {
+    "name": "engineer ii is mid and 2d is not",
+    "title": "Software Engineer II, System Integration",
+    "description": "",
+    "location": "",
+    "remote": false,
+    "tags": [],
+    "expect": {
+      "skills": [],
+      "seniority": "mid",
+      "workplace": "unknown",
+      "junior_friendly": false,
+      "regions": []
+    }
+  },
+  {
+    "name": "2d game title is not level two",
+    "title": "2D Game Developer (Defold) (Remote-Worldwide)",
+    "description": "",
+    "location": "Remote",
+    "remote": true,
+    "tags": [],
+    "expect": {
+      "skills": ["Defold"],
+      "seniority": "unknown",
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
+    }
+  },
+  {
+    "name": "tech lead rails",
+    "title": "Tech Lead Full-Stack Rails Engineer",
+    "description": "",
+    "location": "LATAM",
+    "remote": true,
+    "tags": [],
+    "expect": {
+      "skills": ["Full-Stack", "Ruby on Rails"],
+      "seniority": "lead",
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": ["Latin America"]
+    }
+  },
+  {
+    "name": "region restriction in the description",
+    "title": "Backend Engineer",
+    "description": "Applicants must be located in Germany or the EU.",
+    "location": "Remote",
+    "remote": true,
+    "tags": [],
+    "expect": {
+      "skills": ["Backend"],
+      "seniority": "unknown",
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": ["Germany", "European Union"]
+    }
+  },
+  {
+    "name": "join us is not the united states and go to is not golang",
+    "title": "Frontend Engineer",
+    "description": "Come join us and build UI. We will go to market.",
+    "location": "Remote - Canada",
+    "remote": true,
+    "tags": [],
+    "expect": {
+      "skills": ["Frontend"],
+      "seniority": "unknown",
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": ["Canada"]
+    }
+  },
+  {
+    "name": "script blocks are not skills and k8s in a tag is kubernetes",
+    "title": "Python Developer",
+    "description": "<script>var go = \"golang\";</script><p>We use <strong>Kubernetes</strong>.</p>",
+    "location": "",
+    "remote": false,
+    "tags": ["k8s"],
+    "expect": {
+      "skills": ["Python", "Kubernetes"],
+      "seniority": "unknown",
+      "workplace": "unknown",
+      "junior_friendly": false,
+      "regions": []
+    }
+  },
+  {
+    "name": "jr and new grad and qa entry level",
+    "title": "Jr. Backend Engineer",
+    "description": "",
+    "location": "",
+    "remote": false,
+    "tags": [],
+    "expect": {
+      "skills": ["Backend"],
+      "seniority": "junior",
+      "workplace": "unknown",
+      "junior_friendly": true,
+      "regions": []
+    }
+  },
+  {
+    "name": "new grad",
+    "title": "New Grad Data Engineer",
+    "description": "",
+    "location": "",
+    "remote": false,
+    "tags": [],
+    "expect": {
+      "skills": [],
+      "seniority": "junior",
+      "workplace": "unknown",
+      "junior_friendly": true,
+      "regions": []
+    }
+  },
+  {
+    "name": "qa tester entry level",
+    "title": "QA Tester Entry Level",
+    "description": "",
+    "location": "",
+    "remote": false,
+    "tags": [],
+    "expect": {
+      "skills": ["QA"],
+      "seniority": "junior",
+      "workplace": "unknown",
+      "junior_friendly": true,
+      "regions": []
+    }
+  },
+  {
+    "name": "head of engineering",
+    "title": "Head of Engineering",
+    "description": "",
+    "location": "",
+    "remote": false,
+    "tags": [],
+    "expect": {
+      "skills": [],
+      "seniority": "manager",
+      "workplace": "unknown",
+      "junior_friendly": false,
+      "regions": []
+    }
+  },
+  {
+    "name": "an accented word is not the r language",
+    "title": "Senior Platform Engineer",
+    "description": "<p><strong>Rémunération</strong>: 60 000€ à 70 000€. AI in Recruitment is a separate team.</p>",
+    "location": "Paris",
+    "remote": false,
+    "tags": [],
+    "expect": {
+      "skills": ["AI"],
+      "seniority": "senior",
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": ["France"]
+    }
+  },
+  {
+    "name": "a marketing mention of countries is not a restriction",
+    "title": "Frontend Engineer",
+    "description": "Lemon.io helps companies in the US and Europe hire engineers from 75+ countries.",
+    "location": "Remote",
+    "remote": true,
+    "tags": [],
+    "expect": {
+      "skills": ["Frontend"],
+      "seniority": "unknown",
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
+    }
+  },
+  {
+    "name": "remote and onsite without the word hybrid",
+    "title": "Engineer",
+    "description": "Remote or on-site in Paris.",
+    "location": "",
+    "remote": false,
+    "tags": [],
+    "expect": {
+      "skills": [],
+      "seniority": "unknown",
+      "workplace": "hybrid",
+      "junior_friendly": false,
+      "regions": ["France"]
+    }
+  }
+]

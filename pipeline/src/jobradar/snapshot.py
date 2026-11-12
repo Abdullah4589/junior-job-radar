@@ -8,21 +8,9 @@ import re
 from pathlib import Path
 from typing import Any
 
-from jobradar.models import JobPosting
+from jobradar.models import FIELD_NAMES, JobPosting
 
-CSV_FIELDS = [
-    "id",
-    "source",
-    "title",
-    "company",
-    "location",
-    "remote",
-    "tags",
-    "salary_text",
-    "posted_at",
-    "url",
-    "fetched_at",
-]
+CSV_FIELDS = list(FIELD_NAMES)
 
 
 def write_snapshots(
@@ -92,17 +80,37 @@ def _write_json(path: Path, document: dict[str, Any]) -> None:
     )
 
 
+def replace_normalized_jobs(path: Path, jobs: list[JobPosting]) -> None:
+    """Replace the jobs in one snapshot and rewrite its CSV. Other dates stay."""
+
+    document = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(document, dict):
+        raise ValueError(f"{path} is not a JSON object")
+    document["jobs"] = [job.to_dict() for job in jobs]
+    document["count"] = len(jobs)
+    _write_json(path, document)
+    _write_csv(path.with_suffix(".csv"), jobs)
+
+
 def _write_csv(path: Path, jobs: list[JobPosting]) -> None:
     with path.open("w", encoding="utf-8", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=CSV_FIELDS)
         writer.writeheader()
         for job in jobs:
             row = job.to_dict()
-            tags = row["tags"]
-            row["tags"] = "|".join(tags) if isinstance(tags, list) else ""
+            row["tags"] = _pipe(row["tags"])
+            row["skills"] = _pipe(row["skills"])
+            row["regions"] = _pipe(row["regions"])
             row["remote"] = "true" if row["remote"] else "false"
+            row["junior_friendly"] = "true" if row["junior_friendly"] else "false"
             if row["salary_text"] is None:
                 row["salary_text"] = ""
             if row["posted_at"] is None:
                 row["posted_at"] = ""
             writer.writerow(row)
+
+
+def _pipe(value: object) -> str:
+    if not isinstance(value, list):
+        return ""
+    return "|".join(item for item in value if isinstance(item, str))

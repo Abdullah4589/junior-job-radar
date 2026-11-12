@@ -4,15 +4,15 @@ Daily pipeline and (from Day 4) dashboard that tracks public junior and remote s
 
 Built by Abdullah, a software-engineering graduate in Karachi, as a public portfolio project. It uses free job-board APIs only. There is no paid plan and no API key.
 
-Day 1 is the ingestion pipeline. Day 2 stores every posting in a deduped catalog and runs the fetch on a daily schedule. The dashboard and deployment come later. The day-by-day plan is in [docs/ROADMAP.md](docs/ROADMAP.md).
+Day 1 is the ingestion pipeline. Day 2 stores every posting in a deduped catalog and runs the fetch on a daily schedule. Day 3 adds skill, seniority, and workplace extraction. The dashboard and deployment come later. The day-by-day plan is in [docs/ROADMAP.md](docs/ROADMAP.md).
 
 ## Roadmap
 
 | Day | Work |
 | --- | --- |
 | 1 | Python ingestion pipeline, normalized snapshots, `fetch` and `summary` |
-| 2 | Deduped SQLite catalog, daily snapshots kept in git, scheduled workflow that opens a pull request (this repo state) |
-| 3 | Skill, seniority, and workplace extraction (keywords, then an optional free LLM with a fallback) |
+| 2 | Deduped SQLite catalog, daily snapshots kept in git, scheduled workflow that opens a pull request |
+| 3 | Skill, seniority, and workplace extraction, stored on each posting and in `data/catalog/trends.json` (this repo state) |
 | 4–5 | Next.js dashboard with charts and filters |
 | 6 | Parser tests, Playwright, CI |
 | 7 | Free-tier deploy and a README with screenshots, methodology, and limitations |
@@ -26,6 +26,7 @@ cd pipeline
 uv sync
 uv run jobradar fetch
 uv run jobradar summary
+uv run jobradar extract
 uv run pytest
 ```
 
@@ -42,19 +43,21 @@ Running `fetch` again on the same UTC date refreshes that date's three snapshot 
 
 A second fetch that sees the same postings does not add rows and does not rewrite the database. A richer repost (a salary, more tags) can fill in the stored row and keeps `first_seen`. A role that disappears from the snapshot files drops out of the catalog. Deleting `data/jobradar.sqlite` and running `fetch` rebuilds it.
 
-`summary` reads the latest normalized snapshot (or `--date YYYY-MM-DD`) and prints counts per source, the top 15 tags, the remote share, and how many postings look junior or entry-level. That summary is one day's file, including roles that were already in an earlier snapshot. The deduped trend series is `days` in the catalog.
+`summary` reads the latest normalized snapshot (or `--date YYYY-MM-DD`) and prints counts per source, the top 15 tags, the remote share, how many postings look junior or entry-level, plus workplace, seniority, and top skills. That summary is one day's file, including roles that were already in an earlier snapshot. The deduped trend series is `days` in the catalog. The deduped skill, seniority, and workplace counts are `data/catalog/trends.json`.
+
+`extract` fills seniority, skills, workplace, `junior_friendly`, and regions on snapshot rows that were stored before those fields existed, then rebuilds the catalog and `trends.json`. A second run does not rewrite files that already match. Fetch already extracts new postings, so `extract` is the backfill.
 
 ## What gets stored
 
 Every normalized posting has the same fields:
 
-`id`, `source`, `title`, `company`, `location`, `remote`, `tags`, `salary_text`, `posted_at`, `url`, `fetched_at`
+`id`, `source`, `title`, `company`, `location`, `remote`, `tags`, `salary_text`, `posted_at`, `url`, `fetched_at`, `seniority`, `skills`, `workplace`, `junior_friendly`, `regions`
 
 A posting is kept when the title (or a Remotive software category, or an Arbeitnow "Software Development" tag) looks like a software role. Sales, nursing, accounting, and similar listings from the same feeds are stored in the raw snapshot and left out of the normalized file.
 
 Duplicates inside one run are collapsed. The same URL matches after tracking parameters are stripped. The same company and title match after punctuation and suffixes like "Inc" or "GmbH" are folded. The record with a salary, more tags, or a posted date wins.
 
-Junior / entry-level in the summary is a keyword check on the title and tags (`junior`, `jr`, `intern`, `entry-level`, `new grad`, `working student`, and a few close phrases). It does not read the job description. Day 3 replaces it with a real extractor.
+Junior / entry-level in the summary is `junior_friendly`: seniority `intern` or `junior`, taken from the title and tags. The highest explicit level wins, so a senior title stays senior when the description mentions mentoring juniors. `workplace` is `remote`, `hybrid`, `onsite`, or `unknown` and does not replace the `remote` boolean. `skills` are canonical names from `pipeline/src/jobradar/taxonomy/skills.json` (`js` and `k8s` fold to JavaScript and Kubernetes). `regions` are limits stated by the title, the location, or a phrase like "must be located in".
 
 Tags are lowercased. Skills named in the title (`python`, `react`, `full-stack`, …) are added so the three boards can be compared. Remote OK's API attaches unrelated tags to listings (a nurse role can be tagged `golang`), so a Remote OK tag is kept only when the title also says it. Generic labels (`engineer`, `full time`) and parenthetical team names (`engineering (ads)`) are dropped. The raw snapshot still has the original tag list.
 
@@ -115,14 +118,15 @@ Top 15 tags
   15. javascript (3)
 ```
 
-That junior share is the finding, not a bug in the count: these three boards are mostly senior. Day 3 can read descriptions, but it should not invent junior roles the titles do not claim.
+That junior share is the finding, not a bug in the count: these three boards are mostly senior. The command now continues with workplace, seniority, and top skills for the same file. `data/catalog/trends.json` is the deduped version of those counts.
 
 ## Limitations
 
 - Remotive's free API currently returns 12 jobs and ignores `category` and `search`. The feed is delayed about 24 hours.
 - Remote OK's tag list is not a skill list. Normalized tags only keep a Remote OK tag when the title supports it.
 - Arbeitnow's first page is 300 mixed roles, mostly on-site in Europe, with no salary field. Software roles are filtered in by title.
-- Junior / entry-level is a keyword check. It misses junior roles whose titles only say "Software Engineer".
+- Seniority does not read the description, and the extractor does not understand negation ("Java is not required" still counts Java). `Go`, `R`, and `C` are matched cautiously so ordinary words are not skills. A description or tag list that names more than 12 skills is ignored as a catalog of other roles; the title still counts. Snapshots from before Day 3 have no description text, so their skills come from the title and tags.
+- Junior / entry-level still misses roles whose titles only say "Software Engineer".
 - Fetching the same UTC date again refreshes that date's snapshot files. Other dates stay. The catalog keeps one row per posting, so a repost updates `last_seen` and the trend count uses `days.new`.
 - No paid APIs and no API keys. The Muse's old public jobs endpoint returned 404 and is not a source.
 
@@ -133,7 +137,9 @@ pipeline/                         Python 3.12 package (uv)
 data/raw/                         One compact payload file per UTC date
 data/normalized/                  One JSON and one CSV per UTC date
 data/catalog/postings.json        Deduped catalog, one row per posting
+data/catalog/trends.json          Top skills, seniority, workplace, regions
 data/jobradar.sqlite              Same catalog in SQLite
+pipeline/src/jobradar/taxonomy/   Skill, seniority, and region lists
 .github/workflows/daily-fetch.yml Daily fetch. Opens a pull request, does not push main
 docs/                             Roadmap for the rest of the week
 web/                              Next.js dashboard, added on Day 4

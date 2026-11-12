@@ -30,13 +30,21 @@ The cross-day catalog is `data/jobradar.sqlite`, dumped for review to `data/cata
 
 Retention: keep every daily file in git. Raw snapshots already drop descriptions and logos, and the catalog grows by newly seen roles rather than by reposts. Revisit if `data/` gets large. The workflow is inactive until this branch is merged to `main`, because `schedule` uses the workflow file on the default branch.
 
-## Day 3 — Skill, seniority, and remote extraction
+## Day 3 — Skill, seniority, and remote extraction (done)
 
-- Replace the Day 1 title-keyword hints with an explicit extractor module.
-- Keyword baseline first: skills, seniority (junior / mid / senior), and remote / hybrid / on-site.
-- Optional free LLM structured extraction behind an environment variable. If no key or the call fails, fall back to the keyword result. The pipeline must still run with zero secrets.
-- Preserve the Day 1 schema and add fields rather than renaming existing ones (`seniority`, `skills`, `workplace`).
-- Unit-test the extractor against saved fixtures, including source failures and empty salary text.
+Keyword extraction lives in `pipeline/src/jobradar/extract.py`. The lists it matches are JSON, not code: `taxonomy/skills.json` (aliases such as `js` → JavaScript and `k8s` → Kubernetes), `taxonomy/seniority.json`, and `taxonomy/regions.json`.
+
+`Go`, `R`, and `C` use a Unicode letter boundary and, for those three, refuse `+`, `#`, and `-`. That keeps `Go` out of "go to the office" and `Google`, `R` out of `Rémunération` and `R&D`, and `C` out of `C++` and `C#`. A description or a tag list that names more than 12 skills is treated as a catalog of other roles (Remote OK and some Remotive posts do this) and does not add skills. The title still counts.
+
+Seniority is read from the title and tags only, highest explicit level wins, and `junior_friendly` is true for `intern` and `junior`. A description that says "mentor junior engineers" does not relabel a senior role. Workplace is `remote`, `hybrid`, `onsite`, or `unknown`. The Day 1 `remote` boolean is unchanged. Region limits come from the title, the location, and restriction phrases ("must be located in", "US only"). A marketing line such as "companies in the US and Europe" is not a restriction.
+
+The Day 1 keys are unchanged and still come first. Each posting now also has `seniority`, `skills`, `workplace`, `junior_friendly`, and `regions`. Older snapshot rows omit those keys; `jobradar extract` fills them from the stored title, tags, and location and does not overwrite a row that already has them. The SQLite catalog is schema version 2: opening a version 1 file adds the columns with defaults, and opening that file again does not rewrite it. Re-running the same snapshots does not rewrite the database.
+
+`uv run jobradar fetch` extracts while it normalizes. `uv run jobradar summary` prints workplace, seniority, and top skills beside the Day 1 counts. The deduped aggregate for the dashboard is `data/catalog/trends.json` (top skills, seniority counts, workplace counts, junior-friendly count, regions).
+
+An optional LLM pass runs only when `JOBRADAR_LLM_URL` is set. `JOBRADAR_LLM_API_KEY` and `JOBRADAR_LLM_MODEL` are optional. A missing URL, a failed call, or a response that is not usable JSON keeps the keyword result. Skills and regions from the model are kept only when they are already in the taxonomy. No key is required to run the pipeline, and none is stored in the repo.
+
+The 2026-11-12 fetch, after this extractor, reported 93 software postings and a catalog of 223 unique rows: 16 junior-friendly, workplace 55 remote / 17 hybrid / 150 onsite / 1 unknown. These boards are still senior-heavy (74 senior, 8 junior, 8 intern). Top catalog skills started with AI, Security, Backend, Python, and Full-Stack. Negation is not understood ("Java is not required" still counts Java). Historical snapshots have no description text, so their skills come from the title and tags.
 
 ## Day 4–5 — Next.js dashboard
 
@@ -77,5 +85,10 @@ Normalized records use these keys, in this order:
 | `posted_at` | string or null | UTC `YYYY-MM-DDTHH:MM:SSZ` |
 | `url` | string | Original posting URL. Link here when displaying a job |
 | `fetched_at` | string | UTC timestamp for the run |
+| `seniority` | string | `intern`, `junior`, `mid`, `senior`, `lead`, `staff`, `principal`, `manager`, or `unknown` |
+| `skills` | string[] | Canonical names from the taxonomy. Aliases are folded (`js` → JavaScript) |
+| `workplace` | string | `remote`, `hybrid`, `onsite`, or `unknown`. Does not replace `remote` |
+| `junior_friendly` | boolean | True when seniority is `intern` or `junior` |
+| `regions` | string[] | Country or macro-region limits when the title, location, or a restriction phrase says so |
 
 Later days may add keys. Do not rename or drop these.

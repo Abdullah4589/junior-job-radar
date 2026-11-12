@@ -17,6 +17,11 @@ dev = ["pytest>=8.3"]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
+[tool.hatch.build.targets.wheel.force-include]
+"src/jobradar/taxonomy/skills.json" = "jobradar/taxonomy/skills.json"
+"src/jobradar/taxonomy/seniority.json" = "jobradar/taxonomy/seniority.json"
+"src/jobradar/taxonomy/regions.json" = "jobradar/taxonomy/regions.json"
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["src"]

@@ -33,7 +33,14 @@
       "salary_text": null,
       "posted_at": "2026-11-10T06:55:20Z",
       "url": "https://www.arbeitnow.com/jobs/companies/celonis/forward-deployed-engineer-cpg-retail-munich-444279",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "unknown",
+      "skills": [],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "Germany"
+      ]
     },
     {
       "id": "arbeitnow:senior-embedded-linux-engineer-munich-402137",
@@ -48,7 +55,17 @@
       "salary_text": null,
       "posted_at": "2026-11-10T06:31:43Z",
       "url": "https://www.arbeitnow.com/jobs/companies/tytan-technologies-gmbh/senior-embedded-linux-engineer-munich-402137",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "senior",
+      "skills": [
+        "Embedded",
+        "Linux"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "Germany"
+      ]
     },
     {
       "id": "arbeitnow:production-esg-data-engineer-amsterdam-214778",
@@ -63,7 +80,14 @@
       "salary_text": null,
       "posted_at": "2026-11-10T06:31:43Z",
       "url": "https://www.arbeitnow.nl/jobs/companies/one-dyas-bv/production-esg-data-engineer-amsterdam-214778",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "unknown",
+      "skills": [],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "Netherlands"
+      ]
     },
     {
       "id": "arbeitnow:full-stack-engineer-munich-77931",
@@ -78,7 +102,16 @@
       "salary_text": null,
       "posted_at": "2026-11-10T06:31:43Z",
       "url": "https://www.arbeitnow.com/jobs/companies/tytan-technologies-gmbh/full-stack-engineer-munich-77931",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "unknown",
+      "skills": [
+        "Full-Stack"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "Germany"
+      ]
     },
     {
       "id": "arbeitnow:demo-software-engineer-london-378723",
@@ -91,7 +124,14 @@
       "salary_text": null,
       "posted_at": "2026-11-10T03:55:28Z",
       "url": "https://www.arbeitnow.co.uk/jobs/companies/contentful/demo-software-engineer-london-378723",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "unknown",
+      "skills": [],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "United Kingdom"
+      ]
     },
     {
       "id": "arbeitnow:lead-software-engineer-integrations-typescript-paris-93071",
@@ -107,7 +147,16 @@
       "salary_text": null,
       "posted_at": "2026-11-10T03:40:17Z",
       "url": "https://www.arbeitnow.fr/jobs/companies/vocca/lead-software-engineer-integrations-typescript-paris-93071",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "lead",
+      "skills": [
+        "TypeScript"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "France"
+      ]
     },
     {
       "id": "arbeitnow:security-engineer-remote-netherlands-471107",
@@ -122,7 +171,16 @@
       "salary_text": null,
       "posted_at": "2026-11-10T03:40:15Z",
       "url": "https://www.arbeitnow.nl/jobs/companies/everai/security-engineer-remote-netherlands-471107",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "unknown",
+      "skills": [
+        "Security"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": [
+        "Netherlands"
+      ]
     },
     {
       "id": "arbeitnow:security-engineer-remote-germany-464932",
@@ -137,7 +195,16 @@
       "salary_text": null,
       "posted_at": "2026-11-10T03:40:15Z",
       "url": "https://www.arbeitnow.com/jobs/companies/everai/security-engineer-remote-germany-464932",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "unknown",
+      "skills": [
+        "Security"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": [
+        "Germany"
+      ]
     },
     {
       "id": "arbeitnow:full-stack-software-engineer-child-safety-tools-systems-london-87438",
@@ -153,7 +220,16 @@
       "salary_text": null,
       "posted_at": "2026-11-10T03:40:15Z",
       "url": "https://www.arbeitnow.co.uk/jobs/companies/openai/full-stack-software-engineer-child-safety-tools-systems-london-87438",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "unknown",
+      "skills": [
+        "Full-Stack"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "United Kingdom"
+      ]
     },
     {
       "id": "arbeitnow:applied-ai-engineer-large-enterprise-munich-164560",
@@ -168,7 +244,16 @@
       "salary_text": null,
       "posted_at": "2026-11-10T03:40:15Z",
       "url": "https://www.arbeitnow.com/jobs/companies/openai/applied-ai-engineer-large-enterprise-munich-164560",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "unknown",
+      "skills": [
+        "AI"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "Germany"
+      ]
     },
     {
       "id": "arbeitnow:software-engineer-london-383579",
@@ -181,7 +266,14 @@
       "salary_text": null,
       "posted_at": "2026-11-10T03:40:14Z",
       "url": "https://www.arbeitnow.co.uk/jobs/companies/axle-careers/software-engineer-london-383579",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "unknown",
+      "skills": [],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "United Kingdom"
+      ]
     },
     {
       "id": "arbeitnow:manager-forward-deployed-engineering-munich-496174",
@@ -196,7 +288,14 @@
       "salary_text": null,
       "posted_at": "2026-11-10T03:40:14Z",
       "url": "https://www.arbeitnow.com/jobs/companies/openai/manager-forward-deployed-engineering-munich-496174",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "manager",
+      "skills": [],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "Germany"
+      ]
     },
     {
       "id": "arbeitnow:data-engineer-london-36017",
@@ -209,7 +308,14 @@
       "salary_text": null,
       "posted_at": "2026-11-10T03:40:13Z",
       "url": "https://www.arbeitnow.co.uk/jobs/companies/smarkets/data-engineer-london-36017",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "unknown",
+      "skills": [],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "United Kingdom"
+      ]
     },
     {
       "id": "arbeitnow:software-engineer-net-woerden-348003",
@@ -224,7 +330,14 @@
       "salary_text": null,
       "posted_at": "2026-11-10T03:31:39Z",
       "url": "https://www.arbeitnow.nl/jobs/companies/ccs-connects/software-engineer-net-woerden-348003",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "unknown",
+      "skills": [
+        ".NET"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": []
     },
     {
       "id": "arbeitnow:remote-hands-on-engineering-manager-infrastructure-261178",
@@ -239,7 +352,12 @@
       "salary_text": null,
       "posted_at": "2026-11-10T03:31:33Z",
       "url": "https://www.arbeitnow.com/jobs/companies/miaplaza/remote-hands-on-engineering-manager-infrastructure-261178",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "manager",
+      "skills": [],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
     },
     {
       "id": "arbeitnow:senior-staff-platform-engineer-switzerland-225515",
@@ -252,7 +370,14 @@
       "salary_text": null,
       "posted_at": "2026-11-10T03:27:51Z",
       "url": "https://www.arbeitnow.ch/jobs/companies/jobgether/senior-staff-platform-engineer-switzerland-225515",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "staff",
+      "skills": [],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "Switzerland"
+      ]
     },
     {
       "id": "arbeitnow:autosar-cybersecurity-software-development-koblenz-germany-445289",
@@ -265,7 +390,16 @@
       "salary_text": null,
       "posted_at": "2026-11-10T03:27:51Z",
       "url": "https://www.arbeitnow.com/jobs/companies/mobileye/autosar-cybersecurity-software-development-koblenz-germany-445289",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "unknown",
+      "skills": [
+        "Security"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "Germany"
+      ]
     },
     {
       "id": "arbeitnow:machine-learning-engineering-manager-power-united-kingdom-415713",
@@ -281,7 +415,16 @@
       "salary_text": null,
       "posted_at": "2026-11-10T03:27:46Z",
       "url": "https://www.arbeitnow.co.uk/jobs/companies/kpler/machine-learning-engineering-manager-power-united-kingdom-415713",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "manager",
+      "skills": [
+        "Machine Learning"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "United Kingdom"
+      ]
     },
     {
       "id": "arbeitnow:senior-data-engineer-databricks-lausanne-vaud-130127",
@@ -296,7 +439,14 @@
       "salary_text": null,
       "posted_at": "2026-11-10T00:55:31Z",
       "url": "https://www.arbeitnow.ch/jobs/companies/artefactjobs/senior-data-engineer-databricks-lausanne-vaud-130127",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "senior",
+      "skills": [
+        "Databricks"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": []
     },
     {
       "id": "arbeitnow:staff-software-engineer-new-verticals-london-403189",
@@ -309,7 +459,14 @@
       "salary_text": null,
       "posted_at": "2026-11-10T00:55:24Z",
       "url": "https://www.arbeitnow.co.uk/jobs/companies/deliveroo/staff-software-engineer-new-verticals-london-403189",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "staff",
+      "skills": [],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "United Kingdom"
+      ]
     },
     {
       "id": "arbeitnow:staff-software-engineer-full-stack-london-232276",
@@ -324,7 +481,16 @@
       "salary_text": null,
       "posted_at": "2026-11-10T00:55:24Z",
       "url": "https://www.arbeitnow.co.uk/jobs/companies/deliveroo/staff-software-engineer-full-stack-london-232276",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "staff",
+      "skills": [
+        "Full-Stack"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "United Kingdom"
+      ]
     },
     {
       "id": "arbeitnow:staff-software-engineer-dev-environments-london-127534",
@@ -337,7 +503,14 @@
       "salary_text": null,
       "posted_at": "2026-11-10T00:55:24Z",
       "url": "https://www.arbeitnow.co.uk/jobs/companies/deliveroo/staff-software-engineer-dev-environments-london-127534",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "staff",
+      "skills": [],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "United Kingdom"
+      ]
     },
     {
       "id": "arbeitnow:software-engineer-new-grad-london-492707",
@@ -350,7 +523,14 @@
       "salary_text": null,
       "posted_at": "2026-11-10T00:55:24Z",
       "url": "https://www.arbeitnow.co.uk/jobs/companies/deliveroo/software-engineer-new-grad-london-492707",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "junior",
+      "skills": [],
+      "workplace": "onsite",
+      "junior_friendly": true,
+      "regions": [
+        "United Kingdom"
+      ]
     },
     {
       "id": "arbeitnow:software-engineer-backend-bi-platform-london-98307",
@@ -365,7 +545,16 @@
       "salary_text": null,
       "posted_at": "2026-11-10T00:55:24Z",
       "url": "https://www.arbeitnow.co.uk/jobs/companies/deliveroo/software-engineer-backend-bi-platform-london-98307",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "unknown",
+      "skills": [
+        "Backend"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "United Kingdom"
+      ]
     },
     {
       "id": "arbeitnow:software-engineer-ii-system-integration-berlin-91182",
@@ -380,7 +569,14 @@
       "salary_text": null,
       "posted_at": "2026-11-10T00:40:11Z",
       "url": "https://www.arbeitnow.com/jobs/companies/rivianvwtech/software-engineer-ii-system-integration-berlin-91182",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "mid",
+      "skills": [],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "Germany"
+      ]
     },
     {
       "id": "arbeitnow:forward-deployed-engineer-france-paris-86177",
@@ -395,7 +591,14 @@
       "salary_text": null,
       "posted_at": "2026-11-10T00:40:11Z",
       "url": "https://www.arbeitnow.fr/jobs/companies/neuralconcept/forward-deployed-engineer-france-paris-86177",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "unknown",
+      "skills": [],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "France"
+      ]
     },
     {
       "id": "arbeitnow:senior-software-engineer-web-paris-349684",
@@ -408,7 +611,14 @@
       "salary_text": null,
       "posted_at": "2026-11-09T21:55:30Z",
       "url": "https://www.arbeitnow.fr/jobs/companies/dashlane/senior-software-engineer-web-paris-349684",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "senior",
+      "skills": [],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "France"
+      ]
     },
     {
       "id": "arbeitnow:senior-bloomreach-java-developer-zwolle-154323",
@@ -424,7 +634,14 @@
       "salary_text": null,
       "posted_at": "2026-11-09T21:51:25Z",
       "url": "https://www.arbeitnow.nl/jobs/companies/unive/senior-bloomreach-java-developer-zwolle-154323",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "senior",
+      "skills": [
+        "Java"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": []
     },
     {
       "id": "arbeitnow:stage-devops-et-processus-ci-cd-f-h-16000-angouleme-233339",
@@ -442,7 +659,17 @@
       "salary_text": null,
       "posted_at": "2026-11-09T21:51:24Z",
       "url": "https://www.arbeitnow.fr/jobs/companies/hemeria/stage-devops-et-processus-ci-cd-f-h-16000-angouleme-233339",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "intern",
+      "skills": [
+        "DevOps",
+        "CI/CD"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": true,
+      "regions": [
+        "France"
+      ]
     },
     {
       "id": "arbeitnow:senior-devops-engineer-java-100-digital-onboarding-product-opening-zurich-323591",
@@ -458,7 +685,17 @@
       "salary_text": null,
       "posted_at": "2026-11-09T21:51:19Z",
       "url": "https://www.arbeitnow.ch/jobs/companies/callista-group-ag/senior-devops-engineer-java-100-digital-onboarding-product-opening-zurich-323591",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "senior",
+      "skills": [
+        "DevOps",
+        "Java"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "Switzerland"
+      ]
     },
     {
       "id": "arbeitnow:forward-deployed-engineer-berlin-400716",
@@ -473,7 +710,14 @@
       "salary_text": null,
       "posted_at": "2026-11-09T20:30:43Z",
       "url": "https://www.arbeitnow.com/jobs/companies/agent-f-gmbh/forward-deployed-engineer-berlin-400716",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "unknown",
+      "skills": [],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "Germany"
+      ]
     },
     {
       "id": "arbeitnow:remote-rust-software-engineer-rust-c-gilching-217668",
@@ -489,7 +733,15 @@
       "salary_text": null,
       "posted_at": "2026-11-09T18:31:18Z",
       "url": "https://www.arbeitnow.com/jobs/companies/quantum-systems-gmbh/remote-rust-software-engineer-rust-c-gilching-217668",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "unknown",
+      "skills": [
+        "Rust",
+        "C++"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
     },
     {
       "id": "arbeitnow:software-engineer-ai-development-experience-hanover-226842",
@@ -504,7 +756,14 @@
       "salary_text": null,
       "posted_at": "2026-11-09T17:30:46Z",
       "url": "https://www.arbeitnow.com/jobs/companies/hornetsecurity/software-engineer-ai-development-experience-hanover-226842",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "unknown",
+      "skills": [
+        "AI"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": []
     },
     {
       "id": "arbeitnow:software-developer-fokus-secure-software-development-nuremberg-122160",
@@ -519,7 +778,12 @@
       "salary_text": null,
       "posted_at": "2026-11-09T16:31:08Z",
       "url": "https://www.arbeitnow.com/jobs/companies/isento-gmbh/software-developer-fokus-secure-software-development-nuremberg-122160",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "unknown",
+      "skills": [],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": []
     },
     {
       "id": "arbeitnow:senior-cloud-engineer-azure-basel-165209",
@@ -534,7 +798,14 @@
       "salary_text": null,
       "posted_at": "2026-11-09T16:01:09Z",
       "url": "https://www.arbeitnow.ch/jobs/companies/coopers-group-ag/senior-cloud-engineer-azure-basel-165209",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "senior",
+      "skills": [
+        "Azure"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
     },
     {
       "id": "arbeitnow:backend-engineer-payments-team-amsterdam-441218",
@@ -550,7 +821,16 @@
       "salary_text": null,
       "posted_at": "2026-11-09T15:51:34Z",
       "url": "https://www.arbeitnow.nl/jobs/companies/fastned/backend-engineer-payments-team-amsterdam-441218",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "unknown",
+      "skills": [
+        "Backend"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "Netherlands"
+      ]
     },
     {
       "id": "arbeitnow:senior-java-kotlin-fullstack-entwickler-angular-spring-boot-azure-refnr-48191-zurich-288530",
@@ -570,7 +850,22 @@
       "salary_text": null,
       "posted_at": "2026-11-09T12:00:57Z",
       "url": "https://www.arbeitnow.ch/jobs/companies/wavestone-germany-ag/senior-java-kotlin-fullstack-entwickler-angular-spring-boot-azure-refnr-48191-zurich-288530",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "senior",
+      "skills": [
+        "Java",
+        "Kotlin",
+        "Full-Stack",
+        "Angular",
+        "Spring Boot",
+        "Azure",
+        "Spring"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "Switzerland"
+      ]
     },
     {
       "id": "arbeitnow:java-fullstack-software-engineer-spring-boot-angular-bern-241500",
@@ -588,7 +883,18 @@
       "salary_text": null,
       "posted_at": "2026-11-09T11:01:03Z",
       "url": "https://www.arbeitnow.ch/jobs/companies/coopers-group-ag/java-fullstack-software-engineer-spring-boot-angular-bern-241500",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "unknown",
+      "skills": [
+        "Java",
+        "Full-Stack",
+        "Spring Boot",
+        "Angular",
+        "Spring"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
     },
     {
       "id": "arbeitnow:product-frontend-engineer-zurich-97407",
@@ -603,7 +909,16 @@
       "salary_text": null,
       "posted_at": "2026-11-09T10:31:08Z",
       "url": "https://www.arbeitnow.ch/jobs/companies/servicehunter-ag-quitt-quinn/product-frontend-engineer-zurich-97407",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "unknown",
+      "skills": [
+        "Frontend"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "Switzerland"
+      ]
     },
     {
       "id": "arbeitnow:2d-game-developer-defold-remote-worldwide-amsterdam-139626",
@@ -618,7 +933,16 @@
       "salary_text": null,
       "posted_at": "2026-11-09T09:01:09Z",
       "url": "https://www.arbeitnow.nl/jobs/companies/your-software-supplier/2d-game-developer-defold-remote-worldwide-amsterdam-139626",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "unknown",
+      "skills": [
+        "Defold"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": [
+        "Netherlands"
+      ]
     },
     {
       "id": "arbeitnow:senior-software-engineer-zurich-194918",
@@ -631,7 +955,14 @@
       "salary_text": null,
       "posted_at": "2026-11-09T06:55:16Z",
       "url": "https://www.arbeitnow.ch/jobs/companies/auterion/senior-software-engineer-zurich-194918",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "senior",
+      "skills": [],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "Switzerland"
+      ]
     },
     {
       "id": "remoteok:1137704",
@@ -644,7 +975,12 @@
       "salary_text": null,
       "posted_at": "2026-11-08T16:00:03Z",
       "url": "https://remoteOK.com/remote-jobs/remote-ui-developer-rainfocus-1137704",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "unknown",
+      "skills": [],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
     },
     {
       "id": "arbeitnow:mid-senior-ai-llm-engineer-full-remote-netherlands-457814",
@@ -659,7 +995,17 @@
       "salary_text": null,
       "posted_at": "2026-11-08T12:40:15Z",
       "url": "https://www.arbeitnow.nl/jobs/companies/everai/mid-senior-ai-llm-engineer-full-remote-netherlands-457814",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "senior",
+      "skills": [
+        "AI",
+        "LLM"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": [
+        "Netherlands"
+      ]
     },
     {
       "id": "arbeitnow:system-engineer-cloud-network-security-steinhausen-459011",
@@ -674,7 +1020,16 @@
       "salary_text": null,
       "posted_at": "2026-11-08T12:31:22Z",
       "url": "https://www.arbeitnow.ch/jobs/companies/swisspeak-partners-gmbh/system-engineer-cloud-network-security-steinhausen-459011",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "unknown",
+      "skills": [
+        "Security"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "Switzerland"
+      ]
     },
     {
       "id": "arbeitnow:senior-net-developer-luzern-182639",
@@ -690,7 +1045,16 @@
       "salary_text": null,
       "posted_at": "2026-11-08T12:31:22Z",
       "url": "https://www.arbeitnow.ch/jobs/companies/swisspeak-partners-gmbh/senior-net-developer-luzern-182639",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "senior",
+      "skills": [
+        ".NET"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "Switzerland"
+      ]
     },
     {
       "id": "arbeitnow:senior-java-developer-performance-focused-zurich-267996",
@@ -706,7 +1070,16 @@
       "salary_text": null,
       "posted_at": "2026-11-08T12:31:22Z",
       "url": "https://www.arbeitnow.ch/jobs/companies/swisspeak-partners-gmbh/senior-java-developer-performance-focused-zurich-267996",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "senior",
+      "skills": [
+        "Java"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "Switzerland"
+      ]
     },
     {
       "id": "arbeitnow:senior-java-angular-engineer-zurich-433887",
@@ -722,7 +1095,17 @@
       "salary_text": null,
       "posted_at": "2026-11-08T12:31:22Z",
       "url": "https://www.arbeitnow.ch/jobs/companies/swisspeak-partners-gmbh/senior-java-angular-engineer-zurich-433887",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "senior",
+      "skills": [
+        "Java",
+        "Angular"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "Switzerland"
+      ]
     },
     {
       "id": "arbeitnow:senior-generative-ai-engineer-zurich-404030",
@@ -737,7 +1120,16 @@
       "salary_text": null,
       "posted_at": "2026-11-08T12:31:22Z",
       "url": "https://www.arbeitnow.ch/jobs/companies/swisspeak-partners-gmbh/senior-generative-ai-engineer-zurich-404030",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "senior",
+      "skills": [
+        "AI"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "Switzerland"
+      ]
     },
     {
       "id": "arbeitnow:remote-software-test-engineer-bern-255669",
@@ -752,7 +1144,12 @@
       "salary_text": null,
       "posted_at": "2026-11-08T12:31:22Z",
       "url": "https://www.arbeitnow.ch/jobs/companies/swisspeak-partners-gmbh/remote-software-test-engineer-bern-255669",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "unknown",
+      "skills": [],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
     },
     {
       "id": "arbeitnow:iot-embedded-systems-engineer-bern-391319",
@@ -767,7 +1164,16 @@
       "salary_text": null,
       "posted_at": "2026-11-08T12:31:22Z",
       "url": "https://www.arbeitnow.ch/jobs/companies/swisspeak-partners-gmbh/iot-embedded-systems-engineer-bern-391319",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "unknown",
+      "skills": [
+        "Embedded"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "Switzerland"
+      ]
     },
     {
       "id": "arbeitnow:senior-product-analyst-data-scientist-amsterdam-147157",
@@ -782,7 +1188,14 @@
       "salary_text": null,
       "posted_at": "2026-11-08T03:55:23Z",
       "url": "https://www.arbeitnow.nl/jobs/companies/nebius/senior-product-analyst-data-scientist-amsterdam-147157",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "senior",
+      "skills": [],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "Netherlands"
+      ]
     },
     {
       "id": "arbeitnow:software-engineering-manager-almelo-364758",
@@ -797,7 +1210,12 @@
       "salary_text": null,
       "posted_at": "2026-11-07T15:51:23Z",
       "url": "https://www.arbeitnow.nl/jobs/companies/benchmark/software-engineering-manager-almelo-364758",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "manager",
+      "skills": [],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": []
     },
     {
       "id": "remoteok:1137701",
@@ -810,7 +1228,14 @@
       "salary_text": null,
       "posted_at": "2026-11-07T00:00:02Z",
       "url": "https://remoteOK.com/remote-jobs/remote-ai-developer-salvo-software-1137701",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "unknown",
+      "skills": [
+        "AI"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
     },
     {
       "id": "remoteok:1137691",
@@ -823,7 +1248,14 @@
       "salary_text": "$60,000–$110,000",
       "posted_at": "2026-11-05T16:00:07Z",
       "url": "https://remoteOK.com/remote-jobs/remote-feltsense-ai-engineer-silver-dev-1137691",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "unknown",
+      "skills": [
+        "AI"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
     },
     {
       "id": "remoteok:1137689",
@@ -838,7 +1270,18 @@
       "salary_text": null,
       "posted_at": "2026-11-05T14:58:56Z",
       "url": "https://remoteOK.com/remote-jobs/remote-ml-inference-engineer-terminal-bench-task-designer-vllm-sglang-tensorrt-llm-toptal-1137689",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "unknown",
+      "skills": [
+        "Machine Learning",
+        "vLLM",
+        "SGLang",
+        "TensorRT",
+        "LLM"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
     },
     {
       "id": "remoteok:1137688",
@@ -853,7 +1296,14 @@
       "salary_text": "$50,000–$180,000",
       "posted_at": "2026-11-05T12:45:45Z",
       "url": "https://remoteOK.com/remote-jobs/remote-senior-vue-developer-lemon-io-1137688",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "senior",
+      "skills": [
+        "Vue"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
     },
     {
       "id": "remoteok:1137687",
@@ -866,7 +1316,16 @@
       "salary_text": "$137,318–$192,960",
       "posted_at": "2026-11-05T00:00:04Z",
       "url": "https://remoteOK.com/remote-jobs/remote-senior-staff-infrastructure-security-engineer-civilgrid-1137687",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "staff",
+      "skills": [
+        "Security"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": [
+        "United States"
+      ]
     },
     {
       "id": "remoteok:1137685",
@@ -879,7 +1338,12 @@
       "salary_text": "$10,000–$30,000",
       "posted_at": "2026-11-04T15:09:09Z",
       "url": "https://remoteOK.com/remote-jobs/remote-software-engineer-claims-1137685",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "unknown",
+      "skills": [],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
     },
     {
       "id": "remoteok:1137619",
@@ -894,7 +1358,15 @@
       "salary_text": "$10,000–$120,000",
       "posted_at": "2026-11-02T10:43:35Z",
       "url": "https://remoteOK.com/remote-jobs/remote-ai-ml-engineer-docusketch-1137619",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "unknown",
+      "skills": [
+        "AI",
+        "Machine Learning"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
     },
     {
       "id": "remoteok:1137614",
@@ -907,7 +1379,12 @@
       "salary_text": "$185,000–$215,000",
       "posted_at": "2026-11-02T00:00:13Z",
       "url": "https://remoteOK.com/remote-jobs/remote-software-engineer-infrastructure-sodalis-inc-1137614",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "unknown",
+      "skills": [],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
     },
     {
       "id": "remotive:2091165",
@@ -948,7 +1425,23 @@
       "salary_text": "$3.5k–$5k/month",
       "posted_at": "2026-10-29T18:22:41Z",
       "url": "https://remotive.com/remote-jobs/software-development/full-stack-developer-2091165",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "unknown",
+      "skills": [
+        "Full-Stack",
+        "AWS",
+        "Backend",
+        "Docker",
+        "Frontend",
+        "JavaScript",
+        "React",
+        "Security",
+        "TypeScript",
+        "Next.js"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
     },
     {
       "id": "remoteok:1137600",
@@ -963,7 +1456,14 @@
       "salary_text": null,
       "posted_at": "2026-10-29T16:00:03Z",
       "url": "https://remoteOK.com/remote-jobs/remote-cloud-engineer-automation-smile-digital-health-1137600",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "unknown",
+      "skills": [],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": [
+        "Canada"
+      ]
     },
     {
       "id": "remoteok:1137597",
@@ -978,7 +1478,14 @@
       "salary_text": "$80,000–$100,000",
       "posted_at": "2026-10-28T21:53:15Z",
       "url": "https://remoteOK.com/remote-jobs/remote-front-end-developer-cambridge-information-group-1137597",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "unknown",
+      "skills": [
+        "Frontend"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
     },
     {
       "id": "remotive:2091135",
@@ -1039,7 +1546,47 @@
       "salary_text": null,
       "posted_at": "2026-10-27T12:56:13Z",
       "url": "https://remotive.com/remote-jobs/software-development/senior-back-end-developer-2091135",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "senior",
+      "skills": [
+        "Backend",
+        ".NET",
+        "Android",
+        "C",
+        "C#",
+        "C++",
+        "Data Science",
+        "Go",
+        "iOS",
+        "Java",
+        "JavaScript",
+        "Kubernetes",
+        "Node.js",
+        "PHP",
+        "Python",
+        "React",
+        "Scala",
+        "Swift",
+        "React Native",
+        "Rust",
+        "Spring",
+        "Laravel",
+        "TypeScript",
+        "Angular",
+        "SRE",
+        "Next.js",
+        "Flutter"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": [
+        "Europe",
+        "United States",
+        "Canada",
+        "Australia",
+        "Singapore",
+        "Mexico"
+      ]
     },
     {
       "id": "remotive:2091134",
@@ -1057,7 +1604,12 @@
       "salary_text": null,
       "posted_at": "2026-10-26T12:20:09Z",
       "url": "https://remotive.com/remote-jobs/software-development/head-of-engineering-2091134",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "manager",
+      "skills": [],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
     },
     {
       "id": "remoteok:1137572",
@@ -1070,7 +1622,14 @@
       "salary_text": "$100,000–$140,000",
       "posted_at": "2026-10-26T08:00:06Z",
       "url": "https://remoteOK.com/remote-jobs/remote-senior-software-engineer-latam-wagmo-1137572",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "senior",
+      "skills": [],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": [
+        "Latin America"
+      ]
     },
     {
       "id": "remoteok:1137571",
@@ -1083,7 +1642,12 @@
       "salary_text": "$80,000–$100,000",
       "posted_at": "2026-10-25T12:34:21Z",
       "url": "https://remoteOK.com/remote-jobs/remote-senior-software-engineer-klardaten-1137571",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "senior",
+      "skills": [],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
     },
     {
       "id": "remoteok:1137557",
@@ -1098,7 +1662,14 @@
       "salary_text": "$50,000–$150,000",
       "posted_at": "2026-10-22T12:58:28Z",
       "url": "https://remoteOK.com/remote-jobs/remote-senior-devops-engineer-lemon-io-1137557",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "senior",
+      "skills": [
+        "DevOps"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
     },
     {
       "id": "remoteok:1137551",
@@ -1113,7 +1684,14 @@
       "salary_text": "$190,000",
       "posted_at": "2026-10-21T14:29:21Z",
       "url": "https://remoteOK.com/remote-jobs/remote-senior-backend-engineer-duckduckgo-1137551",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "senior",
+      "skills": [
+        "Backend"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
     },
     {
       "id": "remoteok:1137545",
@@ -1126,7 +1704,12 @@
       "salary_text": null,
       "posted_at": "2026-10-18T19:00:02Z",
       "url": "https://remoteOK.com/remote-jobs/remote-senior-software-engineer-sothebys-1137545",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "senior",
+      "skills": [],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
     },
     {
       "id": "remoteok:1137544",
@@ -1141,7 +1724,14 @@
       "salary_text": null,
       "posted_at": "2026-10-18T18:00:01Z",
       "url": "https://remoteOK.com/remote-jobs/remote-senior-backend-engineer-rain-1137544",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "senior",
+      "skills": [
+        "Backend"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
     },
     {
       "id": "remotive:2091158",
@@ -1170,7 +1760,23 @@
       "salary_text": "$1000 per task",
       "posted_at": "2026-10-17T16:04:29Z",
       "url": "https://remotive.com/remote-jobs/software-development/software-engineer-ai-coding-tasks-2091158",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "unknown",
+      "skills": [
+        "AI",
+        "C++",
+        "Docker",
+        "Git",
+        "Go",
+        "Java",
+        "Python",
+        "Security",
+        "Rust",
+        "TypeScript"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
     },
     {
       "id": "remoteok:1137527",
@@ -1183,7 +1789,14 @@
       "salary_text": null,
       "posted_at": "2026-10-15T16:00:03Z",
       "url": "https://remoteOK.com/remote-jobs/remote-senior-software-engineer-ii-applied-ai-wrapbook-1137527",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "senior",
+      "skills": [
+        "AI"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
     },
     {
       "id": "remotive:2069746",
@@ -1222,7 +1835,28 @@
       "salary_text": "$170k - $200k",
       "posted_at": "2026-10-14T20:33:44Z",
       "url": "https://remotive.com/remote-jobs/software-development/tech-lead-full-stack-rails-engineer-2069746",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "lead",
+      "skills": [
+        "Full-Stack",
+        "Ruby on Rails",
+        "CSS",
+        "Docker",
+        "Elasticsearch",
+        "HTML",
+        "JavaScript",
+        "Kubernetes",
+        "PostgreSQL",
+        "React",
+        "Redis",
+        "MySQL"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": [
+        "United States",
+        "Canada"
+      ]
     },
     {
       "id": "remoteok:1137508",
@@ -1235,7 +1869,12 @@
       "salary_text": null,
       "posted_at": "2026-10-13T00:00:18Z",
       "url": "https://remoteOK.com/remote-jobs/remote-principal-software-engineer-vytalize-health-1137508",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "principal",
+      "skills": [],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
     },
     {
       "id": "remoteok:1137465",
@@ -1248,7 +1887,14 @@
       "salary_text": null,
       "posted_at": "2026-10-05T13:00:02Z",
       "url": "https://remoteOK.com/remote-jobs/remote-platform-and-integration-engineer-security-telemetry-redmimicry-1137465",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "unknown",
+      "skills": [
+        "Security"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
     },
     {
       "id": "remoteok:1137427",
@@ -1261,7 +1907,12 @@
       "salary_text": null,
       "posted_at": "2026-09-23T14:00:02Z",
       "url": "https://remoteOK.com/remote-jobs/remote-software-engineer-prenosis-1137427",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "unknown",
+      "skills": [],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
     },
     {
       "id": "remoteok:1137410",
@@ -1276,7 +1927,16 @@
       "salary_text": null,
       "posted_at": "2026-09-20T00:00:25Z",
       "url": "https://remoteOK.com/remote-jobs/remote-frontend-engineer-bjak-1137410",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "unknown",
+      "skills": [
+        "Frontend"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": [
+        "Ireland"
+      ]
     },
     {
       "id": "remoteok:1137387",
@@ -1289,7 +1949,12 @@
       "salary_text": null,
       "posted_at": "2026-09-12T14:00:03Z",
       "url": "https://remoteOK.com/remote-jobs/remote-software-engineer-mirantis-1137387",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "unknown",
+      "skills": [],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
     },
     {
       "id": "remoteok:1137224",
@@ -1302,7 +1967,14 @@
       "salary_text": null,
       "posted_at": "2026-08-30T21:00:01Z",
       "url": "https://remoteOK.com/remote-jobs/remote-ai-engineer-data-apis-benzinga-1137224",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "unknown",
+      "skills": [
+        "AI"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
     },
     {
       "id": "remoteok:1137114",
@@ -1317,7 +1989,15 @@
       "salary_text": null,
       "posted_at": "2026-08-25T07:00:03Z",
       "url": "https://remoteOK.com/remote-jobs/remote-senior-backend-engineer-build-ai-agents-salesforge-1137114",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "senior",
+      "skills": [
+        "Backend",
+        "AI"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
     },
     {
       "id": "remoteok:1137062",
@@ -1332,7 +2012,14 @@
       "salary_text": null,
       "posted_at": "2026-08-22T00:00:12Z",
       "url": "https://remoteOK.com/remote-jobs/remote-desarrollador-full-stack-kruger-nearshore-llc-rekluti-1137062",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "unknown",
+      "skills": [
+        "Full-Stack"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
     },
     {
       "id": "remoteok:1136795",
@@ -1345,7 +2032,14 @@
       "salary_text": "$190,000–$220,000",
       "posted_at": "2026-08-16T00:00:03Z",
       "url": "https://remoteOK.com/remote-jobs/remote-senior-software-engineer-case-execution-pivotal-health-1136795",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "senior",
+      "skills": [],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": [
+        "United States"
+      ]
     },
     {
       "id": "remoteok:1136701",
@@ -1358,7 +2052,14 @@
       "salary_text": null,
       "posted_at": "2026-08-15T00:00:25Z",
       "url": "https://remoteOK.com/remote-jobs/remote-qa-tester-entry-level-ace-it-careers-1136701",
-      "fetched_at": "2026-11-10T08:05:12Z"
+      "fetched_at": "2026-11-10T08:05:12Z",
+      "seniority": "junior",
+      "skills": [
+        "QA"
+      ],
+      "workplace": "remote",
+      "junior_friendly": true,
+      "regions": []
     }
   ]
 }
