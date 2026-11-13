@@ -1,25 +1,7 @@
-import { SENIORITY_LEVELS, WORKPLACES, type Catalog, type Seniority, type Trends, type Workplace } from "@/lib/catalog/types";
-
-const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"] as const;
-
-const SENIORITY_LABELS: Record<Seniority, string> = {
-  intern: "Intern",
-  junior: "Junior",
-  mid: "Mid",
-  senior: "Senior",
-  lead: "Lead",
-  staff: "Staff",
-  principal: "Principal",
-  manager: "Manager",
-  unknown: "Unspecified",
-};
-
-const WORKPLACE_LABELS: Record<Workplace, string> = {
-  remote: "Remote",
-  hybrid: "Hybrid",
-  onsite: "On-site",
-  unknown: "Unspecified",
-};
+import { countSalaryMentions } from "@/lib/catalog/filters";
+import { formatIsoDate } from "@/lib/catalog/format";
+import { SENIORITY_LABELS, WORKPLACE_LABELS } from "@/lib/catalog/labels";
+import { SENIORITY_LEVELS, WORKPLACES, type Catalog, type Trends } from "@/lib/catalog/types";
 
 export type DayPoint = {
   date: string;
@@ -49,6 +31,8 @@ export type Overview = {
   juniorFriendlyShare: string;
   remoteCount: number;
   remoteShare: string;
+  salaryMentionCount: number;
+  salaryMentionShare: string;
   snapshotLabel: string;
   days: DayPoint[];
   seniority: BreakdownRow[];
@@ -67,21 +51,6 @@ export function formatCount(value: number): string {
   return new Intl.NumberFormat("en-US").format(value);
 }
 
-function formatDay(isoDate: string, includeYear: boolean): string {
-  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(isoDate);
-  if (!match) {
-    return isoDate;
-  }
-  const year = match[1] ?? isoDate;
-  const monthIndex = Number(match[2]) - 1;
-  const month = MONTHS[monthIndex];
-  const day = Number(match[3]);
-  if (!month || !Number.isInteger(day)) {
-    return isoDate;
-  }
-  return includeYear ? `${day} ${month} ${year}` : `${day} ${month}`;
-}
-
 function snapshotLabel(dates: string[]): string {
   if (dates.length === 0) {
     return "No snapshot days yet";
@@ -89,9 +58,9 @@ function snapshotLabel(dates: string[]): string {
   const first = dates[0] ?? "";
   const last = dates[dates.length - 1] ?? first;
   if (first === last) {
-    return formatDay(first, true);
+    return formatIsoDate(first, true);
   }
-  return `${formatDay(first, true)} – ${formatDay(last, true)}`;
+  return `${formatIsoDate(first, true)} – ${formatIsoDate(last, true)}`;
 }
 
 function sum(values: number[]): number {
@@ -139,6 +108,7 @@ export function toOverview(trends: Trends, catalog: Catalog): Overview {
     );
   }
 
+  const salaryMentionCount = countSalaryMentions(catalog.postings);
   const days = [...catalog.days].sort((left, right) => left.date.localeCompare(right.date));
   const dates = days.map((day) => day.date);
   const spanYears = (dates[0]?.slice(0, 4) ?? "") !== (dates[dates.length - 1]?.slice(0, 4) ?? "");
@@ -149,10 +119,12 @@ export function toOverview(trends: Trends, catalog: Catalog): Overview {
     juniorFriendlyShare: formatPercent(trends.junior_friendly, total),
     remoteCount: trends.workplace.remote,
     remoteShare: formatPercent(trends.workplace.remote, total),
+    salaryMentionCount,
+    salaryMentionShare: formatPercent(salaryMentionCount, total),
     snapshotLabel: snapshotLabel(dates),
     days: days.map((day) => ({
       date: day.date,
-      label: formatDay(day.date, spanYears),
+      label: formatIsoDate(day.date, spanYears),
       new: day.new,
       seenAgain: day.seen_again,
       collected: day.collected,
