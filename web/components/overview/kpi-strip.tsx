@@ -28,8 +28,8 @@ function Kpi({
 export function KpiStrip({ overview }: { overview: Overview }) {
   const total = formatCount(overview.totalPostings);
   return (
-    <section aria-label="Headline figures">
-      <div className="grid gap-4 sm:grid-cols-3">
+    <section id="overview" aria-label="Headline figures" className="scroll-mt-6">
+      <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
         <Kpi
           label="Unique postings"
           value={total}
@@ -44,6 +44,11 @@ export function KpiStrip({ overview }: { overview: Overview }) {
           label="Remote"
           value={overview.remoteShare}
           detail={`${formatCount(overview.remoteCount)} of ${total} are fully remote. Hybrid is counted on its own.`}
+        />
+        <Kpi
+          label="Salary mentions"
+          value={overview.salaryMentionShare}
+          detail={`${formatCount(overview.salaryMentionCount)} of ${total} name a salary. The Arbeitnow public feed has no pay field, so this undercounts.`}
         />
       </div>
     </section>

@@ -1,10 +1,11 @@
-import { access, readFile } from "node:fs/promises";
+import { access, readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 
 import { cacheLife } from "next/cache";
 
 import { toOverview, type Overview } from "@/lib/catalog/overview";
 import { parseCatalog, parseTrends } from "@/lib/catalog/parse";
+import { parseSourceRun, type SourceRun } from "@/lib/catalog/source-health";
 import type { CatalogBundle } from "@/lib/catalog/types";
 
 /**
@@ -12,15 +13,12 @@ import type { CatalogBundle } from "@/lib/catalog/types";
  * from `web/`, so the files live one directory up. A checkout that runs from
  * the repo root is accepted too.
  */
-async function catalogDirectory(): Promise<string> {
-  const candidates = [
-    path.resolve(process.cwd(), "data", "catalog"),
-    path.resolve(process.cwd(), "..", "data", "catalog"),
-  ];
+async function dataDirectory(): Promise<string> {
+  const candidates = [path.resolve(process.cwd(), "data"), path.resolve(process.cwd(), "..", "data")];
   for (const dir of candidates) {
     try {
-      await access(path.join(dir, "trends.json"));
-      await access(path.join(dir, "postings.json"));
+      await access(path.join(dir, "catalog", "trends.json"));
+      await access(path.join(dir, "catalog", "postings.json"));
       return dir;
     } catch {
       continue;
@@ -47,7 +45,7 @@ async function readJson(filePath: string): Promise<unknown> {
 }
 
 async function readCatalog(): Promise<CatalogBundle> {
-  const dir = await catalogDirectory();
+  const dir = path.join(await dataDirectory(), "catalog");
   const [trendsValue, catalogValue] = await Promise.all([
     readJson(path.join(dir, "trends.json")),
     readJson(path.join(dir, "postings.json")),
@@ -69,4 +67,35 @@ export async function loadOverview(): Promise<Overview> {
   cacheLife("max");
   const { trends, catalog } = await readCatalog();
   return toOverview(trends, catalog);
+}
+
+/**
+ * Latest raw snapshot's per-board status. The catalog keeps earlier rows when
+ * a board fails, so the failure itself is only on the raw file.
+ * A missing raw directory does not block the catalog page.
+ */
+export async function loadLatestSourceRun(): Promise<SourceRun | null> {
+  "use cache";
+  cacheLife("max");
+  const rawDir = path.join(await dataDirectory(), "raw");
+  let names: string[];
+  try {
+    names = await readdir(rawDir);
+  } catch {
+    return null;
+  }
+  const dates = names
+    .map((name) => /^(\d{4}-\d{2}-\d{2})\.json$/.exec(name)?.[1])
+    .filter((date): date is string => date !== undefined)
+    .sort();
+  const date = dates[dates.length - 1];
+  if (!date) {
+    return null;
+  }
+  try {
+    const text = await readFile(path.join(rawDir, `${date}.json`), "utf8");
+    return parseSourceRun(JSON.parse(text) as unknown, date);
+  } catch {
+    return null;
+  }
 }

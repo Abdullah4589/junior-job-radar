@@ -24,7 +24,7 @@ export function ChartSection({
     <section aria-labelledby={id}>
       <Card>
         <CardHeader>
-          <h2 id={id} className="font-heading text-lg leading-snug font-medium tracking-tight">
+          <h2 id={id} className="scroll-mt-6 font-heading text-lg leading-snug font-medium tracking-tight">
             {title}
           </h2>
           <CardDescription className="max-w-2xl text-sm leading-6">{description}</CardDescription>

@@ -57,15 +57,21 @@ The overview page shows:
 - Seniority and workplace breakdowns.
 - Top skills from `trends.json`.
 
-Run it from `web/` with `npm install`, then `npm run dev`. `npm run lint` and `npm run build` both have to pass. The footer names Remotive, Remote OK, and Arbeitnow. Filters, the postings table, per-posting links, salary-mention rate, and empty-state polish are Day 5. There is no dashboard workflow yet (Day 6) and no deploy (Day 7).
+Run it from `web/` with `npm install`, then `npm run dev`. `npm run lint`, `npm run typecheck`, and `npm run build` have to pass. The footer names Remotive, Remote OK, and Arbeitnow. There is no dashboard workflow yet (Day 6) and no deploy (Day 7).
 
-## Day 5 — Filters, postings, and polish
+## Day 5 — Filters, postings, and polish (done)
 
-- Filters for source, workplace, seniority, and a date range, applied to the catalog the overview already loads.
-- A table of postings with the original URL on each row.
-- Empty, loading, and single-source-failed states.
-- Salary-mention rate beside the other overview figures.
-- Keep the source credits, and link each displayed job back to the board.
+The overview still reads `data/catalog/trends.json` and `data/catalog/postings.json` at build time. Below the charts, the page lists every posting in that catalog.
+
+Filters are seniority, workplace, skill, source, a first-seen date range, text search (title, company, location, skills, tags, and salary text), and junior-friendly only. The table sorts by first seen, posted date, title, company, source, seniority, or workplace, and shows 20 rows at a time. The role title links to the original posting. The source links to that board. Filter, sort, and page live in the query string (`q`, `seniority`, `workplace`, `skill`, `junior`, `source`, `from`, `to`, `sort`, `dir`, `page`), so a view can be shared. Unknown values are dropped, and the page redirects to the canonical query.
+
+The postings block sits in a Suspense boundary. Changing the query shows a loading state while the overview stays put. No matches show an empty state and a way to clear the filters. An inverted date range says so instead of pretending the catalog is empty.
+
+The latest file in `data/raw/` records whether each board responded. The catalog still keeps earlier rows when a board fails, so that status is not on `postings.json`. If one board failed and another succeeded, the page says so. If every board failed, it says the table is the catalog saved before that run. A checkout with no raw snapshot still renders the catalog.
+
+The overview adds a salary-mention rate next to the other headline figures: how many rows have `salary_text`. The Arbeitnow public feed has no pay field, so the rate undercounts.
+
+`npm test` in `web/` runs the filter and source-status unit tests. Day 6 adds Playwright and CI. Day 7 deploys.
 
 ## Day 6 — Tests and CI
 

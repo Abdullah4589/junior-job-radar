@@ -1,21 +1,25 @@
+import { Suspense } from "react";
+
 import { ChartSection } from "@/components/overview/chart-section";
 import { BreakdownChart } from "@/components/overview/breakdown-chart";
 import { KpiStrip } from "@/components/overview/kpi-strip";
 import { NewPostingsChart } from "@/components/overview/new-postings-chart";
 import { SkillsChart } from "@/components/overview/skills-chart";
+import { PostingsSection } from "@/components/postings/postings-section";
+import { PostingsSkeleton } from "@/components/postings/postings-skeleton";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { loadOverview } from "@/lib/catalog/load";
 import { formatCount } from "@/lib/catalog/overview";
 
-export default async function HomePage() {
+export default async function HomePage({ searchParams }: PageProps<"/">) {
   const overview = await loadOverview();
   const total = formatCount(overview.totalPostings);
 
   return (
     <>
       <SiteHeader snapshotLabel={overview.snapshotLabel} />
-      <main className="mx-auto flex w-full max-w-6xl flex-1 flex-col gap-6 px-6 py-8">
+      <main id="content" tabIndex={-1} className="mx-auto flex w-full max-w-6xl flex-1 flex-col gap-6 px-4 py-8 outline-none sm:px-6">
         <KpiStrip overview={overview} />
         <ChartSection
           id="new-postings"
@@ -72,6 +76,9 @@ export default async function HomePage() {
         >
           <SkillsChart skills={overview.skills} />
         </ChartSection>
+        <Suspense fallback={<PostingsSkeleton />}>
+          <PostingsSection searchParams={searchParams} />
+        </Suspense>
       </main>
       <SiteFooter />
     </>

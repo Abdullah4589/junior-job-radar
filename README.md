@@ -4,7 +4,7 @@ Daily pipeline and (from Day 4) dashboard that tracks public junior and remote s
 
 Built by Abdullah, a software-engineering graduate in Karachi, as a public portfolio project. It uses free job-board APIs only. There is no paid plan and no API key.
 
-Day 1 is the ingestion pipeline. Day 2 stores every posting in a deduped catalog and runs the fetch on a daily schedule. Day 3 adds skill, seniority, and workplace extraction. Day 4 is the dashboard overview in `web/`. Filters and deployment come later. The day-by-day plan is in [docs/ROADMAP.md](docs/ROADMAP.md).
+Day 1 is the ingestion pipeline. Day 2 stores every posting in a deduped catalog and runs the fetch on a daily schedule. Day 3 adds skill, seniority, and workplace extraction. Day 4 is the dashboard overview in `web/`. Day 5 adds filters, the postings table, and a salary-mention rate. Deployment is Day 7. The day-by-day plan is in [docs/ROADMAP.md](docs/ROADMAP.md).
 
 ## Roadmap
 
@@ -13,8 +13,8 @@ Day 1 is the ingestion pipeline. Day 2 stores every posting in a deduped catalog
 | 1 | Python ingestion pipeline, normalized snapshots, `fetch` and `summary` |
 | 2 | Deduped SQLite catalog, daily snapshots kept in git, scheduled workflow that opens a pull request |
 | 3 | Skill, seniority, and workplace extraction, stored on each posting and in `data/catalog/trends.json` |
-| 4 | Next.js overview: KPIs, new postings per day, seniority, workplace, and top skills (this repo state) |
-| 5 | Dashboard filters, postings table, and empty states |
+| 4 | Next.js overview: KPIs, new postings per day, seniority, workplace, and top skills |
+| 5 | Dashboard filters, postings table, salary-mention rate, and empty states (this repo state) |
 | 6 | Parser tests, Playwright, CI |
 | 7 | Free-tier deploy and a README with screenshots, methodology, and limitations |
 
@@ -58,7 +58,9 @@ npm install
 npm run dev
 ```
 
-Open `http://localhost:3000`. `npm run lint` and `npm run build` check the app. Filters and the postings table are Day 5.
+Open `http://localhost:3000`. The overview is the top of the page. Filters and the postings table are below the charts. The query string keeps seniority, workplace, skill, source, first-seen dates, text search, junior-friendly only, sort, and page, so a filtered view can be shared. Each title links to the original posting, and each source links to the board.
+
+`npm run lint`, `npm run typecheck`, `npm test`, and `npm run build` check the app.
 
 ## What gets stored
 
@@ -155,7 +157,7 @@ data/jobradar.sqlite              Same catalog in SQLite
 pipeline/src/jobradar/taxonomy/   Skill, seniority, and region lists
 .github/workflows/daily-fetch.yml Daily fetch. Opens a pull request, does not push main
 docs/                             Roadmap for the rest of the week
-web/                              Next.js overview (Day 4). Filters land on Day 5
+web/                              Next.js dashboard. Overview, filters, and the postings table
 ```
 
 ## License
