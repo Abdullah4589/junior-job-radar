@@ -46,13 +46,32 @@ An optional LLM pass runs only when `JOBRADAR_LLM_URL` is set. `JOBRADAR_LLM_API
 
 The 2026-11-12 fetch, after this extractor, reported 93 software postings and a catalog of 223 unique rows: 16 junior-friendly, workplace 55 remote / 17 hybrid / 150 onsite / 1 unknown. These boards are still senior-heavy (74 senior, 8 junior, 8 intern). Top catalog skills started with AI, Security, Backend, Python, and Full-Stack. Negation is not understood ("Java is not required" still counts Java). Historical snapshots have no description text, so their skills come from the title and tags.
 
-## Day 4–5 — Next.js dashboard
+## Day 4 — Dashboard overview (done)
 
-- New `web/` app (App Router, TypeScript). Read the normalized snapshots; do not call job APIs from the browser.
-- Charts for top skills, remote vs on-site, junior share, and salary-mention rate.
-- Filters for source, remote, seniority, and a date range.
-- Empty, loading, and single-source-failed states.
-- Credit Remote OK, Remotive, and Arbeitnow on the page, with direct links back to the original postings.
+`web/` is a Next.js App Router app (TypeScript, Tailwind, shadcn/ui, Recharts). It does not call the job boards and it has no environment variables. `web/lib/catalog/load.ts` reads `data/catalog/trends.json` and `data/catalog/postings.json` while the page is built, checks that the two files describe the same catalog, and caches that result with `use cache`.
+
+The overview page shows:
+
+- Unique postings, the junior-friendly share (intern + junior), and the fully remote share (`workplace.remote`, hybrid kept separate).
+- New postings per snapshot day, from `days.new`. Seen-again counts stay in the chart tooltip.
+- Seniority and workplace breakdowns.
+- Top skills from `trends.json`.
+
+Run it from `web/` with `npm install`, then `npm run dev`. `npm run lint`, `npm run typecheck`, and `npm run build` have to pass. The footer names Remotive, Remote OK, and Arbeitnow. There is no dashboard workflow yet (Day 6) and no deploy (Day 7).
+
+## Day 5 — Filters, postings, and polish (done)
+
+The overview still reads `data/catalog/trends.json` and `data/catalog/postings.json` at build time. Below the charts, the page lists every posting in that catalog.
+
+Filters are seniority, workplace, skill, source, a first-seen date range, text search (title, company, location, skills, tags, and salary text), and junior-friendly only. The table sorts by first seen, posted date, title, company, source, seniority, or workplace, and shows 20 rows at a time. The role title links to the original posting. The source links to that board. Filter, sort, and page live in the query string (`q`, `seniority`, `workplace`, `skill`, `junior`, `source`, `from`, `to`, `sort`, `dir`, `page`), so a view can be shared. Unknown values are dropped, and the page redirects to the canonical query.
+
+The postings block sits in a Suspense boundary. Changing the query shows a loading state while the overview stays put. No matches show an empty state and a way to clear the filters. An inverted date range says so instead of pretending the catalog is empty.
+
+The latest file in `data/raw/` records whether each board responded. The catalog still keeps earlier rows when a board fails, so that status is not on `postings.json`. If one board failed and another succeeded, the page says so. If every board failed, it says the table is the catalog saved before that run. A checkout with no raw snapshot still renders the catalog.
+
+The overview adds a salary-mention rate next to the other headline figures: how many rows have `salary_text`. The Arbeitnow public feed has no pay field, so the rate undercounts.
+
+`npm test` in `web/` runs the filter and source-status unit tests. Day 6 adds Playwright and CI. Day 7 deploys.
 
 ## Day 6 — Tests and CI
 
