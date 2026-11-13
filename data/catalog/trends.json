@@ -1,126 +1,126 @@
 {
   "notes": "Counts over the deduped catalog. seniority, skills, workplace, junior_friendly, and regions are extracted from each posting. top_skills and regions keep the first 20 after ties are broken by name.",
-  "postings": 220,
-  "junior_friendly": 14,
+  "postings": 263,
+  "junior_friendly": 16,
   "top_skills": [
     {
       "skill": "AI",
-      "count": 59
-    },
-    {
-      "skill": "Security",
-      "count": 26
-    },
-    {
-      "skill": "Backend",
-      "count": 21
-    },
-    {
-      "skill": "Full-Stack",
-      "count": 21
+      "count": 80
     },
     {
       "skill": "Python",
-      "count": 21
+      "count": 45
     },
     {
-      "skill": "C++",
-      "count": 16
+      "skill": "Security",
+      "count": 41
     },
     {
-      "skill": "Java",
-      "count": 15
+      "skill": "Backend",
+      "count": 33
+    },
+    {
+      "skill": "Full-Stack",
+      "count": 28
     },
     {
       "skill": "Machine Learning",
-      "count": 15
-    },
-    {
-      "skill": "Kubernetes",
-      "count": 13
-    },
-    {
-      "skill": "Linux",
-      "count": 13
-    },
-    {
-      "skill": "AWS",
-      "count": 12
+      "count": 26
     },
     {
       "skill": "CI/CD",
-      "count": 12
+      "count": 25
     },
     {
-      "skill": "LLM",
-      "count": 11
+      "skill": "AWS",
+      "count": 23
+    },
+    {
+      "skill": "Java",
+      "count": 23
     },
     {
       "skill": "TypeScript",
-      "count": 11
+      "count": 23
     },
     {
-      "skill": "Embedded",
-      "count": 10
+      "skill": "Kubernetes",
+      "count": 22
+    },
+    {
+      "skill": "C++",
+      "count": 21
     },
     {
       "skill": "Frontend",
-      "count": 10
+      "count": 19
     },
     {
       "skill": "DevOps",
-      "count": 9
+      "count": 16
+    },
+    {
+      "skill": "Embedded",
+      "count": 16
+    },
+    {
+      "skill": "LLM",
+      "count": 16
+    },
+    {
+      "skill": "Linux",
+      "count": 16
     },
     {
       "skill": "Docker",
-      "count": 9
+      "count": 15
+    },
+    {
+      "skill": "Google Cloud",
+      "count": 14
     },
     {
       "skill": "JavaScript",
-      "count": 9
-    },
-    {
-      "skill": "PostgreSQL",
-      "count": 8
+      "count": 14
     }
   ],
   "seniority": {
-    "intern": 8,
+    "intern": 10,
     "junior": 6,
     "mid": 2,
-    "senior": 67,
-    "lead": 3,
-    "staff": 12,
-    "principal": 8,
-    "manager": 11,
-    "unknown": 103
+    "senior": 89,
+    "lead": 5,
+    "staff": 13,
+    "principal": 11,
+    "manager": 12,
+    "unknown": 115
   },
   "workplace": {
-    "remote": 60,
-    "hybrid": 13,
-    "onsite": 145,
-    "unknown": 2
+    "remote": 67,
+    "hybrid": 32,
+    "onsite": 161,
+    "unknown": 3
   },
   "regions": [
     {
       "region": "Germany",
-      "count": 46
+      "count": 55
     },
     {
       "region": "United Kingdom",
-      "count": 34
+      "count": 45
     },
     {
       "region": "Switzerland",
-      "count": 25
+      "count": 29
     },
     {
       "region": "France",
-      "count": 23
+      "count": 27
     },
     {
       "region": "Netherlands",
-      "count": 20
+      "count": 25
     },
     {
       "region": "United States",
@@ -151,6 +151,10 @@
       "count": 1
     },
     {
+      "region": "Belgium",
+      "count": 1
+    },
+    {
       "region": "Denmark",
       "count": 1
     },
@@ -172,6 +176,10 @@
     },
     {
       "region": "Poland",
+      "count": 1
+    },
+    {
+      "region": "Spain",
       "count": 1
     }
   ]
