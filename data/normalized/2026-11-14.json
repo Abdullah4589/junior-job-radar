@@ -1,0 +1,2948 @@
+{
+  "date": "2026-11-14",
+  "fetched_at": "2026-11-14T13:31:10Z",
+  "count": 99,
+  "attribution": [
+    {
+      "source": "remotive",
+      "name": "Remotive",
+      "url": "https://remotive.com"
+    },
+    {
+      "source": "remoteok",
+      "name": "Remote OK",
+      "url": "https://remoteok.com"
+    },
+    {
+      "source": "arbeitnow",
+      "name": "Arbeitnow",
+      "url": "https://www.arbeitnow.com"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "arbeitnow:senior-data-engineer-london-442487",
+      "source": "arbeitnow",
+      "title": "Senior Data Engineer",
+      "company": "Livescore9",
+      "location": "London",
+      "remote": false,
+      "tags": [
+        "technology"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-14T12:55:24Z",
+      "url": "https://www.arbeitnow.co.uk/jobs/companies/livescore9/senior-data-engineer-london-442487",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "senior",
+      "skills": [
+        "AI",
+        "Machine Learning",
+        "Google Cloud",
+        "BigQuery",
+        "Security",
+        "SQL",
+        "Python",
+        "Terraform",
+        "Airflow",
+        "Docker"
+      ],
+      "workplace": "hybrid",
+      "junior_friendly": false,
+      "regions": [
+        "United Kingdom"
+      ]
+    },
+    {
+      "id": "arbeitnow:senior-product-security-engineer-396481",
+      "source": "arbeitnow",
+      "title": "Senior Product Security Engineer",
+      "company": "Alphasense",
+      "location": "Unspecified",
+      "remote": false,
+      "tags": [
+        "security / it"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-14T12:55:23Z",
+      "url": "https://www.arbeitnow.co.uk/jobs/companies/alphasense/senior-product-security-engineer-396481",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "senior",
+      "skills": [
+        "Security",
+        "AI",
+        "Machine Learning",
+        "LLM",
+        "CI/CD",
+        "Python",
+        "Java",
+        "JavaScript",
+        "Kubernetes"
+      ],
+      "workplace": "unknown",
+      "junior_friendly": false,
+      "regions": []
+    },
+    {
+      "id": "arbeitnow:remote-software-engineer-all-levels-united-kingdom-213631",
+      "source": "arbeitnow",
+      "title": "Software Engineer (All Levels), United Kingdom",
+      "company": "Koboldmetals",
+      "location": "Remote",
+      "remote": true,
+      "tags": [
+        "software engineering"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-14T12:55:23Z",
+      "url": "https://www.arbeitnow.co.uk/jobs/companies/koboldmetals/remote-software-engineer-all-levels-united-kingdom-213631",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "unknown",
+      "skills": [
+        "AI",
+        "Python",
+        "Django",
+        "React",
+        "AWS",
+        "Frontend",
+        "Docker",
+        "Kubernetes"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": [
+        "United Kingdom"
+      ]
+    },
+    {
+      "id": "arbeitnow:forward-deployed-engineer-ai-x-greentech-augsburg-414392",
+      "source": "arbeitnow",
+      "title": "Forward Deployed Engineer - (AI x Greentech) (m/f/d)",
+      "company": "Reonic",
+      "location": "Augsburg",
+      "remote": false,
+      "tags": [],
+      "salary_text": null,
+      "posted_at": "2026-11-14T12:40:12Z",
+      "url": "https://www.arbeitnow.com/jobs/companies/reonic/forward-deployed-engineer-ai-x-greentech-augsburg-414392",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "unknown",
+      "skills": [
+        "AI",
+        "Security",
+        "TypeScript"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "Germany"
+      ]
+    },
+    {
+      "id": "arbeitnow:software-ai-engineer-minijob-boblingen-471366",
+      "source": "arbeitnow",
+      "title": "Software & AI Engineer Minijob (m/w/d)",
+      "company": "BIMraum GmbH",
+      "location": "Böblingen",
+      "remote": false,
+      "tags": [
+        "software development"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-14T11:31:00Z",
+      "url": "https://www.arbeitnow.com/jobs/companies/bimraum-gmbh/software-ai-engineer-minijob-boblingen-471366",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "unknown",
+      "skills": [
+        "AI",
+        "LLM",
+        "JavaScript",
+        "TypeScript",
+        "Python",
+        "Git",
+        "NestJS",
+        "Next.js",
+        "React"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": []
+    },
+    {
+      "id": "arbeitnow:junior-data-scientist-casablanca-9th-arrondissement-of-paris-75009-paris-484185",
+      "source": "arbeitnow",
+      "title": "Junior Data Scientist - Casablanca",
+      "company": "Artefactlinkedin",
+      "location": "9th arrondissement of Paris, 75009, Paris",
+      "remote": false,
+      "tags": [
+        "data science"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-14T09:55:27Z",
+      "url": "https://www.arbeitnow.fr/jobs/companies/artefactlinkedin/junior-data-scientist-casablanca-9th-arrondissement-of-paris-75009-paris-484185",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "junior",
+      "skills": [
+        "AI",
+        "Data Science",
+        "Machine Learning",
+        "MLOps",
+        "Python",
+        "R",
+        "SQL"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": true,
+      "regions": [
+        "France"
+      ]
+    },
+    {
+      "id": "arbeitnow:senior-devsecops-engineer-contract-373428",
+      "source": "arbeitnow",
+      "title": "Senior DevSecOps Engineer Contract",
+      "company": "Xdesign",
+      "location": "Unspecified",
+      "remote": false,
+      "tags": [
+        "cloud"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-14T09:55:23Z",
+      "url": "https://www.arbeitnow.co.uk/jobs/companies/xdesign/senior-devsecops-engineer-contract-373428",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "senior",
+      "skills": [],
+      "workplace": "hybrid",
+      "junior_friendly": false,
+      "regions": [
+        "United Kingdom"
+      ]
+    },
+    {
+      "id": "arbeitnow:phd-graduate-ai-algorithms-engineer-2026-or-2027-start-326987",
+      "source": "arbeitnow",
+      "title": "PhD Graduate AI & Algorithms Engineer (2026 or 2027 start)",
+      "company": "Cambridgeconsultantslimited",
+      "location": "Unspecified",
+      "remote": false,
+      "tags": [],
+      "salary_text": null,
+      "posted_at": "2026-11-14T09:55:21Z",
+      "url": "https://www.arbeitnow.co.uk/jobs/companies/cambridgeconsultantslimited/phd-graduate-ai-algorithms-engineer-2026-or-2027-start-326987",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "unknown",
+      "skills": [
+        "AI",
+        "Machine Learning",
+        "Python",
+        "Security"
+      ],
+      "workplace": "unknown",
+      "junior_friendly": false,
+      "regions": []
+    },
+    {
+      "id": "arbeitnow:site-reliability-engineer-berlin-246625",
+      "source": "arbeitnow",
+      "title": "Site Reliability Engineer",
+      "company": "sonyinteractiveentertainmentglobal",
+      "location": "Berlin",
+      "remote": false,
+      "tags": [
+        "network / core engineering"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-14T09:55:18Z",
+      "url": "https://www.arbeitnow.com/jobs/companies/sonyinteractiveentertainmentglobal/site-reliability-engineer-berlin-246625",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "unknown",
+      "skills": [
+        "SRE"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "Germany"
+      ]
+    },
+    {
+      "id": "arbeitnow:remote-senior-software-engineer-appsec-175070",
+      "source": "arbeitnow",
+      "title": "Senior Software Engineer (AppSec)",
+      "company": "Triggerdev",
+      "location": "Remote or Hybrid UK",
+      "remote": true,
+      "tags": [],
+      "salary_text": null,
+      "posted_at": "2026-11-14T09:40:22Z",
+      "url": "https://www.arbeitnow.co.uk/jobs/companies/triggerdev/remote-senior-software-engineer-appsec-175070",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "senior",
+      "skills": [
+        "AI",
+        "Security",
+        "Backend",
+        "TypeScript",
+        "Go",
+        "Rust"
+      ],
+      "workplace": "hybrid",
+      "junior_friendly": false,
+      "regions": [
+        "United Kingdom"
+      ]
+    },
+    {
+      "id": "arbeitnow:forward-deployed-intern-berlin-410084",
+      "source": "arbeitnow",
+      "title": "Forward Deployed Intern",
+      "company": "Andercore",
+      "location": "Berlin",
+      "remote": false,
+      "tags": [
+        "business development",
+        "internship"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-14T09:40:20Z",
+      "url": "https://www.arbeitnow.com/jobs/companies/andercore/forward-deployed-intern-berlin-410084",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "intern",
+      "skills": [
+        "AI",
+        "Python",
+        "JavaScript"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": true,
+      "regions": [
+        "Germany"
+      ]
+    },
+    {
+      "id": "arbeitnow:forward-deployed-engineer-berlin-87135",
+      "source": "arbeitnow",
+      "title": "Forward Deployed Engineer",
+      "company": "Andercore",
+      "location": "Berlin",
+      "remote": false,
+      "tags": [
+        "platform development"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-14T09:40:20Z",
+      "url": "https://www.arbeitnow.com/jobs/companies/andercore/forward-deployed-engineer-berlin-87135",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "unknown",
+      "skills": [
+        "AI",
+        "Python",
+        "TypeScript",
+        "LLM",
+        "SQL"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "Germany"
+      ]
+    },
+    {
+      "id": "arbeitnow:software-engineer-london-290868",
+      "source": "arbeitnow",
+      "title": "Software Engineer",
+      "company": "Wolt - English",
+      "location": "London, England, United Kingdom",
+      "remote": false,
+      "tags": [],
+      "salary_text": null,
+      "posted_at": "2026-11-14T08:45:26Z",
+      "url": "https://www.arbeitnow.co.uk/jobs/companies/wolt-english/software-engineer-london-290868",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "unknown",
+      "skills": [
+        "Backend",
+        "Go",
+        "AI",
+        "MongoDB"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "United Kingdom"
+      ]
+    },
+    {
+      "id": "arbeitnow:senior-software-engineer-android-london-446693",
+      "source": "arbeitnow",
+      "title": "Senior Software Engineer - Android",
+      "company": "Deliveroo",
+      "location": "London, England, United Kingdom",
+      "remote": false,
+      "tags": [
+        "android"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-14T08:45:26Z",
+      "url": "https://www.arbeitnow.co.uk/jobs/companies/deliveroo/senior-software-engineer-android-london-446693",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "senior",
+      "skills": [
+        "Android",
+        "Kotlin",
+        "Java"
+      ],
+      "workplace": "hybrid",
+      "junior_friendly": false,
+      "regions": [
+        "United Kingdom"
+      ]
+    },
+    {
+      "id": "arbeitnow:senior-software-engineer-java-springboot-munich-106950",
+      "source": "arbeitnow",
+      "title": "Senior Software Engineer (Java/SpringBoot) (m/f/x)",
+      "company": "Atolls",
+      "location": "Munich, Bavaria, Germany",
+      "remote": false,
+      "tags": [
+        "java"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-14T07:45:23Z",
+      "url": "https://www.arbeitnow.com/jobs/companies/atolls/senior-software-engineer-java-springboot-munich-106950",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "senior",
+      "skills": [
+        "Java",
+        "Spring Boot"
+      ],
+      "workplace": "hybrid",
+      "junior_friendly": false,
+      "regions": [
+        "Germany"
+      ]
+    },
+    {
+      "id": "arbeitnow:infrastructure-engineer-berlin-50947",
+      "source": "arbeitnow",
+      "title": "Infrastructure Engineer (m/f/d)",
+      "company": "Flix",
+      "location": "Berlin, Germany",
+      "remote": false,
+      "tags": [],
+      "salary_text": null,
+      "posted_at": "2026-11-14T07:45:23Z",
+      "url": "https://www.arbeitnow.com/jobs/companies/flix/infrastructure-engineer-berlin-50947",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "unknown",
+      "skills": [
+        "Security",
+        "Python",
+        "Terraform",
+        "AI",
+        "Docker",
+        "Kubernetes",
+        "Frontend",
+        "React",
+        "Spark"
+      ],
+      "workplace": "hybrid",
+      "junior_friendly": false,
+      "regions": [
+        "Germany",
+        "United States"
+      ]
+    },
+    {
+      "id": "arbeitnow:staff-security-engineer-incident-response-28316",
+      "source": "arbeitnow",
+      "title": "Staff Security Engineer, Incident Response",
+      "company": "databricks",
+      "location": "Unspecified",
+      "remote": false,
+      "tags": [
+        "security"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-14T06:55:23Z",
+      "url": "https://www.arbeitnow.co.uk/jobs/companies/databricks/staff-security-engineer-incident-response-28316",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "staff",
+      "skills": [
+        "Security",
+        "Databricks",
+        "AI",
+        "AWS",
+        "Google Cloud",
+        "Azure",
+        "LLM"
+      ],
+      "workplace": "unknown",
+      "junior_friendly": false,
+      "regions": []
+    },
+    {
+      "id": "arbeitnow:sr-engineering-manager-developer-ecosystem-amsterdam-300494",
+      "source": "arbeitnow",
+      "title": "Sr. Engineering Manager - Developer Ecosystem",
+      "company": "databricks",
+      "location": "Amsterdam",
+      "remote": false,
+      "tags": [],
+      "salary_text": null,
+      "posted_at": "2026-11-14T06:55:23Z",
+      "url": "https://www.arbeitnow.nl/jobs/companies/databricks/sr-engineering-manager-developer-ecosystem-amsterdam-300494",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "manager",
+      "skills": [
+        "Databricks",
+        "AI",
+        "CI/CD",
+        "Terraform",
+        "AWS",
+        "Kubernetes"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "Netherlands"
+      ]
+    },
+    {
+      "id": "arbeitnow:staff-software-engineer-backend-berlin-310885",
+      "source": "arbeitnow",
+      "title": "Staff Software Engineer - Backend",
+      "company": "databricks",
+      "location": "Berlin",
+      "remote": false,
+      "tags": [
+        "engineering - pipeline",
+        "backend"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-14T06:55:22Z",
+      "url": "https://www.arbeitnow.com/jobs/companies/databricks/staff-software-engineer-backend-berlin-310885",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "staff",
+      "skills": [
+        "Backend",
+        "Databricks",
+        "AI",
+        "AWS",
+        "Azure",
+        "Scala",
+        "Kubernetes",
+        "Spark",
+        "Java",
+        "C++",
+        "SQL"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "Germany"
+      ]
+    },
+    {
+      "id": "arbeitnow:senior-staff-software-engineer-delta-berlin-291977",
+      "source": "arbeitnow",
+      "title": "Senior Staff Software Engineer - Delta",
+      "company": "databricks",
+      "location": "Berlin",
+      "remote": false,
+      "tags": [
+        "executive engineering - pipeline"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-14T06:55:22Z",
+      "url": "https://www.arbeitnow.com/jobs/companies/databricks/senior-staff-software-engineer-delta-berlin-291977",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "staff",
+      "skills": [
+        "Databricks",
+        "Security",
+        "AI",
+        "Backend"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "Germany"
+      ]
+    },
+    {
+      "id": "arbeitnow:senior-software-engineer-backend-berlin-194766",
+      "source": "arbeitnow",
+      "title": "Senior Software Engineer - Backend",
+      "company": "databricks",
+      "location": "Berlin",
+      "remote": false,
+      "tags": [
+        "engineering - pipeline",
+        "backend"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-14T06:55:22Z",
+      "url": "https://www.arbeitnow.com/jobs/companies/databricks/senior-software-engineer-backend-berlin-194766",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "senior",
+      "skills": [
+        "Backend",
+        "Databricks",
+        "AI",
+        "AWS",
+        "Azure",
+        "Java",
+        "Scala",
+        "C++",
+        "SQL"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "Germany"
+      ]
+    },
+    {
+      "id": "arbeitnow:engineering-manager-developer-ecosystem-amsterdam-107355",
+      "source": "arbeitnow",
+      "title": "Engineering Manager - Developer Ecosystem",
+      "company": "databricks",
+      "location": "Amsterdam",
+      "remote": false,
+      "tags": [],
+      "salary_text": null,
+      "posted_at": "2026-11-14T06:55:22Z",
+      "url": "https://www.arbeitnow.nl/jobs/companies/databricks/engineering-manager-developer-ecosystem-amsterdam-107355",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "manager",
+      "skills": [
+        "Databricks",
+        "AI",
+        "CI/CD",
+        "Terraform",
+        "AWS",
+        "Kubernetes"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "Netherlands"
+      ]
+    },
+    {
+      "id": "arbeitnow:senior-security-operations-engineer-198564",
+      "source": "arbeitnow",
+      "title": "Senior Security Operations Engineer",
+      "company": "Samsara",
+      "location": "Unspecified",
+      "remote": false,
+      "tags": [
+        "it security"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-14T06:55:18Z",
+      "url": "https://www.arbeitnow.nl/jobs/companies/samsara/senior-security-operations-engineer-198564",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "senior",
+      "skills": [
+        "Security",
+        "Python",
+        "Linux",
+        "AWS",
+        "Google Cloud"
+      ],
+      "workplace": "hybrid",
+      "junior_friendly": false,
+      "regions": [
+        "Netherlands"
+      ]
+    },
+    {
+      "id": "arbeitnow:senior-contract-c-javascript-software-engineer-browser-engine-116355",
+      "source": "arbeitnow",
+      "title": "Senior Contract C++ / JavaScript Software Engineer (Browser Engine)",
+      "company": "mozilla",
+      "location": "Unspecified",
+      "remote": false,
+      "tags": [
+        "firefox",
+        "javascript",
+        "c++"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-14T06:55:18Z",
+      "url": "https://www.arbeitnow.fr/jobs/companies/mozilla/senior-contract-c-javascript-software-engineer-browser-engine-116355",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "senior",
+      "skills": [
+        "C++",
+        "JavaScript",
+        "Security"
+      ],
+      "workplace": "unknown",
+      "junior_friendly": false,
+      "regions": []
+    },
+    {
+      "id": "arbeitnow:senior-data-analytics-engineer-amsterdam-214056",
+      "source": "arbeitnow",
+      "title": "Senior Data & Analytics Engineer",
+      "company": "Polarsteps",
+      "location": "Amsterdam",
+      "remote": false,
+      "tags": [
+        "growth & marketing"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-14T06:40:35Z",
+      "url": "https://www.arbeitnow.nl/jobs/companies/polarsteps/senior-data-analytics-engineer-amsterdam-214056",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "senior",
+      "skills": [],
+      "workplace": "hybrid",
+      "junior_friendly": false,
+      "regions": [
+        "Netherlands"
+      ]
+    },
+    {
+      "id": "arbeitnow:software-engineer-net-woerden-201047",
+      "source": "arbeitnow",
+      "title": "Software Engineer (.NET)",
+      "company": "CCS Connects",
+      "location": "Woerden, Utrecht, Nederland",
+      "remote": false,
+      "tags": [
+        ".net"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-14T06:31:34Z",
+      "url": "https://www.arbeitnow.nl/jobs/companies/ccs-connects/software-engineer-net-woerden-201047",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "unknown",
+      "skills": [
+        ".NET",
+        "Docker",
+        "CI/CD",
+        "Azure"
+      ],
+      "workplace": "hybrid",
+      "junior_friendly": false,
+      "regions": [
+        "Netherlands"
+      ]
+    },
+    {
+      "id": "arbeitnow:industrial-data-solutions-engineer-gn-at-stealth-ai-venture-berlin-337847",
+      "source": "arbeitnow",
+      "title": "Industrial Data & Solutions Engineer (gn) @ Stealth AI Venture, Berlin",
+      "company": "atlantic.vc",
+      "location": "Berlin, Berlin, Germany",
+      "remote": false,
+      "tags": [
+        "portfolio company"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-14T06:31:33Z",
+      "url": "https://www.arbeitnow.com/jobs/companies/atlanticvc/industrial-data-solutions-engineer-gn-at-stealth-ai-venture-berlin-337847",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "unknown",
+      "skills": [
+        "AI",
+        "Python",
+        "SQL"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "Germany"
+      ]
+    },
+    {
+      "id": "arbeitnow:fullstack-engineer-leipzig-367682",
+      "source": "arbeitnow",
+      "title": "Fullstack Engineer (f/m/d)",
+      "company": "Spread Group",
+      "location": "Leipzig, Sachsen, Germany",
+      "remote": false,
+      "tags": [],
+      "salary_text": null,
+      "posted_at": "2026-11-14T06:31:33Z",
+      "url": "https://www.arbeitnow.com/jobs/companies/spread-group/fullstack-engineer-leipzig-367682",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "unknown",
+      "skills": [
+        "Full-Stack",
+        "Spring",
+        "Backend",
+        "GraphQL",
+        "Frontend",
+        "TypeScript",
+        "React",
+        "CSS",
+        "Kotlin",
+        "Java",
+        "SQL"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "Germany"
+      ]
+    },
+    {
+      "id": "arbeitnow:remote-software-engineer-computer-use-integrations-berlin-434731",
+      "source": "arbeitnow",
+      "title": "Software Engineer (Computer Use & Integrations) (m/w/d)",
+      "company": "Recare Deutschland GmbH",
+      "location": "Remote job",
+      "remote": true,
+      "tags": [],
+      "salary_text": null,
+      "posted_at": "2026-11-14T06:31:30Z",
+      "url": "https://www.arbeitnow.com/jobs/companies/recare-deutschland-gmbh/remote-software-engineer-computer-use-integrations-berlin-434731",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "unknown",
+      "skills": [
+        "Backend",
+        "AI",
+        "Ruby on Rails",
+        "Go",
+        "Python",
+        "TypeScript"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
+    },
+    {
+      "id": "arbeitnow:remote-lead-security-engineer-berlin-229517",
+      "source": "arbeitnow",
+      "title": "Lead Security Engineer (m/w/d)",
+      "company": "Recare Deutschland GmbH",
+      "location": "Remote job",
+      "remote": true,
+      "tags": [],
+      "salary_text": null,
+      "posted_at": "2026-11-14T06:31:30Z",
+      "url": "https://www.arbeitnow.com/jobs/companies/recare-deutschland-gmbh/remote-lead-security-engineer-berlin-229517",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "lead",
+      "skills": [
+        "Security",
+        "AI"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
+    },
+    {
+      "id": "arbeitnow:data-scientist-munich-456584",
+      "source": "arbeitnow",
+      "title": "Data Scientist (m/w/d)",
+      "company": "Machine Learning Reply",
+      "location": "Munich, Bayern, Germany",
+      "remote": false,
+      "tags": [
+        "data science"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-14T06:31:30Z",
+      "url": "https://www.arbeitnow.com/jobs/companies/machine-learning-reply/data-scientist-munich-456584",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "unknown",
+      "skills": [
+        "Machine Learning",
+        "Azure",
+        "AWS",
+        "Google Cloud",
+        "Spark",
+        "Databricks",
+        "Data Science",
+        "Python",
+        "R",
+        "Rust",
+        "SQL"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": [
+        "Germany"
+      ]
+    },
+    {
+      "id": "arbeitnow:data-scientist-fund-investments-marketing-sales-data-zurich-44645",
+      "source": "arbeitnow",
+      "title": "Data Scientist Fund Investments | Marketing/Sales Data",
+      "company": "coni+partner AG",
+      "location": "Zürich",
+      "remote": false,
+      "tags": [
+        "data scientist"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-14T05:30:32Z",
+      "url": "https://www.arbeitnow.ch/jobs/companies/conipartner-ag/data-scientist-fund-investments-marketing-sales-data-zurich-44645",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "unknown",
+      "skills": [
+        "AI",
+        "Data Science",
+        "Python",
+        "SQL"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "Switzerland"
+      ]
+    },
+    {
+      "id": "arbeitnow:data-scientist-fund-data-offers-zurich-468392",
+      "source": "arbeitnow",
+      "title": "Data Scientist Fund Data & Offers",
+      "company": "coni+partner AG",
+      "location": "Zürich",
+      "remote": false,
+      "tags": [
+        "data scientist"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-14T05:00:27Z",
+      "url": "https://www.arbeitnow.ch/jobs/companies/conipartner-ag/data-scientist-fund-data-offers-zurich-468392",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "unknown",
+      "skills": [
+        "AI",
+        "Data Science",
+        "Python",
+        "SQL"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "Switzerland"
+      ]
+    },
+    {
+      "id": "arbeitnow:forward-deployed-engineer-fde-grafenwohr-bavaria-447557",
+      "source": "arbeitnow",
+      "title": "Forward Deployed Engineer (FDE)",
+      "company": "Pvminc",
+      "location": "Grafenwohr, Bavaria",
+      "remote": false,
+      "tags": [
+        "palantir engineer services"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-14T03:55:35Z",
+      "url": "https://www.arbeitnow.com/jobs/companies/pvminc/forward-deployed-engineer-fde-grafenwohr-bavaria-447557",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "unknown",
+      "skills": [
+        "TypeScript",
+        "Security",
+        "CI/CD",
+        "Frontend",
+        "Python",
+        "Java"
+      ],
+      "workplace": "hybrid",
+      "junior_friendly": false,
+      "regions": [
+        "Germany"
+      ]
+    },
+    {
+      "id": "arbeitnow:senior-data-architect-senior-data-engineer-azure-databricks-39403",
+      "source": "arbeitnow",
+      "title": "Senior Data Architect / Senior Data Engineer – Azure Databricks",
+      "company": "Xebiadach",
+      "location": "Unspecified",
+      "remote": false,
+      "tags": [
+        "delivery",
+        "azure"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-14T03:55:26Z",
+      "url": "https://www.arbeitnow.ch/jobs/companies/xebiadach/senior-data-architect-senior-data-engineer-azure-databricks-39403",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "senior",
+      "skills": [
+        "Azure",
+        "Databricks",
+        "GitHub Actions",
+        "AI",
+        "Spark",
+        "SQL",
+        "Kafka",
+        "Terraform",
+        "Git",
+        "CI/CD",
+        "Power BI"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
+    },
+    {
+      "id": "arbeitnow:senior-full-stack-engineer-experimentation-product-analytics-germany-remote-250355",
+      "source": "arbeitnow",
+      "title": "Senior Full Stack Engineer | Experimentation - Product Analytics | Germany | Remote",
+      "company": "grafanalabs",
+      "location": "Unspecified",
+      "remote": false,
+      "tags": [
+        "r&d: observability",
+        "full-stack"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-14T03:55:22Z",
+      "url": "https://www.arbeitnow.com/jobs/companies/grafanalabs/senior-full-stack-engineer-experimentation-product-analytics-germany-remote-250355",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "senior",
+      "skills": [
+        "Full-Stack",
+        "AI",
+        "Frontend",
+        "TypeScript",
+        "React",
+        "Backend",
+        "Go",
+        "Kubernetes",
+        "Embedded",
+        "BigQuery",
+        "Security",
+        "SQL"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": [
+        "Germany"
+      ]
+    },
+    {
+      "id": "arbeitnow:senior-full-stack-engineer-databases-analytics-germany-remote-216267",
+      "source": "arbeitnow",
+      "title": "Senior Full Stack Engineer - Databases - Analytics | Germany | Remote",
+      "company": "grafanalabs",
+      "location": "Unspecified",
+      "remote": false,
+      "tags": [
+        "r&d: second horizon",
+        "full-stack"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-14T03:55:22Z",
+      "url": "https://www.arbeitnow.com/jobs/companies/grafanalabs/senior-full-stack-engineer-databases-analytics-germany-remote-216267",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "senior",
+      "skills": [
+        "Full-Stack",
+        "AI",
+        "Backend",
+        "LLM",
+        "AWS",
+        "Google Cloud",
+        "Azure",
+        "Power BI",
+        "Snowflake",
+        "Databricks"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": [
+        "Germany",
+        "Spain",
+        "Sweden",
+        "United Kingdom",
+        "Ireland"
+      ]
+    },
+    {
+      "id": "arbeitnow:remote-staff-forward-deployed-engineer-emea-244241",
+      "source": "arbeitnow",
+      "title": "Staff Forward Deployed Engineer, EMEA",
+      "company": "gitlab",
+      "location": "Remote",
+      "remote": true,
+      "tags": [
+        "customer experience"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-14T03:55:22Z",
+      "url": "https://www.arbeitnow.com/jobs/companies/gitlab/remote-staff-forward-deployed-engineer-emea-244241",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "staff",
+      "skills": [],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": [
+        "EMEA"
+      ]
+    },
+    {
+      "id": "arbeitnow:qa-engineer-intern-6-months-333718",
+      "source": "arbeitnow",
+      "title": "QA Engineer Intern (6 months)",
+      "company": "shifttechnology",
+      "location": "Unspecified",
+      "remote": false,
+      "tags": [
+        "technology - software engineering",
+        "infrastructure",
+        "and security"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-14T03:55:19Z",
+      "url": "https://www.arbeitnow.fr/jobs/companies/shifttechnology/qa-engineer-intern-6-months-333718",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "intern",
+      "skills": [
+        "QA"
+      ],
+      "workplace": "hybrid",
+      "junior_friendly": true,
+      "regions": []
+    },
+    {
+      "id": "arbeitnow:backend-engineer-platform-core-france-4872",
+      "source": "arbeitnow",
+      "title": "Backend Engineer - Platform Core",
+      "company": "Fullenrich",
+      "location": "France",
+      "remote": false,
+      "tags": [
+        "technology",
+        "backend"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-14T03:40:29Z",
+      "url": "https://www.arbeitnow.fr/jobs/companies/fullenrich/backend-engineer-platform-core-france-4872",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "unknown",
+      "skills": [
+        "Backend",
+        "Go",
+        "AI",
+        "AWS",
+        "PostgreSQL",
+        "Docker",
+        "CI/CD",
+        "GitHub Actions"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": [
+        "France"
+      ]
+    },
+    {
+      "id": "arbeitnow:ai-engineer-paris-170648",
+      "source": "arbeitnow",
+      "title": "AI Engineer",
+      "company": "Alassio",
+      "location": "Paris",
+      "remote": false,
+      "tags": [
+        "product & engineering"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-14T03:40:29Z",
+      "url": "https://www.arbeitnow.fr/jobs/companies/alassio/ai-engineer-paris-170648",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "unknown",
+      "skills": [
+        "AI",
+        "C",
+        "Python"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "France"
+      ]
+    },
+    {
+      "id": "arbeitnow:senior-backend-engineer-java-kotlin-berlin-325851",
+      "source": "arbeitnow",
+      "title": "Senior Backend Engineer - Java/Kotlin (x/f/m)",
+      "company": "Doctolib",
+      "location": "Berlin",
+      "remote": false,
+      "tags": [
+        "backend",
+        "kotlin",
+        "java"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-14T03:40:25Z",
+      "url": "https://www.arbeitnow.com/jobs/companies/doctolib/senior-backend-engineer-java-kotlin-berlin-325851",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "senior",
+      "skills": [
+        "Backend",
+        "Java",
+        "Kotlin",
+        "Security",
+        "Frontend",
+        "React",
+        "TypeScript",
+        "AI",
+        "Kafka",
+        "Ruby on Rails",
+        "Python",
+        "Swift",
+        "React Native"
+      ],
+      "workplace": "hybrid",
+      "junior_friendly": false,
+      "regions": [
+        "Germany"
+      ]
+    },
+    {
+      "id": "arbeitnow:security-engineer-geldermalsen-379120",
+      "source": "arbeitnow",
+      "title": "Security Engineer",
+      "company": "Dawn Technology",
+      "location": "Geldermalsen, Gelderland, Nederland",
+      "remote": false,
+      "tags": [
+        "dawn technology"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-14T03:31:42Z",
+      "url": "https://www.arbeitnow.nl/jobs/companies/dawn-technology/security-engineer-geldermalsen-379120",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "unknown",
+      "skills": [
+        "Security",
+        "Rust",
+        "AWS"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "Netherlands"
+      ]
+    },
+    {
+      "id": "arbeitnow:integration-test-engineer-utrecht-434292",
+      "source": "arbeitnow",
+      "title": "Integration Test Engineer",
+      "company": "iwell",
+      "location": "Utrecht, Utrecht, Netherlands",
+      "remote": false,
+      "tags": [
+        "battery systems"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-14T03:31:38Z",
+      "url": "https://www.arbeitnow.nl/jobs/companies/iwell/integration-test-engineer-utrecht-434292",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "unknown",
+      "skills": [
+        "Security",
+        "QA"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "Netherlands"
+      ]
+    },
+    {
+      "id": "arbeitnow:ai-native-software-engineer-berlin-186419",
+      "source": "arbeitnow",
+      "title": "AI-Native Software Engineer (m/w/d)",
+      "company": "vitaservices GmbH & Co. KG",
+      "location": "Berlin",
+      "remote": false,
+      "tags": [
+        "software development"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-14T02:30:37Z",
+      "url": "https://www.arbeitnow.com/jobs/companies/vitaservices-gmbh-co-kg/ai-native-software-engineer-berlin-186419",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "unknown",
+      "skills": [
+        "AI",
+        "CI/CD",
+        "Java",
+        "Spring Boot",
+        "Backend",
+        "Angular",
+        "Frontend",
+        "Kubernetes",
+        "PostgreSQL"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "Germany"
+      ]
+    },
+    {
+      "id": "arbeitnow:senior-software-engineer-query-engine-database-systems-munich-4419",
+      "source": "arbeitnow",
+      "title": "Senior Software Engineer - Query Engine & Database Systems",
+      "company": "celonis",
+      "location": "Munich",
+      "remote": false,
+      "tags": [],
+      "salary_text": null,
+      "posted_at": "2026-11-14T00:55:35Z",
+      "url": "https://www.arbeitnow.com/jobs/companies/celonis/senior-software-engineer-query-engine-database-systems-munich-4419",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "senior",
+      "skills": [
+        "AI",
+        "C++",
+        "Java",
+        "Linux"
+      ],
+      "workplace": "hybrid",
+      "junior_friendly": false,
+      "regions": [
+        "Germany"
+      ]
+    },
+    {
+      "id": "arbeitnow:senior-software-engineer-munich-59079",
+      "source": "arbeitnow",
+      "title": "Senior Software Engineer",
+      "company": "celonis",
+      "location": "Munich",
+      "remote": false,
+      "tags": [],
+      "salary_text": null,
+      "posted_at": "2026-11-14T00:55:35Z",
+      "url": "https://www.arbeitnow.com/jobs/companies/celonis/senior-software-engineer-munich-59079",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "senior",
+      "skills": [
+        "AI",
+        "Backend",
+        "Java",
+        "Spring Boot",
+        "PostgreSQL",
+        "Kubernetes",
+        "DevOps",
+        "Spring",
+        "Docker",
+        "Terraform",
+        "Go"
+      ],
+      "workplace": "hybrid",
+      "junior_friendly": false,
+      "regions": [
+        "Germany"
+      ]
+    },
+    {
+      "id": "arbeitnow:senior-software-engineer-engine-orchestration-munich-205702",
+      "source": "arbeitnow",
+      "title": "Senior Software Engineer - Engine Orchestration",
+      "company": "celonis",
+      "location": "Munich",
+      "remote": false,
+      "tags": [],
+      "salary_text": null,
+      "posted_at": "2026-11-14T00:55:35Z",
+      "url": "https://www.arbeitnow.com/jobs/companies/celonis/senior-software-engineer-engine-orchestration-munich-205702",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "senior",
+      "skills": [
+        "AI",
+        "Security",
+        "Java",
+        "Spring",
+        "PostgreSQL",
+        "Python",
+        "Spring Boot",
+        "Kubernetes",
+        "C++"
+      ],
+      "workplace": "hybrid",
+      "junior_friendly": false,
+      "regions": [
+        "Germany"
+      ]
+    },
+    {
+      "id": "arbeitnow:intern-ai-management-consulting-value-engineering-paris-369448",
+      "source": "arbeitnow",
+      "title": "Intern AI & Management Consulting (Value Engineering)",
+      "company": "celonis",
+      "location": "Paris",
+      "remote": false,
+      "tags": [
+        "value engineering"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-14T00:55:28Z",
+      "url": "https://www.arbeitnow.fr/jobs/companies/celonis/intern-ai-management-consulting-value-engineering-paris-369448",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "intern",
+      "skills": [
+        "AI",
+        "SQL"
+      ],
+      "workplace": "hybrid",
+      "junior_friendly": true,
+      "regions": [
+        "France"
+      ]
+    },
+    {
+      "id": "arbeitnow:stage-software-engineer-paris-9th-arrondissement-of-paris-75009-paris-208717",
+      "source": "arbeitnow",
+      "title": "Stage Software Engineer - Paris - H/F/X",
+      "company": "Artefactjobs",
+      "location": "9th arrondissement of Paris, 75009, Paris",
+      "remote": false,
+      "tags": [
+        "ai applied engineer"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-14T00:55:27Z",
+      "url": "https://www.arbeitnow.fr/jobs/companies/artefactjobs/stage-software-engineer-paris-9th-arrondissement-of-paris-75009-paris-208717",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "intern",
+      "skills": [],
+      "workplace": "onsite",
+      "junior_friendly": true,
+      "regions": [
+        "France"
+      ]
+    },
+    {
+      "id": "arbeitnow:data-scientist-intern-paris-9th-arrondissement-of-paris-75009-paris-471003",
+      "source": "arbeitnow",
+      "title": "Data Scientist Intern - Paris",
+      "company": "Artefactjobs",
+      "location": "9th arrondissement of Paris, 75009, Paris",
+      "remote": false,
+      "tags": [
+        "ai applied engineer"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-14T00:55:27Z",
+      "url": "https://www.arbeitnow.fr/jobs/companies/artefactjobs/data-scientist-intern-paris-9th-arrondissement-of-paris-75009-paris-471003",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "intern",
+      "skills": [
+        "Google Cloud",
+        "AWS",
+        "Azure",
+        "Data Science"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": true,
+      "regions": [
+        "France"
+      ]
+    },
+    {
+      "id": "arbeitnow:senior-cloud-engineer-product-metrics-emea-remote-amsterdam-453090",
+      "source": "arbeitnow",
+      "title": "Senior Cloud Engineer - Product Metrics (EMEA Remote)",
+      "company": "Clickhouse",
+      "location": "The Netherlands",
+      "remote": false,
+      "tags": [],
+      "salary_text": null,
+      "posted_at": "2026-11-14T00:40:14Z",
+      "url": "https://www.arbeitnow.nl/jobs/companies/clickhouse/senior-cloud-engineer-product-metrics-emea-remote-amsterdam-453090",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "senior",
+      "skills": [
+        "Go",
+        "Kubernetes",
+        "AWS",
+        "Google Cloud",
+        "Azure",
+        "Terraform",
+        "Kafka"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": [
+        "EMEA",
+        "Netherlands"
+      ]
+    },
+    {
+      "id": "arbeitnow:data-platform-engineer-amsterdam-124619",
+      "source": "arbeitnow",
+      "title": "Data Platform Engineer",
+      "company": "Clickhouse",
+      "location": "The Netherlands",
+      "remote": false,
+      "tags": [],
+      "salary_text": null,
+      "posted_at": "2026-11-14T00:40:14Z",
+      "url": "https://www.arbeitnow.nl/jobs/companies/clickhouse/data-platform-engineer-amsterdam-124619",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "unknown",
+      "skills": [
+        "Airflow",
+        "AWS",
+        "GitHub Actions",
+        "Security",
+        "AI",
+        "SQL",
+        "Python",
+        "CI/CD"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": [
+        "Netherlands"
+      ]
+    },
+    {
+      "id": "arbeitnow:jr-ai-engineer-amsterdam-262980",
+      "source": "arbeitnow",
+      "title": "Jr. AI Engineer",
+      "company": "433",
+      "location": "Amsterdam , Noord-Holland, Netherlands",
+      "remote": false,
+      "tags": [
+        "entry-level"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-13T21:31:18Z",
+      "url": "https://www.arbeitnow.nl/jobs/companies/433/jr-ai-engineer-amsterdam-262980",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "junior",
+      "skills": [
+        "AI",
+        "LLM",
+        "Python",
+        "Data Science",
+        "SQL",
+        "Docker",
+        "Airflow",
+        "Git",
+        "AWS",
+        "Azure",
+        "Google Cloud",
+        "MLOps",
+        "Machine Learning"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": true,
+      "regions": [
+        "Netherlands"
+      ]
+    },
+    {
+      "id": "arbeitnow:senior-microsoft-dynamics-365-crm-entwickler-80-refnr-48267-zurich-69318",
+      "source": "arbeitnow",
+      "title": "Senior Microsoft Dynamics 365 CRM Entwickler (m/w/d) 80% (Ref.Nr.: 48267)",
+      "company": "Wavestone Germany AG",
+      "location": "Zürich",
+      "remote": false,
+      "tags": [
+        "sap/erp consulting"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-13T18:00:51Z",
+      "url": "https://www.arbeitnow.ch/jobs/companies/wavestone-germany-ag/senior-microsoft-dynamics-365-crm-entwickler-80-refnr-48267-zurich-69318",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "senior",
+      "skills": [],
+      "workplace": "hybrid",
+      "junior_friendly": false,
+      "regions": [
+        "Switzerland"
+      ]
+    },
+    {
+      "id": "arbeitnow:senior-java-entwickler-kafka-datenintegration-ms-dynamics-365-80-refnr-48266-zurich-394435",
+      "source": "arbeitnow",
+      "title": "Senior Java Entwickler (m/w/d) - Kafka / Datenintegration MS Dynamics 365 (80%) (Ref.Nr.: 48266)",
+      "company": "Wavestone Germany AG",
+      "location": "Zürich",
+      "remote": false,
+      "tags": [
+        "software development",
+        "kafka",
+        "java"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-13T18:00:51Z",
+      "url": "https://www.arbeitnow.ch/jobs/companies/wavestone-germany-ag/senior-java-entwickler-kafka-datenintegration-ms-dynamics-365-80-refnr-48266-zurich-394435",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "senior",
+      "skills": [
+        "Java",
+        "Kafka",
+        "Spring",
+        "Spring Boot"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": [
+        "Switzerland"
+      ]
+    },
+    {
+      "id": "arbeitnow:applikations-entwickler-ms-dynamics-zurich-388115",
+      "source": "arbeitnow",
+      "title": "Applikations-Entwickler (MS Dynamics)",
+      "company": "PROSTAFF Schweiz GmbH",
+      "location": "Zürich",
+      "remote": false,
+      "tags": [
+        "software development"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-13T15:32:02Z",
+      "url": "https://www.arbeitnow.ch/jobs/companies/prostaff-schweiz-gmbh/applikations-entwickler-ms-dynamics-zurich-388115",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "unknown",
+      "skills": [
+        "Java",
+        "Spring Boot",
+        "Kafka",
+        "DevOps",
+        "Spring"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "Switzerland"
+      ]
+    },
+    {
+      "id": "arbeitnow:junior-tester-assen-149068",
+      "source": "arbeitnow",
+      "title": "Junior Tester",
+      "company": "The Trainee Company",
+      "location": "Assen, Drenthe, Nederland",
+      "remote": false,
+      "tags": [
+        "business & ict",
+        "entry-level"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-13T15:31:42Z",
+      "url": "https://www.arbeitnow.nl/jobs/companies/the-trainee-company/junior-tester-assen-149068",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "junior",
+      "skills": [],
+      "workplace": "onsite",
+      "junior_friendly": true,
+      "regions": [
+        "Netherlands"
+      ]
+    },
+    {
+      "id": "arbeitnow:backend-developer-python-java-den-haag-321529",
+      "source": "arbeitnow",
+      "title": "Backend Developer (Python, Java)",
+      "company": "Lefebvre Sdu",
+      "location": "Den Haag, Zuid-Holland, Nederland",
+      "remote": false,
+      "tags": [
+        "product & technology",
+        "backend",
+        "python",
+        "java"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-13T12:31:29Z",
+      "url": "https://www.arbeitnow.nl/jobs/companies/lefebvre-sdu/backend-developer-python-java-den-haag-321529",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "unknown",
+      "skills": [
+        "Backend",
+        "Python",
+        "Java",
+        "AI",
+        "DevOps",
+        "FastAPI",
+        "PostgreSQL",
+        "GraphQL",
+        "MongoDB",
+        "GitHub Actions",
+        "Frontend"
+      ],
+      "workplace": "hybrid",
+      "junior_friendly": false,
+      "regions": [
+        "Netherlands"
+      ]
+    },
+    {
+      "id": "arbeitnow:system-engineer-cloud-network-security-steinhausen-30293",
+      "source": "arbeitnow",
+      "title": "System Engineer - Cloud, Network & Security (m/w/d)",
+      "company": "SwissPeak Partners GmbH",
+      "location": "Steinhausen, Zug, Switzerland",
+      "remote": false,
+      "tags": [
+        "infrastructure & devops"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-13T09:31:36Z",
+      "url": "https://www.arbeitnow.ch/jobs/companies/swisspeak-partners-gmbh/system-engineer-cloud-network-security-steinhausen-30293",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "unknown",
+      "skills": [
+        "Security",
+        "Azure"
+      ],
+      "workplace": "hybrid",
+      "junior_friendly": false,
+      "regions": [
+        "Switzerland"
+      ]
+    },
+    {
+      "id": "arbeitnow:senior-net-developer-luzern-120672",
+      "source": "arbeitnow",
+      "title": "Senior .NET Developer",
+      "company": "SwissPeak Partners GmbH",
+      "location": "Luzern, Luzern, Switzerland",
+      "remote": false,
+      "tags": [
+        "software engineering",
+        ".net"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-13T09:31:36Z",
+      "url": "https://www.arbeitnow.ch/jobs/companies/swisspeak-partners-gmbh/senior-net-developer-luzern-120672",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "senior",
+      "skills": [
+        ".NET",
+        "Backend",
+        "Frontend",
+        "Azure",
+        "DevOps",
+        "Kubernetes",
+        "Kafka",
+        "AI"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "Switzerland"
+      ]
+    },
+    {
+      "id": "arbeitnow:senior-java-developer-performance-focused-zurich-111009",
+      "source": "arbeitnow",
+      "title": "Senior Java Developer (Performance Focused)",
+      "company": "SwissPeak Partners GmbH",
+      "location": "Zurich, Zürich, Switzerland",
+      "remote": false,
+      "tags": [
+        "software engineering",
+        "java"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-13T09:31:36Z",
+      "url": "https://www.arbeitnow.ch/jobs/companies/swisspeak-partners-gmbh/senior-java-developer-performance-focused-zurich-111009",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "senior",
+      "skills": [
+        "Java",
+        "Spring",
+        "SQL",
+        "PostgreSQL",
+        "Kubernetes",
+        "CI/CD",
+        "DevOps"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "Switzerland"
+      ]
+    },
+    {
+      "id": "arbeitnow:iot-embedded-systems-engineer-bern-137465",
+      "source": "arbeitnow",
+      "title": "IoT Embedded Systems Engineer",
+      "company": "SwissPeak Partners GmbH",
+      "location": "Bern, Berne, Switzerland",
+      "remote": false,
+      "tags": [
+        "infrastructure & devops"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-13T09:31:36Z",
+      "url": "https://www.arbeitnow.ch/jobs/companies/swisspeak-partners-gmbh/iot-embedded-systems-engineer-bern-137465",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "unknown",
+      "skills": [
+        "Embedded",
+        "Linux"
+      ],
+      "workplace": "onsite",
+      "junior_friendly": false,
+      "regions": [
+        "Switzerland"
+      ]
+    },
+    {
+      "id": "remoteok:1137793",
+      "source": "remoteok",
+      "title": "Software Engineer AI Tooling",
+      "company": "Supabase",
+      "location": "Remote",
+      "remote": true,
+      "tags": [],
+      "salary_text": null,
+      "posted_at": "2026-11-13T00:00:15Z",
+      "url": "https://remoteOK.com/remote-jobs/remote-software-engineer-ai-tooling-supabase-1137793",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "unknown",
+      "skills": [
+        "AI",
+        "PostgreSQL",
+        "Backend",
+        "Frontend",
+        "TypeScript",
+        "JavaScript"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
+    },
+    {
+      "id": "remotive:2091137",
+      "source": "remotive",
+      "title": "Senior Data Engineer",
+      "company": "Lemon.io",
+      "location": "LATAM, Europe, USA, Canada, APAC",
+      "remote": true,
+      "tags": [
+        ".net",
+        "android",
+        "apache",
+        "aws",
+        "azure",
+        "c",
+        "c#",
+        "c++",
+        "data science",
+        "full-stack",
+        "go",
+        "ios",
+        "java",
+        "javascript",
+        "magento",
+        "node.js",
+        "php",
+        "python",
+        "react",
+        "ruby/rails",
+        "scala",
+        "shopify",
+        "sql",
+        "swift",
+        "ui/ux",
+        "wordpress",
+        "blockchain",
+        "ai/ml",
+        "automation",
+        "project management",
+        "react native",
+        "rust",
+        "unity",
+        "electron",
+        "spring",
+        "data analysis",
+        "laravel",
+        "ethereum",
+        "graphic design",
+        "typescript",
+        "angular",
+        "gcp",
+        "firebase",
+        "snowflake",
+        "site reliability",
+        "symfony",
+        "next.js",
+        "infrastructure",
+        "flutter"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-11T18:39:59Z",
+      "url": "https://remotive.com/remote-jobs/data/senior-data-engineer-2091137",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "senior",
+      "skills": [],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": [
+        "Latin America",
+        "Europe",
+        "United States",
+        "Canada",
+        "Asia Pacific"
+      ]
+    },
+    {
+      "id": "remoteok:1137714",
+      "source": "remoteok",
+      "title": "Data Engineer",
+      "company": "Addepto",
+      "location": "Remote",
+      "remote": true,
+      "tags": [],
+      "salary_text": null,
+      "posted_at": "2026-11-10T16:00:04Z",
+      "url": "https://remoteOK.com/remote-jobs/remote-data-engineer-addepto-1137714",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "unknown",
+      "skills": [
+        "AI",
+        "Google Cloud",
+        "Snowflake",
+        "Python",
+        "SQL",
+        "BigQuery",
+        "Power BI",
+        "Airflow",
+        "Git",
+        "CI/CD",
+        "Databricks"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
+    },
+    {
+      "id": "remotive:2091136",
+      "source": "remotive",
+      "title": "Senior React Full-stack Developer",
+      "company": "Lemon.io",
+      "location": "LATAM, Europe, USA, Canada, APAC",
+      "remote": true,
+      "tags": [
+        ".net",
+        "android",
+        "aws",
+        "azure",
+        "c",
+        "c#",
+        "c++",
+        "data science",
+        "full-stack",
+        "go",
+        "ios",
+        "java",
+        "javascript",
+        "magento",
+        "node.js",
+        "php",
+        "python",
+        "react",
+        "react js",
+        "ruby/rails",
+        "scala",
+        "shopify",
+        "swift",
+        "ui/ux",
+        "wordpress",
+        "blockchain",
+        "ai/ml",
+        "automation",
+        "project management",
+        "react native",
+        "rust",
+        "unity",
+        "electron",
+        "spring",
+        "laravel",
+        "ethereum",
+        "graphic design",
+        "typescript",
+        "angular",
+        "gcp",
+        "firebase",
+        "data engineering",
+        "site reliability",
+        "symfony",
+        "next.js",
+        "flutter"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-10T14:25:05Z",
+      "url": "https://remotive.com/remote-jobs/software-development/senior-react-full-stack-developer-2091136",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "senior",
+      "skills": [
+        "React",
+        "Full-Stack"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": [
+        "Latin America",
+        "Europe",
+        "United States",
+        "Canada",
+        "Asia Pacific"
+      ]
+    },
+    {
+      "id": "remoteok:1137713",
+      "source": "remoteok",
+      "title": "Senior Software Engineer — Kubernetes Control Plane",
+      "company": "Buoyant",
+      "location": "Remote",
+      "remote": true,
+      "tags": [
+        "kubernetes"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-09T22:00:02Z",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-software-engineer-kubernetes-control-plane-buoyant-1137713",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "senior",
+      "skills": [
+        "Kubernetes",
+        "Go"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
+    },
+    {
+      "id": "remoteok:1137710",
+      "source": "remoteok",
+      "title": "Senior Agentic AI Engineer NDA",
+      "company": "GT",
+      "location": "Warsaw",
+      "remote": true,
+      "tags": [],
+      "salary_text": null,
+      "posted_at": "2026-11-09T16:00:13Z",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-agentic-ai-engineer-nda-gt-1137710",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "senior",
+      "skills": [
+        "AI",
+        "Machine Learning",
+        "LLM",
+        "Security",
+        "Python",
+        "SQL",
+        "Pandas",
+        "Azure",
+        "Docker",
+        "React",
+        "FastAPI"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": [
+        "Poland"
+      ]
+    },
+    {
+      "id": "remoteok:1137704",
+      "source": "remoteok",
+      "title": "UI Developer",
+      "company": "RainFocus",
+      "location": "Any State",
+      "remote": true,
+      "tags": [],
+      "salary_text": null,
+      "posted_at": "2026-11-08T16:00:03Z",
+      "url": "https://remoteOK.com/remote-jobs/remote-ui-developer-rainfocus-1137704",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "unknown",
+      "skills": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "Svelte",
+        "Git",
+        "Backend",
+        "Java",
+        "Frontend"
+      ],
+      "workplace": "hybrid",
+      "junior_friendly": false,
+      "regions": []
+    },
+    {
+      "id": "remoteok:1137701",
+      "source": "remoteok",
+      "title": "AI Developer",
+      "company": "Salvo Software",
+      "location": "Remote",
+      "remote": true,
+      "tags": [],
+      "salary_text": null,
+      "posted_at": "2026-11-07T00:00:02Z",
+      "url": "https://remoteOK.com/remote-jobs/remote-ai-developer-salvo-software-1137701",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "unknown",
+      "skills": [
+        "AI"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
+    },
+    {
+      "id": "remoteok:1137691",
+      "source": "remoteok",
+      "title": "Feltsense AI Engineer",
+      "company": "Silver.dev",
+      "location": "Remote",
+      "remote": true,
+      "tags": [],
+      "salary_text": "$60,000–$110,000",
+      "posted_at": "2026-11-05T16:00:07Z",
+      "url": "https://remoteOK.com/remote-jobs/remote-feltsense-ai-engineer-silver-dev-1137691",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "unknown",
+      "skills": [
+        "AI",
+        "Backend",
+        "LLM",
+        "TypeScript",
+        "Node.js",
+        "PostgreSQL",
+        "Google Cloud"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
+    },
+    {
+      "id": "remoteok:1137689",
+      "source": "remoteok",
+      "title": "ML Inference Engineer – Terminal-Bench Task Designer (vLLM / SGLang / TensorRT-LLM)",
+      "company": "Toptal",
+      "location": "Anywhere in the World",
+      "remote": true,
+      "tags": [
+        "llm"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-11-05T14:58:56Z",
+      "url": "https://remoteOK.com/remote-jobs/remote-ml-inference-engineer-terminal-bench-task-designer-vllm-sglang-tensorrt-llm-toptal-1137689",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "unknown",
+      "skills": [
+        "Machine Learning",
+        "vLLM",
+        "SGLang",
+        "TensorRT",
+        "LLM",
+        "AI",
+        "Docker",
+        "Git",
+        "PyTorch",
+        "Python"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
+    },
+    {
+      "id": "remoteok:1137688",
+      "source": "remoteok",
+      "title": "Senior Vue Developer",
+      "company": "Lemon.io",
+      "location": "Remote",
+      "remote": true,
+      "tags": [
+        "vue"
+      ],
+      "salary_text": "$50,000–$180,000",
+      "posted_at": "2026-11-05T12:45:45Z",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-vue-developer-lemon-io-1137688",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "senior",
+      "skills": [
+        "Vue"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
+    },
+    {
+      "id": "remoteok:1137687",
+      "source": "remoteok",
+      "title": "Senior Staff Infrastructure & Security Engineer",
+      "company": "CivilGrid",
+      "location": "Boston",
+      "remote": true,
+      "tags": [],
+      "salary_text": "$137,318–$192,960",
+      "posted_at": "2026-11-05T00:00:04Z",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-staff-infrastructure-security-engineer-civilgrid-1137687",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "staff",
+      "skills": [
+        "Security",
+        "DevOps",
+        "SRE",
+        "AWS",
+        "PostgreSQL",
+        "Terraform"
+      ],
+      "workplace": "hybrid",
+      "junior_friendly": false,
+      "regions": [
+        "United States"
+      ]
+    },
+    {
+      "id": "remoteok:1137685",
+      "source": "remoteok",
+      "title": "Software Engineer",
+      "company": "Claims",
+      "location": "Remote",
+      "remote": true,
+      "tags": [],
+      "salary_text": "$10,000–$30,000",
+      "posted_at": "2026-11-04T15:09:09Z",
+      "url": "https://remoteOK.com/remote-jobs/remote-software-engineer-claims-1137685",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "unknown",
+      "skills": [],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
+    },
+    {
+      "id": "remoteok:1137619",
+      "source": "remoteok",
+      "title": "AI ML Engineer",
+      "company": "Docusketch",
+      "location": "Remote",
+      "remote": true,
+      "tags": [
+        "ai"
+      ],
+      "salary_text": "$10,000–$120,000",
+      "posted_at": "2026-11-02T10:43:35Z",
+      "url": "https://remoteOK.com/remote-jobs/remote-ai-ml-engineer-docusketch-1137619",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "unknown",
+      "skills": [
+        "AI",
+        "Machine Learning",
+        "PyTorch",
+        "Python"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
+    },
+    {
+      "id": "remoteok:1137614",
+      "source": "remoteok",
+      "title": "Software Engineer Infrastructure",
+      "company": "Sodalis, Inc.",
+      "location": "Palo Alto",
+      "remote": true,
+      "tags": [],
+      "salary_text": "$185,000–$215,000",
+      "posted_at": "2026-11-02T00:00:13Z",
+      "url": "https://remoteOK.com/remote-jobs/remote-software-engineer-infrastructure-sodalis-inc-1137614",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "unknown",
+      "skills": [
+        "AI",
+        "Ruby on Rails",
+        "Machine Learning",
+        "Full-Stack",
+        "Go",
+        "AWS",
+        "Kubernetes",
+        "Embedded"
+      ],
+      "workplace": "hybrid",
+      "junior_friendly": false,
+      "regions": []
+    },
+    {
+      "id": "remotive:2091165",
+      "source": "remotive",
+      "title": "Full-Stack Developer",
+      "company": "Fluence International, Inc.",
+      "location": "Worldwide",
+      "remote": true,
+      "tags": [
+        "admin",
+        "api",
+        "aws",
+        "backend",
+        "cloud",
+        "docker",
+        "frontend",
+        "full-stack",
+        "javascript",
+        "react",
+        "security",
+        "ui/ux",
+        "ai/ml",
+        "automation",
+        "documentation",
+        "healthcare",
+        "typescript",
+        "web applications",
+        "solid",
+        "json",
+        "serverless",
+        "next.js",
+        "github",
+        "rest",
+        "mental health",
+        "baas",
+        "datadog"
+      ],
+      "salary_text": "$3.5k–$5k/month",
+      "posted_at": "2026-10-29T18:22:41Z",
+      "url": "https://remotive.com/remote-jobs/software-development/full-stack-developer-2091165",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "unknown",
+      "skills": [
+        "Full-Stack",
+        "Security",
+        "AI",
+        "React",
+        "Next.js",
+        "AWS",
+        "LLM",
+        "Frontend",
+        "TypeScript",
+        "JavaScript",
+        "Backend",
+        "Docker"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
+    },
+    {
+      "id": "remoteok:1137600",
+      "source": "remoteok",
+      "title": "Cloud Engineer Automation",
+      "company": "Smile Digital Health",
+      "location": "Toronto, Ontario",
+      "remote": true,
+      "tags": [
+        "cloud"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-10-29T16:00:03Z",
+      "url": "https://remoteOK.com/remote-jobs/remote-cloud-engineer-automation-smile-digital-health-1137600",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "unknown",
+      "skills": [],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": [
+        "Canada"
+      ]
+    },
+    {
+      "id": "remoteok:1137597",
+      "source": "remoteok",
+      "title": "Front End Developer",
+      "company": "Cambridge Information Group",
+      "location": "Remote",
+      "remote": true,
+      "tags": [
+        "frontend"
+      ],
+      "salary_text": "$80,000–$100,000",
+      "posted_at": "2026-10-28T21:53:15Z",
+      "url": "https://remoteOK.com/remote-jobs/remote-front-end-developer-cambridge-information-group-1137597",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "unknown",
+      "skills": [
+        "Frontend",
+        "PHP",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Git",
+        "CI/CD",
+        "GitHub Actions",
+        "React",
+        "Vue",
+        "AI"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
+    },
+    {
+      "id": "remotive:2091135",
+      "source": "remotive",
+      "title": "Senior Back-end Developer",
+      "company": "Lemon.io",
+      "location": "Europe, USA, Canada, Australia, Singapore, Mexico, Saudi Arabia",
+      "remote": true,
+      "tags": [
+        ".net",
+        "android",
+        "c",
+        "c#",
+        "c++",
+        "cloud",
+        "data science",
+        "go",
+        "ios",
+        "java",
+        "javascript",
+        "kubernetes",
+        "node.js",
+        "php",
+        "python",
+        "react",
+        "ruby/rails",
+        "scala",
+        "shopify",
+        "swift",
+        "ui/ux",
+        "wordpress",
+        "blockchain",
+        "ai/ml",
+        "automation",
+        "project management",
+        "react native",
+        "rust",
+        "unity",
+        "electron",
+        "spring",
+        "laravel",
+        "ethereum",
+        "graphic design",
+        "typescript",
+        "distributed systems",
+        "angular",
+        "firebase",
+        "data engineering",
+        "site reliability",
+        "symfony",
+        "linux/unix",
+        "next.js",
+        "infrastructure",
+        "flutter",
+        "gpu",
+        "backend"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-10-27T12:56:13Z",
+      "url": "https://remotive.com/remote-jobs/software-development/senior-back-end-developer-2091135",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "senior",
+      "skills": [
+        "Backend"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": [
+        "Europe",
+        "United States",
+        "Canada",
+        "Australia",
+        "Singapore",
+        "Mexico"
+      ]
+    },
+    {
+      "id": "remotive:2091134",
+      "source": "remotive",
+      "title": "Head of Engineering",
+      "company": "Lemon.io",
+      "location": "Worldwide",
+      "remote": true,
+      "tags": [
+        "ai/ml",
+        "startup",
+        "marketplace",
+        "fundraising"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-10-26T12:20:09Z",
+      "url": "https://remotive.com/remote-jobs/software-development/head-of-engineering-2091134",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "manager",
+      "skills": [
+        "AI",
+        "Machine Learning"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
+    },
+    {
+      "id": "remoteok:1137572",
+      "source": "remoteok",
+      "title": "Senior Software Engineer LATAM",
+      "company": "Wagmo",
+      "location": "Remote",
+      "remote": true,
+      "tags": [],
+      "salary_text": "$100,000–$140,000",
+      "posted_at": "2026-10-26T08:00:06Z",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-software-engineer-latam-wagmo-1137572",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "senior",
+      "skills": [
+        "AI",
+        "Python",
+        "Django",
+        "TypeScript",
+        "React",
+        "LLM"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": [
+        "Latin America"
+      ]
+    },
+    {
+      "id": "remoteok:1137571",
+      "source": "remoteok",
+      "title": "Senior Software Engineer",
+      "company": "Klardaten",
+      "location": "Remote",
+      "remote": true,
+      "tags": [],
+      "salary_text": "$80,000–$100,000",
+      "posted_at": "2026-10-25T12:34:21Z",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-software-engineer-klardaten-1137571",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "senior",
+      "skills": [
+        "AI",
+        "Frontend",
+        "Backend",
+        "TypeScript",
+        "C#",
+        ".NET"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": [
+        "European Union",
+        "Germany"
+      ]
+    },
+    {
+      "id": "remoteok:1137557",
+      "source": "remoteok",
+      "title": "Senior DevOps Engineer",
+      "company": "Lemon.io",
+      "location": "Remote",
+      "remote": true,
+      "tags": [
+        "devops"
+      ],
+      "salary_text": "$50,000–$150,000",
+      "posted_at": "2026-10-22T12:58:28Z",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-devops-engineer-lemon-io-1137557",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "senior",
+      "skills": [
+        "DevOps"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
+    },
+    {
+      "id": "remoteok:1137545",
+      "source": "remoteok",
+      "title": "Senior Software Engineer",
+      "company": "Sotheby’s",
+      "location": "Remote",
+      "remote": true,
+      "tags": [],
+      "salary_text": null,
+      "posted_at": "2026-10-18T19:00:02Z",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-software-engineer-sothebys-1137545",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "senior",
+      "skills": [],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
+    },
+    {
+      "id": "remoteok:1137544",
+      "source": "remoteok",
+      "title": "Senior Backend Engineer",
+      "company": "Rain",
+      "location": "Remote",
+      "remote": true,
+      "tags": [
+        "backend"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-10-18T18:00:01Z",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-backend-engineer-rain-1137544",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "senior",
+      "skills": [
+        "Backend",
+        "AI"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
+    },
+    {
+      "id": "remotive:2091158",
+      "source": "remotive",
+      "title": "Software Engineer, AI Coding Tasks",
+      "company": "Askable",
+      "location": "Worldwide",
+      "remote": true,
+      "tags": [
+        "c++",
+        "docker",
+        "git",
+        "go",
+        "java",
+        "python",
+        "security",
+        "ai/ml",
+        "rust",
+        "typescript",
+        "distributed systems",
+        "solid",
+        "linux/unix",
+        "testing",
+        "infrastructure"
+      ],
+      "salary_text": "$1000 per task",
+      "posted_at": "2026-10-17T16:04:29Z",
+      "url": "https://remotive.com/remote-jobs/software-development/software-engineer-ai-coding-tasks-2091158",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "unknown",
+      "skills": [
+        "AI",
+        "Python",
+        "TypeScript",
+        "Go",
+        "Rust",
+        "Java",
+        "C++",
+        "Docker",
+        "Linux",
+        "Git",
+        "Security"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
+    },
+    {
+      "id": "remoteok:1137527",
+      "source": "remoteok",
+      "title": "Senior Software Engineer II Applied AI",
+      "company": "Wrapbook",
+      "location": "Remote",
+      "remote": true,
+      "tags": [],
+      "salary_text": null,
+      "posted_at": "2026-10-15T16:00:03Z",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-software-engineer-ii-applied-ai-wrapbook-1137527",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "senior",
+      "skills": [
+        "AI",
+        "Backend",
+        "Python",
+        "TypeScript",
+        "Node.js",
+        "Java",
+        "Security",
+        "LLM",
+        "AWS"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
+    },
+    {
+      "id": "remotive:2069746",
+      "source": "remotive",
+      "title": "Tech Lead Full-Stack Rails Engineer",
+      "company": "Mitre Media",
+      "location": "USA, Canada, USA timezones",
+      "remote": true,
+      "tags": [
+        "api",
+        "css",
+        "docker",
+        "elasticsearch",
+        "full-stack",
+        "html",
+        "javascript",
+        "kubernetes",
+        "postgresql",
+        "react",
+        "ror",
+        "ruby/rails",
+        "ai/ml",
+        "cad",
+        "advertising",
+        "redis",
+        "es6",
+        "web applications",
+        "mysql",
+        "nlp",
+        "fintech",
+        "micro services",
+        "github",
+        "system architecture",
+        "rails"
+      ],
+      "salary_text": "$170k - $200k",
+      "posted_at": "2026-10-14T20:33:44Z",
+      "url": "https://remotive.com/remote-jobs/software-development/tech-lead-full-stack-rails-engineer-2069746",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "lead",
+      "skills": [
+        "Full-Stack",
+        "Ruby on Rails",
+        "CSS",
+        "Docker",
+        "Elasticsearch",
+        "HTML",
+        "JavaScript",
+        "Kubernetes",
+        "PostgreSQL",
+        "React",
+        "Redis",
+        "MySQL"
+      ],
+      "workplace": "hybrid",
+      "junior_friendly": false,
+      "regions": [
+        "United States",
+        "Canada"
+      ]
+    },
+    {
+      "id": "remoteok:1137508",
+      "source": "remoteok",
+      "title": "Principal Software Engineer",
+      "company": "Vytalize Health",
+      "location": "Kansas",
+      "remote": true,
+      "tags": [],
+      "salary_text": null,
+      "posted_at": "2026-10-13T00:00:18Z",
+      "url": "https://remoteOK.com/remote-jobs/remote-principal-software-engineer-vytalize-health-1137508",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "principal",
+      "skills": [
+        "Security",
+        "QA",
+        "Backend",
+        "Python",
+        "Java",
+        "Go",
+        "AWS",
+        "Databricks",
+        "Google Cloud",
+        "Docker",
+        "Kubernetes",
+        "CI/CD"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
+    },
+    {
+      "id": "remoteok:1137465",
+      "source": "remoteok",
+      "title": "Platform and Integration Engineer Security Telemetry",
+      "company": "RedMimicry",
+      "location": "Remote",
+      "remote": true,
+      "tags": [],
+      "salary_text": null,
+      "posted_at": "2026-10-05T13:00:02Z",
+      "url": "https://remoteOK.com/remote-jobs/remote-platform-and-integration-engineer-security-telemetry-redmimicry-1137465",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "unknown",
+      "skills": [
+        "Security"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
+    },
+    {
+      "id": "remoteok:1137427",
+      "source": "remoteok",
+      "title": "Software Engineer",
+      "company": "Prenosis",
+      "location": "Remote",
+      "remote": true,
+      "tags": [],
+      "salary_text": null,
+      "posted_at": "2026-09-23T14:00:02Z",
+      "url": "https://remoteOK.com/remote-jobs/remote-software-engineer-prenosis-1137427",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "unknown",
+      "skills": [],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
+    },
+    {
+      "id": "remoteok:1137410",
+      "source": "remoteok",
+      "title": "Frontend Engineer",
+      "company": "Bjak",
+      "location": "Ireland",
+      "remote": true,
+      "tags": [
+        "frontend"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-09-20T00:00:25Z",
+      "url": "https://remoteOK.com/remote-jobs/remote-frontend-engineer-bjak-1137410",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "unknown",
+      "skills": [
+        "Frontend",
+        "AI",
+        "Backend",
+        "React",
+        "TypeScript",
+        "Next.js",
+        "HTML",
+        "CSS",
+        "Node.js",
+        "GraphQL"
+      ],
+      "workplace": "hybrid",
+      "junior_friendly": false,
+      "regions": [
+        "Ireland"
+      ]
+    },
+    {
+      "id": "remoteok:1137387",
+      "source": "remoteok",
+      "title": "Software Engineer",
+      "company": "Mirantis",
+      "location": "Remote",
+      "remote": true,
+      "tags": [],
+      "salary_text": null,
+      "posted_at": "2026-09-12T14:00:03Z",
+      "url": "https://remoteOK.com/remote-jobs/remote-software-engineer-mirantis-1137387",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "unknown",
+      "skills": [
+        "Kubernetes",
+        "AI",
+        "Machine Learning"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
+    },
+    {
+      "id": "remoteok:1137224",
+      "source": "remoteok",
+      "title": "AI Engineer Data APIs",
+      "company": "Benzinga",
+      "location": "Remote",
+      "remote": true,
+      "tags": [],
+      "salary_text": null,
+      "posted_at": "2026-08-30T21:00:01Z",
+      "url": "https://remoteOK.com/remote-jobs/remote-ai-engineer-data-apis-benzinga-1137224",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "unknown",
+      "skills": [
+        "AI"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
+    },
+    {
+      "id": "remoteok:1137114",
+      "source": "remoteok",
+      "title": "Senior Backend Engineer Build AI Agents",
+      "company": "Salesforge",
+      "location": "Remote",
+      "remote": true,
+      "tags": [
+        "backend"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-08-25T07:00:03Z",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-backend-engineer-build-ai-agents-salesforge-1137114",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "senior",
+      "skills": [
+        "Backend",
+        "AI"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
+    },
+    {
+      "id": "remoteok:1137062",
+      "source": "remoteok",
+      "title": "DESARROLLADOR FULL STACK",
+      "company": "Kruger NearShore LLC - Rekluti",
+      "location": "Remote",
+      "remote": true,
+      "tags": [
+        "full-stack"
+      ],
+      "salary_text": null,
+      "posted_at": "2026-08-22T00:00:12Z",
+      "url": "https://remoteOK.com/remote-jobs/remote-desarrollador-full-stack-kruger-nearshore-llc-rekluti-1137062",
+      "fetched_at": "2026-11-14T13:31:10Z",
+      "seniority": "unknown",
+      "skills": [
+        "Full-Stack",
+        "Python",
+        "Angular",
+        "Go",
+        "Frontend",
+        "Backend",
+        "QA",
+        "DevOps",
+        "Google Cloud",
+        "Flutter",
+        "SQL",
+        "Git"
+      ],
+      "workplace": "remote",
+      "junior_friendly": false,
+      "regions": []
+    }
+  ]
+}
