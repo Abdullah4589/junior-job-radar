@@ -65,11 +65,7 @@ if url="$(gh pr view "$BRANCH" --json url --jq .url 2>/dev/null)"; then
 fi
 
 stamp="$(date -u +%Y-%m-%d)"
-gh pr create \
-  --base main \
-  --head "$BRANCH" \
-  --title "chore: daily job snapshot ${stamp}" \
-  --body "$(cat <<EOF
+body="$(cat <<EOF
 Daily fetch for ${stamp}.
 
 This pull request is opened by the daily workflow. The workflow pushes \`automation/daily-snapshots\` and does not push \`main\`.
@@ -85,3 +81,29 @@ Retention: every daily snapshot stays in git. Descriptions and logos are already
 No API keys. Remotive, Remote OK, and Arbeitnow are public endpoints, and the run uses the workflow's \`GITHUB_TOKEN\` only to push this branch and open the pull request.
 EOF
 )"
+
+if ! created="$(gh pr create --base main --head "$BRANCH" --title "chore: daily job snapshot ${stamp}" --body "$body" 2>&1)"; then
+  printf '%s\n' "$created" >&2
+  case "$created" in
+    *"not permitted to create or approve pull requests"*)
+      settings="${GITHUB_SERVER_URL:-https://github.com}/${GITHUB_REPOSITORY:-Abdullah4589/junior-job-radar}/settings/actions"
+      cat <<EOF >&2
+
+The data branch was pushed. GitHub refused to let this workflow open the pull request.
+
+The job already grants pull-requests: write. That scope is on the token, and it is not enough. The repository owner has to enable a separate setting, which is off by default on a personal account:
+
+  Settings → Actions → General → Workflow permissions →
+  Allow GitHub Actions to create and approve pull requests
+
+Save it here, then rerun the workflow:
+  ${settings}
+
+This workflow does not use a personal access token or another account to bypass that setting. After it is saved, the next run opens the pull request for the commits already on ${BRANCH}.
+EOF
+      ;;
+  esac
+  exit 1
+fi
+
+echo "Opened pull request: ${created}"
