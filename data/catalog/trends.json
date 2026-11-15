@@ -1,130 +1,130 @@
 {
   "notes": "Counts over the deduped catalog. seniority, skills, workplace, junior_friendly, and regions are extracted from each posting. top_skills and regions keep the first 20 after ties are broken by name.",
-  "postings": 321,
-  "junior_friendly": 24,
+  "postings": 371,
+  "junior_friendly": 26,
   "top_skills": [
     {
       "skill": "AI",
-      "count": 117
+      "count": 150
     },
     {
       "skill": "Python",
-      "count": 65
+      "count": 85
     },
     {
       "skill": "Security",
-      "count": 58
+      "count": 77
     },
     {
       "skill": "Backend",
-      "count": 47
+      "count": 62
     },
     {
       "skill": "AWS",
-      "count": 37
-    },
-    {
-      "skill": "Java",
-      "count": 37
+      "count": 52
     },
     {
       "skill": "CI/CD",
-      "count": 33
+      "count": 50
     },
     {
       "skill": "Kubernetes",
-      "count": 33
+      "count": 44
+    },
+    {
+      "skill": "Java",
+      "count": 43
     },
     {
       "skill": "TypeScript",
-      "count": 33
+      "count": 43
     },
     {
       "skill": "Machine Learning",
-      "count": 32
-    },
-    {
-      "skill": "Full-Stack",
-      "count": 31
+      "count": 37
     },
     {
       "skill": "SQL",
-      "count": 29
+      "count": 37
+    },
+    {
+      "skill": "Full-Stack",
+      "count": 35
     },
     {
       "skill": "Frontend",
-      "count": 27
+      "count": 33
     },
     {
       "skill": "C++",
-      "count": 26
-    },
-    {
-      "skill": "Azure",
-      "count": 22
-    },
-    {
-      "skill": "LLM",
-      "count": 22
+      "count": 32
     },
     {
       "skill": "Docker",
-      "count": 21
+      "count": 28
+    },
+    {
+      "skill": "Azure",
+      "count": 27
     },
     {
       "skill": "Google Cloud",
-      "count": 21
+      "count": 26
+    },
+    {
+      "skill": "LLM",
+      "count": 26
+    },
+    {
+      "skill": "PostgreSQL",
+      "count": 26
     },
     {
       "skill": "Terraform",
-      "count": 21
-    },
-    {
-      "skill": "JavaScript",
-      "count": 19
+      "count": 26
     }
   ],
   "seniority": {
-    "intern": 15,
-    "junior": 9,
+    "intern": 16,
+    "junior": 10,
     "mid": 2,
-    "senior": 109,
-    "lead": 6,
-    "staff": 17,
+    "senior": 124,
+    "lead": 7,
+    "staff": 18,
     "principal": 11,
-    "manager": 14,
-    "unknown": 138
+    "manager": 17,
+    "unknown": 166
   },
   "workplace": {
-    "remote": 81,
-    "hybrid": 47,
-    "onsite": 186,
+    "remote": 89,
+    "hybrid": 63,
+    "onsite": 212,
     "unknown": 7
   },
   "regions": [
     {
       "region": "Germany",
-      "count": 75
+      "count": 88
     },
     {
       "region": "United Kingdom",
-      "count": 51
-    },
-    {
-      "region": "Netherlands",
-      "count": 34
-    },
-    {
-      "region": "Switzerland",
-      "count": 34
+      "count": 67
     },
     {
       "region": "France",
-      "count": 33
+      "count": 40
+    },
+    {
+      "region": "Switzerland",
+      "count": 40
+    },
+    {
+      "region": "Netherlands",
+      "count": 35
     },
     {
       "region": "United States",
-      "count": 8
+      "count": 9
     },
     {
       "region": "Canada",
@@ -147,6 +147,10 @@
       "count": 2
     },
     {
+      "region": "Australia",
+      "count": 2
+    },
+    {
       "region": "Ireland",
       "count": 2
     },
@@ -157,10 +161,6 @@
     {
       "region": "Spain",
       "count": 2
-    },
-    {
-      "region": "Australia",
-      "count": 1
     },
     {
       "region": "Belgium",
