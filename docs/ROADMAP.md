@@ -73,12 +73,15 @@ The overview adds a salary-mention rate next to the other headline figures: how 
 
 `npm test` in `web/` runs the filter and source-status unit tests. Day 6 adds Playwright and CI. Day 7 deploys.
 
-## Day 6 — Tests and CI
+## Day 6 — Tests and CI (done)
 
-- Extend parser unit tests as extraction grows.
-- Playwright end-to-end test for the dashboard filters and at least one chart.
-- GitHub Actions CI: `uv run pytest` for the pipeline, plus the web typecheck, lint, and Playwright job.
-- Do not weaken or delete a test to go green.
+Playwright covers the dashboard against a production build of the committed catalog (`next build`, then `next start` on 127.0.0.1). The browser is Chromium. The tests check the overview figures and the four charts, each filter (seniority, workplace, skill, source, first-seen dates, text search, and junior-friendly only) against the table and the query string, pagination, sort, both empty states, and the mobile card list. A request to Remotive, Remote OK, or Arbeitnow fails the test. Run them from `web/` with `npx playwright install chromium` and `npm run e2e`.
+
+`.github/workflows/ci.yml` runs on pull requests and on pushes to `main`. One job runs `uv run pytest`. The other runs `npm ci`, lint, typecheck, `npm test`, `npm run build`, and Playwright. Actions are pinned to full commit SHAs. The workflow permission is `contents: read`. Concurrency cancels an older run on the same ref. npm, uv, and the Playwright browsers are cached. The HTML report is uploaded only when the dashboard job fails.
+
+Extraction did not change, so the parser tests were not rewritten. No test was skipped or weakened.
+
+The daily snapshot workflow failed on 12, 13, and 14 November 2026 for one reason. Pytest passed, `jobradar fetch` wrote that day's snapshot, and the push to `automation/daily-snapshots` succeeded. `gh pr create` then returned `GitHub Actions is not permitted to create or approve pull requests`. The job already has `pull-requests: write`, and the run log shows that scope on the token. Opening a pull request also needs the repository setting **Allow GitHub Actions to create and approve pull requests** (Settings → Actions → General → Workflow permissions). That checkbox is off by default on a personal repository. This change does not add a token or another permission to get around it. The publish script names the setting when GitHub refuses. The commits are already on `automation/daily-snapshots`. The next run after the checkbox is saved opens the pull request. The runs are [2026-11-12](https://github.com/Abdullah4589/junior-job-radar/actions/runs/43245801320), [2026-11-13](https://github.com/Abdullah4589/junior-job-radar/actions/runs/43444201351), and [2026-11-14](https://github.com/Abdullah4589/junior-job-radar/actions/runs/43600151221).
 
 ## Day 7 — Deploy and polish
 

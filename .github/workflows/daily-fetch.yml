@@ -24,6 +24,12 @@ jobs:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    # contents: write pushes automation/daily-snapshots.
+    # pull-requests: write is required and already the whole pull-request scope.
+    # Opening the pull request also needs the repository checkbox
+    # "Allow GitHub Actions to create and approve pull requests"
+    # (Settings → Actions → General → Workflow permissions). This file does
+    # not add a token or a broader permission to get around that checkbox.
     permissions:
       contents: write
       pull-requests: write

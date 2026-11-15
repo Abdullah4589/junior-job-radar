@@ -11,6 +11,10 @@ npm test
 npm run lint
 npm run typecheck
 npm run build
+npx playwright install chromium
+npm run e2e
 ```
+
+`npm run e2e` runs Playwright against `next build` and `next start`. The tests use the committed catalog and do not call the job boards. Chromium is enough.
 
 See [docs/ROADMAP.md](../docs/ROADMAP.md).

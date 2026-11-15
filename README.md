@@ -4,7 +4,7 @@ Daily pipeline and (from Day 4) dashboard that tracks public junior and remote s
 
 Built by Abdullah, a software-engineering graduate in Karachi, as a public portfolio project. It uses free job-board APIs only. There is no paid plan and no API key.
 
-Day 1 is the ingestion pipeline. Day 2 stores every posting in a deduped catalog and runs the fetch on a daily schedule. Day 3 adds skill, seniority, and workplace extraction. Day 4 is the dashboard overview in `web/`. Day 5 adds filters, the postings table, and a salary-mention rate. Deployment is Day 7. The day-by-day plan is in [docs/ROADMAP.md](docs/ROADMAP.md).
+Day 1 is the ingestion pipeline. Day 2 stores every posting in a deduped catalog and runs the fetch on a daily schedule. Day 3 adds skill, seniority, and workplace extraction. Day 4 is the dashboard overview in `web/`. Day 5 adds filters, the postings table, and a salary-mention rate. Day 6 adds Playwright, CI, and the note on the daily snapshot pull-request setting. Deployment is Day 7. The day-by-day plan is in [docs/ROADMAP.md](docs/ROADMAP.md).
 
 ## Roadmap
 
@@ -14,8 +14,8 @@ Day 1 is the ingestion pipeline. Day 2 stores every posting in a deduped catalog
 | 2 | Deduped SQLite catalog, daily snapshots kept in git, scheduled workflow that opens a pull request |
 | 3 | Skill, seniority, and workplace extraction, stored on each posting and in `data/catalog/trends.json` |
 | 4 | Next.js overview: KPIs, new postings per day, seniority, workplace, and top skills |
-| 5 | Dashboard filters, postings table, salary-mention rate, and empty states (this repo state) |
-| 6 | Parser tests, Playwright, CI |
+| 5 | Dashboard filters, postings table, salary-mention rate, and empty states |
+| 6 | Playwright, CI, and the daily snapshot pull-request setting (this repo state) |
 | 7 | Free-tier deploy and a README with screenshots, methodology, and limitations |
 
 ## Run the pipeline
@@ -60,7 +60,37 @@ npm run dev
 
 Open `http://localhost:3000`. The overview is the top of the page. Filters and the postings table are below the charts. The query string keeps seniority, workplace, skill, source, first-seen dates, text search, junior-friendly only, sort, and page, so a filtered view can be shared. Each title links to the original posting, and each source links to the board.
 
-`npm run lint`, `npm run typecheck`, `npm test`, and `npm run build` check the app.
+`npm run lint`, `npm run typecheck`, `npm test`, `npm run build`, and `npm run e2e` check the app. The Playwright section below runs the last two against the production build.
+
+## Tests
+
+Pipeline tests, from `pipeline/`:
+
+```powershell
+uv run pytest
+```
+
+Dashboard unit tests, from `web/`:
+
+```powershell
+npm test
+npm run lint
+npm run typecheck
+```
+
+Playwright drives the production build and the committed catalog. It does not call Remotive, Remote OK, or Arbeitnow. Chromium is the only browser.
+
+```powershell
+cd web
+npm ci
+npx playwright install chromium
+npm run build
+npm run e2e
+```
+
+`npm run e2e` is `playwright test`. If port 3000 is free and `CI` is unset, Playwright builds and starts the app itself, so the `npm run build` line above is optional on a local machine. In CI the workflow builds first and Playwright only starts the server.
+
+`.github/workflows/ci.yml` runs on pull requests and on pushes to `main`. It runs `uv run pytest`, then in `web/` runs `npm ci`, lint, typecheck, `npm test`, `npm run build`, and Playwright with Chromium. Actions are pinned to full commit SHAs. The token is `contents: read`. A newer run on the same ref cancels the older one. The Playwright HTML report is uploaded only when the dashboard job fails.
 
 ## What gets stored
 
@@ -83,6 +113,8 @@ Tags are lowercased. Skills named in the title (`python`, `react`, `full-stack`,
 The job commits changes under `data/` onto `automation/daily-snapshots` and opens a pull request into `main`. It does not push `main`. The only credential is the run's `GITHUB_TOKEN`, limited to `contents: write` and `pull-requests: write`. The boards need no API key, and the workflow file has no secrets. Actions are pinned to full commit SHAs. A run with no data change does not create an empty commit. Two runs cannot overlap (`concurrency: daily-snapshot`).
 
 The schedule starts after this workflow is on `main`. Until the data pull request is merged, the next day checks out `automation/daily-snapshots` (so unmerged days stack) and merges `main` into it. A conflict in pipeline code fails the job. A conflict in an older snapshot keeps `main`'s copy, and the fetch rebuilds the catalog from the snapshot files.
+
+The 12, 13, and 14 November 2026 runs fetched and pushed `automation/daily-snapshots`, then failed at `gh pr create` with `GitHub Actions is not permitted to create or approve pull requests`. `pull-requests: write` was already granted. Opening the pull request also needs a repository setting that is off by default on a personal account: Settings → Actions → General → Workflow permissions → **Allow GitHub Actions to create and approve pull requests**. The workflow does not use a personal access token to skip that checkbox. After it is saved, the next run opens the pull request for the commits already on the data branch.
 
 ## Sources
 
@@ -156,6 +188,7 @@ data/catalog/trends.json          Top skills, seniority, workplace, regions
 data/jobradar.sqlite              Same catalog in SQLite
 pipeline/src/jobradar/taxonomy/   Skill, seniority, and region lists
 .github/workflows/daily-fetch.yml Daily fetch. Opens a pull request, does not push main
+.github/workflows/ci.yml          Pipeline pytest, dashboard checks, and Playwright
 docs/                             Roadmap for the rest of the week
 web/                              Next.js dashboard. Overview, filters, and the postings table
 ```
