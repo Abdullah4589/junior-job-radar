@@ -1,8 +1,6 @@
 import { access, readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 
-import { cacheLife } from "next/cache";
-
 import { toOverview, type Overview } from "@/lib/catalog/overview";
 import { parseCatalog, parseTrends } from "@/lib/catalog/parse";
 import { parseSourceRun, type SourceRun } from "@/lib/catalog/source-health";
@@ -11,7 +9,8 @@ import type { CatalogBundle } from "@/lib/catalog/types";
 /**
  * Read the committed catalog. `npm run dev` and `npm run build` are started
  * from `web/`, so the files live one directory up. A checkout that runs from
- * the repo root is accepted too.
+ * the repo root is accepted too. The static export reads these files once,
+ * while the page is built, and writes the result into `out/`.
  */
 async function dataDirectory(): Promise<string> {
   const candidates = [path.resolve(process.cwd(), "data"), path.resolve(process.cwd(), "..", "data")];
@@ -57,14 +56,10 @@ async function readCatalog(): Promise<CatalogBundle> {
 }
 
 export async function loadCatalog(): Promise<CatalogBundle> {
-  "use cache";
-  cacheLife("max");
   return readCatalog();
 }
 
 export async function loadOverview(): Promise<Overview> {
-  "use cache";
-  cacheLife("max");
   const { trends, catalog } = await readCatalog();
   return toOverview(trends, catalog);
 }
@@ -75,8 +70,6 @@ export async function loadOverview(): Promise<Overview> {
  * A missing raw directory does not block the catalog page.
  */
 export async function loadLatestSourceRun(): Promise<SourceRun | null> {
-  "use cache";
-  cacheLife("max");
   const rawDir = path.join(await dataDirectory(), "raw");
   let names: string[];
   try {

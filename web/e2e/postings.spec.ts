@@ -1,6 +1,13 @@
 import { catalog, invertedDates, PAGE_SIZE, pageTitles, sortPostings, summaryText } from "./catalog";
 import { cardTitles, expect, expectQuery, openHome, summary, tableTitles, test } from "./fixtures";
 
+test("unknown query values are replaced with the canonical catalog url", async ({ page }) => {
+  await page.goto("./?seniority=nope&extra=1");
+  await expect(page).toHaveURL((url) => [...url.searchParams.keys()].length === 0);
+  await expect(page.getByRole("heading", { name: "Junior Job Radar", level: 1 })).toBeVisible();
+  await expect(summary(page)).toHaveText(summaryText(catalog.total, catalog.total, 1));
+});
+
 test("pagination moves to the next page of the catalog", async ({ page }) => {
   const ordered = sortPostings(catalog.postings, "first_seen", "desc");
   await openHome(page);

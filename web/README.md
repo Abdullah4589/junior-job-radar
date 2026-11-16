@@ -1,8 +1,8 @@
 # Dashboard
 
-Next.js dashboard for Junior Job Radar. The page reads `../data/catalog/trends.json` and `../data/catalog/postings.json` when it is built. The latest `../data/raw/YYYY-MM-DD.json` supplies the per-board success flag for the source notice. There are no job-board requests and no environment variables.
+Next.js dashboard for Junior Job Radar. `npm run build` reads `../data/catalog/trends.json` and `../data/catalog/postings.json` and writes a static site to `out/`. The latest `../data/raw/YYYY-MM-DD.json` supplies the per-board success flag. There are no job-board requests and no environment variables.
 
-The overview (counts, new postings, seniority, workplace, top skills, salary-mention rate) is the top of the page. Filters and a sortable, paginated postings table sit below it. Filter state is the query string: `q`, `seniority`, `workplace`, `skill`, `junior`, `source`, `from`, `to`, `sort`, `dir`, and `page`. The role title opens the original posting. The source opens the board.
+The production site is served at `/junior-job-radar/` (`basePath` and `assetPrefix` in `next.config.ts`), which is the GitHub Pages project path. `npm run dev` uses the same path.
 
 ```powershell
 npm install
@@ -11,10 +11,13 @@ npm test
 npm run lint
 npm run typecheck
 npm run build
+npm run start
 npx playwright install chromium
 npm run e2e
 ```
 
-`npm run e2e` runs Playwright against `next build` and `next start`. The tests use the committed catalog and do not call the job boards. Chromium is enough.
+`npm run dev` opens `http://localhost:3000/junior-job-radar/`. `npm run start` serves the static `out/` directory at `http://127.0.0.1:3000/junior-job-radar/`. Run `npm run build` first.
 
-See [docs/ROADMAP.md](../docs/ROADMAP.md).
+`npm run e2e` runs Playwright against that static export. The tests use the committed catalog and do not call the job boards. Chromium is enough. One test checks that scripts and styles load from `/junior-job-radar/_next/`.
+
+See [docs/ROADMAP.md](../docs/ROADMAP.md) and the [root README](../README.md).
