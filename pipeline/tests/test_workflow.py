@@ -67,3 +67,41 @@ def test_ci_workflow_is_least_privilege_and_runs_the_checks():
     upload_at = workflow.index("actions/upload-artifact@")
     assert "if: failure()" in workflow[max(0, upload_at - 250) : upload_at]
     assert "playwright-report" in workflow
+
+
+def test_pages_workflow_is_least_privilege_and_exports_the_dashboard():
+    root = find_repo_root()
+    workflow = (root / ".github" / "workflows" / "pages.yml").read_text(encoding="utf-8")
+
+    uses = []
+    for line in workflow.splitlines():
+        stripped = line.strip()
+        if stripped.startswith("uses:"):
+            uses.append(stripped.split(" # ", 1)[0])
+    assert uses
+    for action in uses:
+        assert re.fullmatch(r"uses: [\w./-]+@[0-9a-f]{40}", action), action
+
+    assert "push:" in workflow
+    assert "- main" in workflow
+    assert "workflow_dispatch:" in workflow
+    assert "pull_request:" not in workflow
+    assert "contents: read" in workflow
+    assert "contents: write" not in workflow
+    assert "pull-requests:" not in workflow
+    assert "pages: write" in workflow
+    assert "id-token: write" in workflow
+    assert "${{ secrets." not in workflow
+    assert "npm run build" in workflow
+    assert "path: web/out" in workflow
+    assert "cancel-in-progress: false" in workflow
+    assert "GitHub Actions" in workflow
+    assert workflow.count("if: github.ref == 'refs/heads/main'") == 2
+
+    deploy = workflow.split("  deploy:", 1)[1]
+    permissions = deploy.split("permissions:", 1)[1].split("environment:", 1)[0]
+    assert "pages: write" in permissions
+    assert "id-token: write" in permissions
+    assert "contents:" not in permissions
+    assert "actions/upload-pages-artifact@" not in deploy
+    assert "actions/deploy-pages@" in deploy

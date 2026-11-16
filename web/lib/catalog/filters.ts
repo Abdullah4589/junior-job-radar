@@ -68,6 +68,22 @@ export type SearchParamInput = {
   [key: string]: string | string[] | undefined;
 };
 
+/** Copy a query string into the shape `parsePostingFilters` already accepts. Repeated keys stay in order. */
+export function inputFromSearchParams(params: Pick<URLSearchParams, "entries">): SearchParamInput {
+  const input: SearchParamInput = {};
+  for (const [key, value] of params.entries()) {
+    const current = input[key];
+    if (current === undefined) {
+      input[key] = value;
+    } else if (Array.isArray(current)) {
+      current.push(value);
+    } else {
+      input[key] = [current, value];
+    }
+  }
+  return input;
+}
+
 export type PostingFilters = {
   q: string;
   seniority: Seniority | null;

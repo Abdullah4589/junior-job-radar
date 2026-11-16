@@ -12,7 +12,7 @@ import { SiteHeader } from "@/components/site-header";
 import { loadOverview } from "@/lib/catalog/load";
 import { formatCount } from "@/lib/catalog/overview";
 
-export default async function HomePage({ searchParams }: PageProps<"/">) {
+export default async function HomePage() {
   const overview = await loadOverview();
   const total = formatCount(overview.totalPostings);
 
@@ -77,7 +77,7 @@ export default async function HomePage({ searchParams }: PageProps<"/">) {
           <SkillsChart skills={overview.skills} />
         </ChartSection>
         <Suspense fallback={<PostingsSkeleton />}>
-          <PostingsSection searchParams={searchParams} />
+          <PostingsSection />
         </Suspense>
       </main>
       <SiteFooter />

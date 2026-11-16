@@ -7,6 +7,7 @@ import {
   filterChips,
   filtersFromFormData,
   countSalaryMentions,
+  inputFromSearchParams,
   filtersHref,
   filtersToSearchParams,
   formActionHref,
@@ -278,6 +279,13 @@ describe("filter helpers", () => {
     const filters: PostingFilters = parsePostingFilters({});
     assert.deepEqual(toggledSort(filters, "first_seen"), { sort: "first_seen", dir: "asc", page: 1 });
     assert.deepEqual(toggledSort(filters, "title"), { sort: "title", dir: "asc", page: 1 });
+  });
+
+  it("keeps repeated query values in order for the parser", () => {
+    const params = new URLSearchParams("seniority=junior&seniority=senior&extra=1");
+    const parsed = parsePostingFilters(inputFromSearchParams(params));
+    assert.equal(parsed.seniority, "junior");
+    assert.equal(recognizedSearch(inputFromSearchParams(params)), "seniority=junior");
   });
 
   it("reads a form and omits empty fields", () => {

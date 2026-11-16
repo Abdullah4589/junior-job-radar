@@ -22,7 +22,7 @@ export function summary(page: Page) {
 }
 
 export async function openHome(page: Page) {
-  await page.goto("/");
+  await page.goto("./");
   await expect(page.getByRole("heading", { name: "Junior Job Radar", level: 1 })).toBeVisible();
   await expect(summary(page)).toBeVisible();
 }

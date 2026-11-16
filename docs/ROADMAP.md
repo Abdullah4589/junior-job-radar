@@ -75,7 +75,7 @@ The overview adds a salary-mention rate next to the other headline figures: how 
 
 ## Day 6 — Tests and CI (done)
 
-Playwright covers the dashboard against a production build of the committed catalog (`next build`, then `next start` on 127.0.0.1). The browser is Chromium. The tests check the overview figures and the four charts, each filter (seniority, workplace, skill, source, first-seen dates, text search, and junior-friendly only) against the table and the query string, pagination, sort, both empty states, and the mobile card list. A request to Remotive, Remote OK, or Arbeitnow fails the test. Run them from `web/` with `npx playwright install chromium` and `npm run e2e`.
+Playwright covers the dashboard against a production build of the committed catalog. Day 6 served that build with `next start`. Day 7 serves the static export instead, under the GitHub Pages base path. The browser is Chromium. The tests check the overview figures and the four charts, each filter (seniority, workplace, skill, source, first-seen dates, text search, and junior-friendly only) against the table and the query string, pagination, sort, both empty states, and the mobile card list. A request to Remotive, Remote OK, or Arbeitnow fails the test. Run them from `web/` with `npx playwright install chromium` and `npm run e2e`.
 
 `.github/workflows/ci.yml` runs on pull requests and on pushes to `main`. One job runs `uv run pytest`. The other runs `npm ci`, lint, typecheck, `npm test`, `npm run build`, and Playwright. Actions are pinned to full commit SHAs. The workflow permission is `contents: read`. Concurrency cancels an older run on the same ref. npm, uv, and the Playwright browsers are cached. The HTML report is uploaded only when the dashboard job fails.
 
@@ -83,12 +83,25 @@ Extraction did not change, so the parser tests were not rewritten. No test was s
 
 The daily snapshot workflow failed on 12, 13, and 14 November 2026 for one reason. Pytest passed, `jobradar fetch` wrote that day's snapshot, and the push to `automation/daily-snapshots` succeeded. `gh pr create` then returned `GitHub Actions is not permitted to create or approve pull requests`. The job already has `pull-requests: write`, and the run log shows that scope on the token. Opening a pull request also needs the repository setting **Allow GitHub Actions to create and approve pull requests** (Settings → Actions → General → Workflow permissions). That checkbox is off by default on a personal repository. This change does not add a token or another permission to get around it. The publish script names the setting when GitHub refuses. The commits are already on `automation/daily-snapshots`. The next run after the checkbox is saved opens the pull request. The runs are [2026-11-12](https://github.com/Abdullah4589/junior-job-radar/actions/runs/43245801320), [2026-11-13](https://github.com/Abdullah4589/junior-job-radar/actions/runs/43444201351), and [2026-11-14](https://github.com/Abdullah4589/junior-job-radar/actions/runs/43600151221).
 
-## Day 7 — Deploy and polish
+## Day 7 — Deploy and polish (done)
 
-- Deploy the dashboard on a free tier (Vercel or Cloudflare).
-- README: what the project is, how to run it, screenshots, methodology, and limitations.
-- Call out source bias (these boards are remote-heavy and senior-heavy), the 24-hour Remotive delay, noisy Remote OK tags, and that salary coverage is incomplete.
-- No production secrets in the repo.
+The dashboard is a static export. `web/next.config.ts` sets `output: 'export'`, `basePath` and `assetPrefix` to `/junior-job-radar`, and `trailingSlash`. `npm run build` writes `web/out`. Cache Components stayed off: Next.js refuses Partial Prerendering in export mode (`PPR cannot be enabled in export mode`). The catalog is read once, from the committed `data/catalog` files, while the page is built. Nothing in the repo is a secret, and the site calls no API.
+
+GitHub Pages can host that folder. The page does not need a server. Filters, sort, and pagination read the query string in the browser and replace a dirty query with the canonical one. The static HTML already contains the unfiltered table.
+
+`.github/workflows/pages.yml` runs on a push to `main` and on `workflow_dispatch`. Both jobs run only when the ref is `main`, so a manual run from another branch cannot replace the live site. The build job checks out the commit, runs `npm ci` and `npm run build`, and uploads `web/out` with `actions/upload-pages-artifact`. The deploy job runs `actions/deploy-pages`. Actions are pinned to full commit SHAs. The workflow permission is `contents: read`. The deploy job replaces that with `pages: write` and `id-token: write` only. There is no `contents: write`, no pull-request scope, and no secret. Uploading the artifact uses the Actions runtime token.
+
+The site is `https://abdullah4589.github.io/junior-job-radar/` after the owner sets **Settings → Pages → Build and deployment → Source** to **GitHub Actions**. This change does not flip that setting. Until it is saved, the deploy job cannot publish, and a failed deploy leaves any previous site in place.
+
+A merged data pull request is a push to `main`, so the Pages workflow rebuilds the dashboard from the new catalog. The daily fetch workflow still does not push `main` and was not changed.
+
+Rollback:
+
+- Actions → Pages → open the last good run on `main` → **Re-run all jobs**. The re-run checks out that commit and publishes it again.
+- Or revert the merge commit on `main` (a revert pull request is enough). The push to `main` builds the reverted tree and deploys it.
+- To take the site offline: **Settings → Pages → Unpublish site**.
+
+Playwright still drives Chromium against the production build. It now loads `http://127.0.0.1:3000/junior-job-radar/` from `web/out`, and one test asserts the base path and that `/_next` assets are not double-prefixed. Screenshots of that build are in `docs/screenshots/` and in the README. The README also states the source bias: these boards are remote-heavy and senior-heavy, Remotive is delayed about 24 hours, Remote OK tags are noisy, and salary coverage is incomplete.
 
 ## Schema contract
 
