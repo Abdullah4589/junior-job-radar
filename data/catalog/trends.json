@@ -1,157 +1,177 @@
 {
   "notes": "Counts over the deduped catalog. seniority, skills, workplace, junior_friendly, and regions are extracted from each posting. top_skills and regions keep the first 20 after ties are broken by name.",
-  "postings": 223,
-  "junior_friendly": 16,
+  "postings": 371,
+  "junior_friendly": 26,
   "top_skills": [
     {
       "skill": "AI",
-      "count": 62
-    },
-    {
-      "skill": "Security",
-      "count": 29
-    },
-    {
-      "skill": "Backend",
-      "count": 23
+      "count": 150
     },
     {
       "skill": "Python",
-      "count": 22
+      "count": 85
     },
     {
-      "skill": "Full-Stack",
-      "count": 21
+      "skill": "Security",
+      "count": 77
     },
     {
-      "skill": "Machine Learning",
-      "count": 20
-    },
-    {
-      "skill": "Java",
-      "count": 17
-    },
-    {
-      "skill": "LLM",
-      "count": 17
-    },
-    {
-      "skill": "Kubernetes",
-      "count": 16
-    },
-    {
-      "skill": "CI/CD",
-      "count": 15
+      "skill": "Backend",
+      "count": 62
     },
     {
       "skill": "AWS",
-      "count": 13
+      "count": 52
     },
     {
-      "skill": "Docker",
-      "count": 13
+      "skill": "CI/CD",
+      "count": 50
     },
     {
-      "skill": "Azure",
-      "count": 11
+      "skill": "Kubernetes",
+      "count": 44
     },
     {
-      "skill": "DevOps",
-      "count": 11
-    },
-    {
-      "skill": "Data Science",
-      "count": 10
-    },
-    {
-      "skill": "Frontend",
-      "count": 10
-    },
-    {
-      "skill": "Google Cloud",
-      "count": 10
-    },
-    {
-      "skill": "React",
-      "count": 10
+      "skill": "Java",
+      "count": 43
     },
     {
       "skill": "TypeScript",
-      "count": 10
+      "count": 43
+    },
+    {
+      "skill": "Machine Learning",
+      "count": 37
+    },
+    {
+      "skill": "SQL",
+      "count": 37
+    },
+    {
+      "skill": "Full-Stack",
+      "count": 35
+    },
+    {
+      "skill": "Frontend",
+      "count": 33
     },
     {
       "skill": "C++",
-      "count": 9
+      "count": 32
+    },
+    {
+      "skill": "Docker",
+      "count": 28
+    },
+    {
+      "skill": "Azure",
+      "count": 27
+    },
+    {
+      "skill": "Google Cloud",
+      "count": 26
+    },
+    {
+      "skill": "LLM",
+      "count": 26
+    },
+    {
+      "skill": "PostgreSQL",
+      "count": 26
+    },
+    {
+      "skill": "Terraform",
+      "count": 26
     }
   ],
   "seniority": {
-    "intern": 8,
-    "junior": 8,
-    "mid": 4,
-    "senior": 74,
-    "lead": 3,
-    "staff": 12,
-    "principal": 8,
-    "manager": 12,
-    "unknown": 94
+    "intern": 16,
+    "junior": 10,
+    "mid": 2,
+    "senior": 124,
+    "lead": 7,
+    "staff": 18,
+    "principal": 11,
+    "manager": 17,
+    "unknown": 166
   },
   "workplace": {
-    "remote": 55,
-    "hybrid": 17,
-    "onsite": 150,
-    "unknown": 1
+    "remote": 89,
+    "hybrid": 63,
+    "onsite": 212,
+    "unknown": 7
   },
   "regions": [
     {
       "region": "Germany",
-      "count": 44
+      "count": 88
     },
     {
       "region": "United Kingdom",
-      "count": 36
+      "count": 67
     },
     {
       "region": "France",
-      "count": 32
+      "count": 40
     },
     {
       "region": "Switzerland",
-      "count": 26
+      "count": 40
     },
     {
       "region": "Netherlands",
-      "count": 23
+      "count": 35
     },
     {
       "region": "United States",
-      "count": 4
+      "count": 9
     },
     {
       "region": "Canada",
-      "count": 3
-    },
-    {
-      "region": "Denmark",
-      "count": 2
+      "count": 5
     },
     {
       "region": "EMEA",
+      "count": 3
+    },
+    {
+      "region": "Europe",
+      "count": 3
+    },
+    {
+      "region": "Latin America",
+      "count": 3
+    },
+    {
+      "region": "Asia Pacific",
       "count": 2
     },
     {
       "region": "Australia",
-      "count": 1
-    },
-    {
-      "region": "Europe",
-      "count": 1
+      "count": 2
     },
     {
       "region": "Ireland",
+      "count": 2
+    },
+    {
+      "region": "Singapore",
+      "count": 2
+    },
+    {
+      "region": "Spain",
+      "count": 2
+    },
+    {
+      "region": "Belgium",
       "count": 1
     },
     {
-      "region": "Latin America",
+      "region": "Denmark",
+      "count": 1
+    },
+    {
+      "region": "Japan",
       "count": 1
     },
     {
@@ -159,15 +179,7 @@
       "count": 1
     },
     {
-      "region": "North America",
-      "count": 1
-    },
-    {
       "region": "Poland",
-      "count": 1
-    },
-    {
-      "region": "Singapore",
       "count": 1
     }
   ]
