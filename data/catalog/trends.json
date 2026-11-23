@@ -1,138 +1,142 @@
 {
   "notes": "Counts over the deduped catalog. seniority, skills, workplace, junior_friendly, and regions are extracted from each posting. top_skills and regions keep the first 20 after ties are broken by name.",
-  "postings": 752,
-  "junior_friendly": 69,
+  "postings": 814,
+  "junior_friendly": 76,
   "top_skills": [
     {
       "skill": "AI",
-      "count": 379
+      "count": 413
     },
     {
       "skill": "Python",
-      "count": 242
+      "count": 264
     },
     {
       "skill": "Security",
-      "count": 184
+      "count": 204
     },
     {
       "skill": "Backend",
-      "count": 169
-    },
-    {
-      "skill": "Machine Learning",
-      "count": 131
+      "count": 187
     },
     {
       "skill": "CI/CD",
-      "count": 128
+      "count": 148
+    },
+    {
+      "skill": "Machine Learning",
+      "count": 141
     },
     {
       "skill": "AWS",
-      "count": 124
+      "count": 135
     },
     {
       "skill": "Kubernetes",
-      "count": 115
+      "count": 129
     },
     {
       "skill": "LLM",
-      "count": 106
+      "count": 116
     },
     {
       "skill": "SQL",
-      "count": 106
+      "count": 114
     },
     {
       "skill": "TypeScript",
-      "count": 102
+      "count": 109
     },
     {
       "skill": "Java",
-      "count": 98
+      "count": 104
     },
     {
       "skill": "Full-Stack",
-      "count": 85
+      "count": 96
     },
     {
       "skill": "Frontend",
-      "count": 84
-    },
-    {
-      "skill": "Google Cloud",
-      "count": 74
+      "count": 94
     },
     {
       "skill": "Docker",
-      "count": 73
+      "count": 89
     },
     {
       "skill": "Azure",
-      "count": 70
+      "count": 78
+    },
+    {
+      "skill": "Google Cloud",
+      "count": 78
     },
     {
       "skill": "Go",
-      "count": 70
+      "count": 73
+    },
+    {
+      "skill": "DevOps",
+      "count": 72
     },
     {
       "skill": "PostgreSQL",
-      "count": 64
-    },
-    {
-      "skill": "Terraform",
-      "count": 62
+      "count": 72
     }
   ],
   "seniority": {
-    "intern": 42,
-    "junior": 27,
+    "intern": 47,
+    "junior": 29,
     "mid": 9,
-    "senior": 225,
-    "lead": 13,
-    "staff": 48,
-    "principal": 21,
-    "manager": 36,
-    "unknown": 331
+    "senior": 244,
+    "lead": 18,
+    "staff": 50,
+    "principal": 22,
+    "manager": 41,
+    "unknown": 354
   },
   "workplace": {
-    "remote": 184,
-    "hybrid": 153,
-    "onsite": 397,
+    "remote": 197,
+    "hybrid": 167,
+    "onsite": 432,
     "unknown": 18
   },
   "regions": [
     {
       "region": "Germany",
-      "count": 164
+      "count": 172
     },
     {
       "region": "United Kingdom",
-      "count": 135
+      "count": 151
     },
     {
       "region": "France",
-      "count": 101
-    },
-    {
-      "region": "Switzerland",
-      "count": 82
+      "count": 113
     },
     {
       "region": "Netherlands",
-      "count": 81
+      "count": 84
+    },
+    {
+      "region": "Switzerland",
+      "count": 84
     },
     {
       "region": "United States",
-      "count": 33
+      "count": 38
     },
     {
       "region": "Canada",
-      "count": 7
+      "count": 8
     },
     {
       "region": "Europe",
-      "count": 7
+      "count": 8
+    },
+    {
+      "region": "Australia",
+      "count": 4
     },
     {
       "region": "Ireland",
@@ -151,16 +155,20 @@
       "count": 3
     },
     {
+      "region": "Singapore",
+      "count": 3
+    },
+    {
       "region": "Asia Pacific",
       "count": 2
     },
     {
-      "region": "Australia",
+      "region": "Mexico",
       "count": 2
     },
     {
-      "region": "Singapore",
-      "count": 2
+      "region": "Austria",
+      "count": 1
     },
     {
       "region": "Belgium",
@@ -172,14 +180,6 @@
     },
     {
       "region": "European Union",
-      "count": 1
-    },
-    {
-      "region": "Italy",
-      "count": 1
-    },
-    {
-      "region": "Japan",
       "count": 1
     }
   ]
