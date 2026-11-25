@@ -1,157 +1,173 @@
 {
   "notes": "Counts over the deduped catalog. seniority, skills, workplace, junior_friendly, and regions are extracted from each posting. top_skills and regions keep the first 20 after ties are broken by name.",
-  "postings": 864,
-  "junior_friendly": 81,
+  "postings": 921,
+  "junior_friendly": 82,
   "top_skills": [
     {
       "skill": "AI",
-      "count": 440
+      "count": 472
     },
     {
       "skill": "Python",
-      "count": 285
+      "count": 302
     },
     {
       "skill": "Security",
-      "count": 225
+      "count": 240
     },
     {
       "skill": "Backend",
-      "count": 201
+      "count": 217
     },
     {
       "skill": "CI/CD",
-      "count": 160
+      "count": 172
     },
     {
       "skill": "Machine Learning",
-      "count": 149
+      "count": 157
     },
     {
       "skill": "AWS",
-      "count": 144
+      "count": 151
     },
     {
       "skill": "Kubernetes",
-      "count": 136
+      "count": 146
     },
     {
       "skill": "LLM",
-      "count": 124
+      "count": 134
     },
     {
       "skill": "SQL",
-      "count": 122
+      "count": 131
     },
     {
       "skill": "TypeScript",
-      "count": 117
+      "count": 124
     },
     {
       "skill": "Full-Stack",
-      "count": 108
+      "count": 116
     },
     {
       "skill": "Java",
-      "count": 108
+      "count": 113
     },
     {
       "skill": "Frontend",
-      "count": 99
+      "count": 106
     },
     {
       "skill": "Docker",
-      "count": 92
+      "count": 99
     },
     {
       "skill": "Azure",
-      "count": 88
+      "count": 95
     },
     {
       "skill": "Google Cloud",
+      "count": 89
+    },
+    {
+      "skill": "PostgreSQL",
       "count": 84
     },
     {
       "skill": "DevOps",
-      "count": 79
+      "count": 83
     },
     {
       "skill": "Go",
-      "count": 76
-    },
-    {
-      "skill": "PostgreSQL",
-      "count": 76
+      "count": 80
     }
   ],
   "seniority": {
-    "intern": 51,
+    "intern": 52,
     "junior": 30,
-    "mid": 10,
-    "senior": 261,
-    "lead": 20,
-    "staff": 51,
-    "principal": 22,
+    "mid": 11,
+    "senior": 283,
+    "lead": 22,
+    "staff": 55,
+    "principal": 23,
     "manager": 41,
-    "unknown": 378
+    "unknown": 404
   },
   "workplace": {
-    "remote": 207,
-    "hybrid": 180,
-    "onsite": 459,
+    "remote": 227,
+    "hybrid": 195,
+    "onsite": 481,
     "unknown": 18
   },
   "regions": [
     {
       "region": "Germany",
-      "count": 190
+      "count": 205
     },
     {
       "region": "United Kingdom",
-      "count": 156
+      "count": 164
     },
     {
       "region": "France",
-      "count": 122
+      "count": 129
     },
     {
       "region": "Netherlands",
-      "count": 95
+      "count": 104
     },
     {
       "region": "Switzerland",
-      "count": 86
+      "count": 89
     },
     {
       "region": "United States",
-      "count": 39
+      "count": 45
     },
     {
       "region": "Canada",
-      "count": 9
+      "count": 11
     },
     {
       "region": "Europe",
-      "count": 9
+      "count": 10
     },
     {
       "region": "EMEA",
+      "count": 7
+    },
+    {
+      "region": "Spain",
       "count": 6
+    },
+    {
+      "region": "Ireland",
+      "count": 5
     },
     {
       "region": "Australia",
       "count": 4
     },
     {
-      "region": "Ireland",
-      "count": 4
-    },
-    {
-      "region": "Spain",
-      "count": 4
-    },
-    {
       "region": "Latin America",
+      "count": 4
+    },
+    {
+      "region": "Austria",
+      "count": 3
+    },
+    {
+      "region": "Italy",
+      "count": 3
+    },
+    {
+      "region": "North America",
+      "count": 3
+    },
+    {
+      "region": "Portugal",
       "count": 3
     },
     {
@@ -165,22 +181,6 @@
     {
       "region": "Mexico",
       "count": 2
-    },
-    {
-      "region": "Austria",
-      "count": 1
-    },
-    {
-      "region": "Belgium",
-      "count": 1
-    },
-    {
-      "region": "Denmark",
-      "count": 1
-    },
-    {
-      "region": "European Union",
-      "count": 1
     }
   ]
 }
